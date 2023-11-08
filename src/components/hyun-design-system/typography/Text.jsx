@@ -29,22 +29,17 @@ const StyledText = styled.p`
   line-height: ${(props) => StylesText[props.size].lineHeight};
 `;
 
-const Text = ({ size, text }) => {
-  if (!text) {
-    return null;
-  }
-
-  return <StyledText size={size}>{text}</StyledText>;
+const Text = ({ size, children }) => {
+  return <StyledText size={size}>{children}</StyledText>;
 };
 
 StyledText.defaultProps = {
   size: 'md',
-  text: null,
 };
 
 Text.propTypes = {
-  size: PropTypes.PropTypes.oneOf(['lg', 'md', 'sm', 'xs', 'xxs']),
-  text: PropTypes.string.isRequired,
+  size: PropTypes.oneOf(['lg', 'md', 'sm', 'xs', 'xxs']).isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default Text;

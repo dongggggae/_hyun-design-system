@@ -34,10 +34,6 @@ const StyledHeading = styled.h1`
 `;
 
 const Heading = ({ as, text }) => {
-  if (!text) {
-    return null;
-  }
-
   return <StyledHeading as={as}>{text}</StyledHeading>;
 };
 

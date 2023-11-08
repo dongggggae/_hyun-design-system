@@ -7,7 +7,7 @@ const App = () => {
     <div className="App">
       <Heading as="h2" text="Heading" />
       <CodeContainer />
-      <Text size="lg" text="asdasdasdaㅁㄴㅇ" />
+      <Text size="lg">Textextextextext</Text>
     </div>
   );
 };
