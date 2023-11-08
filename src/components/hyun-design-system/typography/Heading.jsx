@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 
-const Stylesheading = {
+const StylesHeading = {
   h1: {
     fontSize: '56px',
     lineHeight: '72px',
@@ -29,8 +29,8 @@ const Stylesheading = {
 };
 
 const StyledHeading = styled.h1`
-  font-size: ${(props) => Stylesheading[props.as].fontSize};
-  line-height: ${(props) => Stylesheading[props.as].lineHeight};
+  font-size: ${(props) => StylesHeading[props.as].fontSize};
+  line-height: ${(props) => StylesHeading[props.as].lineHeight};
 `;
 
 const Heading = ({ as, text }) => {
