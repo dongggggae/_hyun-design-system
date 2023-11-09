@@ -19,45 +19,75 @@ const StylesButton = {
   },
 };
 
+const SizesButton = {
+  lg: {
+    height: '56px',
+    paddingX: '18px',
+    fontSize: '16px',
+    lineHeight: '24px',
+  },
+  md: {
+    height: '48px',
+    paddingX: '14px',
+    fontSize: '14px',
+    lineHeight: '24px',
+  },
+  sm: {
+    height: '32px',
+    paddingX: '10px',
+    fontSize: '14px',
+    lineHeight: '24px',
+  },
+  xs: {
+    height: '24px',
+    paddingX: '6px',
+    fontSize: '12px',
+    lineHeight: '20px',
+  },
+};
+
 const StyledButton = styled.button`
-  display: 'inline-flex';
-  justify-content: 'center';
-  align-items: 'center';
-  font-family: 'inherit';
-  text-align: 'center';
-  box-sizing: 'border-box';
-  border-width: '1px';
-  border-style: 'solid';
-  border-radius: '5px';
-  font-size: '16px';
-  padding: 10px 20px;
-  user-select: 'none';
-  box-shadow: 'none';
-  out-line: 'none';
-  background-color: ${(props) => StylesButton[props.type].backgroundColor};
-  border-color: ${(props) => StylesButton[props.type].borderColor};
-  color: ${(props) => StylesButton[props.type].color};
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-family: inherit;
+  text-align: center;
+  box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px;
+  user-select: none;
+  box-shadow: none;
+  outline: none;
+  height: ${(props) => SizesButton[props.size].height};
+  font-size: ${(props) => SizesButton[props.size].fontSize};
+  line-height: ${(props) => SizesButton[props.size].lineHeight};
+  padding-right: ${(props) => SizesButton[props.size].paddingX};
+  padding-left: ${(props) => SizesButton[props.size].paddingX};
+  background-color: ${(props) => StylesButton[props.variant].backgroundColor};
+  border-color: ${(props) => StylesButton[props.variant].borderColor};
+  color: ${(props) => StylesButton[props.variant].color};
 `;
 
-const Button = ({ type, children }) => {
+const Button = ({ variant, size, text }) => {
   return (
-    <StyledButton className="btn" type={type}>
-      {children}
+    <StyledButton className="btn" variant={variant} size={size}>
+      {text}
     </StyledButton>
   );
 };
 
 StyledButton.defaultProps = {
-  type: 'primary',
-  // size: 'md',
-  // text: 'Button',
+  variant: 'primary',
+  size: 'md',
+  text: 'Button',
 };
 
 Button.propTypes = {
-  type: PropTypes.oneOf(['primary', 'secondary', 'tertiary']).isRequired,
-  // size: PropTypes.string.isRequired,
+  variant: PropTypes.oneOf(['primary', 'secondary', 'tertiary']).isRequired,
+  size: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
   // text: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
 };
 
 export default Button;

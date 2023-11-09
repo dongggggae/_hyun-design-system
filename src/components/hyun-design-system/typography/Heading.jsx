@@ -2,48 +2,54 @@ import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 
 const StylesHeading = {
-  h1: {
+  1: {
     fontSize: '56px',
     lineHeight: '72px',
   },
-  h2: {
+  2: {
     fontSize: '48px',
     lineHeight: '64px',
   },
-  h3: {
+  3: {
     fontSize: '40px',
     lineHeight: '56px',
   },
-  h4: {
+  4: {
     fontSize: '32px',
     lineHeight: '48px',
   },
-  h5: {
+  5: {
     fontSize: '24px',
     lineHeight: '40px',
   },
-  h6: {
+  6: {
     fontSize: '20px',
     lineHeight: '32px',
   },
 };
 
 const StyledHeading = styled.h1`
-  font-size: ${(props) => StylesHeading[props.as].fontSize};
-  line-height: ${(props) => StylesHeading[props.as].lineHeight};
+  font-size: ${(props) => StylesHeading[props.size].fontSize};
+  line-height: ${(props) => StylesHeading[props.size].lineHeight};
 `;
 
-const Heading = ({ as, text }) => {
-  return <StyledHeading as={as}>{text}</StyledHeading>;
+const Heading = ({ as, size, text }) => {
+  return (
+    <StyledHeading as={as} size={size}>
+      {text}
+    </StyledHeading>
+  );
 };
 
 StyledHeading.defaultProps = {
-  as: 'h4',
+  as: 'h1',
+  size: 1,
   text: null,
 };
 
 Heading.propTypes = {
-  as: PropTypes.string.isRequired,
+  as: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']).isRequired,
+  size: PropTypes.oneOf([1, 2, 3, 4, 5, 6]).isRequired,
   text: PropTypes.string.isRequired,
 };
 
