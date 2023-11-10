@@ -84,10 +84,9 @@ StyledButton.defaultProps = {
 };
 
 Button.propTypes = {
-  variant: PropTypes.oneOf(['primary', 'secondary', 'tertiary']).isRequired,
-  size: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
-  // text: PropTypes.string.isRequired,
+  variant: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
+  size: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']),
+  text: PropTypes.string,
 };
 
 export default Button;

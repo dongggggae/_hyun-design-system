@@ -44,7 +44,7 @@ const Heading = ({ as, size, text }) => {
 StyledHeading.defaultProps = {
   as: 'h1',
   size: 1,
-  text: null,
+  text: '',
 };
 
 Heading.propTypes = {

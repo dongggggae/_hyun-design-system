@@ -38,7 +38,7 @@ StyledText.defaultProps = {
 };
 
 Text.propTypes = {
-  size: PropTypes.oneOf(['lg', 'md', 'sm', 'xs', 'xxs']).isRequired,
+  size: PropTypes.oneOf(['lg', 'md', 'sm', 'xs', 'xxs']),
   children: PropTypes.node.isRequired,
 };
 
