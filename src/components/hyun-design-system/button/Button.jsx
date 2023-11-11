@@ -59,6 +59,7 @@ const StyledButton = styled.button`
   user-select: none;
   box-shadow: none;
   outline: none;
+  cursor: pointer;
   height: ${(props) => SizesButton[props.size].height};
   font-size: ${(props) => SizesButton[props.size].fontSize};
   line-height: ${(props) => SizesButton[props.size].lineHeight};

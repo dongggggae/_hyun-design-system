@@ -5,7 +5,7 @@ const StyledMain = styled.main`
   position: relative;
   margin-top: 70px;
   margin-left: 250px;
-  padding: 20px 0 0 15px;
+  padding: 20px 0 0 30px;
 `;
 
 const Main = ({ children }) => {

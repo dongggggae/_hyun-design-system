@@ -1,7 +1,7 @@
 import Header from '../components/layout/Header';
 import MySidebar from '../components/layout/MySidebar';
 import Main from '../components/layout/Main';
-import Typography from '../pages/components/Typography';
+import Btn from '../pages/components/Btn';
 
 const Layout = () => {
   const PREFIX = 'Wrap';
@@ -10,7 +10,7 @@ const Layout = () => {
       <Header></Header>
       <MySidebar></MySidebar>
       <Main>
-        <Typography></Typography>
+        <Btn></Btn>
       </Main>
     </div>
   );

@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 import CodeContainer from '../../components/docs/CodeContainer';
 import Heading from '../../components/hyun-design-system/typography/Heading';
-// import Text from '../../components/hyun-design-system/typography/Text';
 
 const StyledPreview = styled.div`
   display: flex;
