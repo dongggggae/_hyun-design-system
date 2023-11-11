@@ -31,6 +31,7 @@ const StylesHeading = {
 const StyledHeading = styled.h1`
   font-size: ${(props) => StylesHeading[props.size].fontSize};
   line-height: ${(props) => StylesHeading[props.size].lineHeight};
+  color: #111111;
 `;
 
 const Heading = ({ as, size, text }) => {

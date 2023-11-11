@@ -5,8 +5,8 @@ const StyledHeader = styled.header`
   top: 0;
   width: 100%;
   height: 70px;
-  background-color: #1e1e23;
-  border-bottom: 1px solid #fff;
+  background-color: #ffffff;
+  border-bottom: 2px solid #091e4224;
   z-index: 99;
 `;
 

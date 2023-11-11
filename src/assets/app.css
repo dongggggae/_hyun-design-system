@@ -1,7 +1,7 @@
 /* app.css */
 .sidebar {
   position: fixed !important;
-  border: none !important;
+  border-color: #091e4224 !important;
   top: 70px;
   bottom: 0;
   left: 0;

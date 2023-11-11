@@ -8,7 +8,7 @@ const MySidebar = () => {
     <Sidebar
       className={PREFIX}
       rootStyles={{
-        [`.${sidebarClasses.container}`]: { padding: '16px 5px 32px 5px', backgroundColor: '#1e1e23' },
+        [`.${sidebarClasses.container}`]: { padding: '16px 5px 32px 5px', backgroundColor: '#FFFFFF' },
       }}
     >
       <Menu>

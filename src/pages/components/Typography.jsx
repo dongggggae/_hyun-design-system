@@ -16,7 +16,7 @@ const StyledPreview = styled.div`
 
 const Desc = styled.p`
   margin-bottom: 16px;
-  color: #eee;
+  color: #555555;
   font-sizze: 14px;
   line-height: 24px;
 `;

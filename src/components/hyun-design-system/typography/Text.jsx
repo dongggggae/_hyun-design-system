@@ -27,6 +27,7 @@ const StylesText = {
 const StyledText = styled.p`
   font-size: ${(props) => StylesText[props.size].fontSize};
   line-height: ${(props) => StylesText[props.size].lineHeight};
+  color: #555555;
 `;
 
 const Text = ({ size, children }) => {

@@ -8,8 +8,8 @@ const StyledPreview = styled.div`
   gap: 5px;
   flex-wrap: wrap;
   padding: 32px;
-  background-color: #fafafa;
-  border: 1px solid #e8e8e8;
+  background-color: #fff;
+  border: 1px solid #091E4224;
   border-radius: 5px;
   color: #333;
 `;
@@ -20,7 +20,7 @@ const ComponentContent = styled.div`
 
 const Desc = styled.p`
   margin-bottom: 16px;
-  color: #eee;
+  color: #555555;
   font-sizze: 14px;
   line-height: 24px;
 `;
