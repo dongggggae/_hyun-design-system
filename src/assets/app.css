@@ -1,0 +1,9 @@
+/* app.css */
+.sidebar {
+  position: fixed !important;
+  border: none !important;
+  top: 70px;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+}
