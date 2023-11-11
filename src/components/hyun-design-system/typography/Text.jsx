@@ -30,7 +30,13 @@ const StyledText = styled.p`
 `;
 
 const Text = ({ size, children }) => {
-  return <StyledText size={size}>{children}</StyledText>;
+  const PREFIX = 'text';
+
+  return (
+    <StyledText className={PREFIX} size={size}>
+      {children}
+    </StyledText>
+  );
 };
 
 StyledText.defaultProps = {

@@ -70,8 +70,11 @@ const StyledButton = styled.button`
 `;
 
 const Button = ({ variant, size, text }) => {
+  const PREFIX = 'btn';
+  const classNames = [PREFIX, `${PREFIX}-${variant}`].join(' ');
+
   return (
-    <StyledButton className="btn" variant={variant} size={size}>
+    <StyledButton className={classNames} variant={variant} size={size}>
       {text}
     </StyledButton>
   );

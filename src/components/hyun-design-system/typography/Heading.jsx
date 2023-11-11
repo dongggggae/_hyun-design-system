@@ -34,8 +34,10 @@ const StyledHeading = styled.h1`
 `;
 
 const Heading = ({ as, size, text }) => {
+  const PREFIX = 'heading';
+
   return (
-    <StyledHeading as={as} size={size}>
+    <StyledHeading className={PREFIX} as={as} size={size}>
       {text}
     </StyledHeading>
   );
