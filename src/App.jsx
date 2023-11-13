@@ -1,13 +1,18 @@
+// App.js
+import { Routes, Route } from 'react-router-dom';
 import Layout from './layouts/Layout';
+import Btn from './pages/components/Btn';
+import Typography from './pages/components/Typography';
 
-import './assets/app.css';
-
-const App = () => {
+function App() {
   return (
-    <div className="App">
-      <Layout></Layout>
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route path="components/btn" element={<Btn />} />
+        <Route path="components/typography" element={<Typography />} />
+      </Route>
+    </Routes>
   );
-};
+}
 
 export default App;

@@ -1,16 +1,16 @@
+import { Outlet } from 'react-router-dom';
 import Header from '../components/layout/Header';
-import MySidebar from '../components/layout/MySidebar';
+import Sidebar from '../components/layout/MySidebar';
 import Main from '../components/layout/Main';
-import Btn from '../pages/components/Btn';
 
 const Layout = () => {
   const PREFIX = 'Wrap';
   return (
     <div className={PREFIX}>
       <Header></Header>
-      <MySidebar></MySidebar>
+      <Sidebar></Sidebar>
       <Main>
-        <Btn></Btn>
+        <Outlet />
       </Main>
     </div>
   );

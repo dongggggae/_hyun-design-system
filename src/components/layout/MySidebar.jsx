@@ -1,8 +1,9 @@
+import { Link } from 'react-router-dom';
 import { Sidebar, Menu, MenuItem, SubMenu, sidebarClasses } from 'react-pro-sidebar';
 import '../../assets/app.css';
 
 const MySidebar = () => {
-  const PREFIX = 'sidebar';
+  const PREFIX = 'Sidebar';
   return (
     <Sidebar
       className={PREFIX}
@@ -11,9 +12,13 @@ const MySidebar = () => {
       }}
     >
       <Menu>
-        <SubMenu label="Charts">
-          <MenuItem> Pie charts </MenuItem>
-          <MenuItem> Line charts </MenuItem>
+        <SubMenu label="Components">
+          <MenuItem>
+            <Link to="/components/btn">Button</Link>
+          </MenuItem>
+          <MenuItem>
+            <Link to="/components/typography">Typography</Link>
+          </MenuItem>
         </SubMenu>
         <MenuItem> Documentation </MenuItem>
         <MenuItem> Calendar </MenuItem>
