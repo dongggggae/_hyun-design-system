@@ -14,10 +14,13 @@ const MySidebar = () => {
       <Menu>
         <SubMenu label="Components">
           <MenuItem>
-            <Link to="/components/btn">Button</Link>
+            <Link to="/components/Btn">Button</Link>
           </MenuItem>
           <MenuItem>
-            <Link to="/components/typography">Typography</Link>
+            <Link to="/components/Typography">Typography</Link>
+          </MenuItem>
+          <MenuItem>
+            <Link to="/components/Colors">Color</Link>
           </MenuItem>
         </SubMenu>
         <MenuItem> Documentation </MenuItem>

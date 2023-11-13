@@ -56,8 +56,8 @@ const colorScales = {
 const colors = {
   ...colorScales,
 
+  comon: colorScales.gray800,
   muted: colorScales.gray400,
-  default: colorScales.gray800,
   selected: colorScales.default,
   surface: colorScales.white,
   overlay: 'rgba(67, 90, 111, 0.7)',
