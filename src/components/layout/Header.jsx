@@ -11,8 +11,9 @@ const StyledHeader = styled.header`
 `;
 
 const Header = () => {
+  const PREFIX = 'Header';
   return (
-    <StyledHeader>
+    <StyledHeader className={PREFIX}>
       <div className="HeaderInner">HEADER</div>
     </StyledHeader>
   );

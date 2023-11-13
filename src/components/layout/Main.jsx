@@ -9,7 +9,8 @@ const StyledMain = styled.main`
 `;
 
 const Main = ({ children }) => {
-  return <StyledMain>{children}</StyledMain>;
+  const PREFIX = 'Main';
+  return <StyledMain className={PREFIX}>{children}</StyledMain>;
 };
 
 Main.propTypes = {
