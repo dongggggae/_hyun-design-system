@@ -25,48 +25,6 @@ const ComponentContent = styled.div`
   margin-bottom: 50px;
 `;
 
-const HeadingCode = {
-  overview: [`<!-- Default Heading -->`, `<Heading as="h1" text="Default Title" />`, ``, `<!-- H3 Heading -->`, `<Heading as="h3" text="H3 Title" />`].join('\n'),
-  level: [
-    `<!-- H1 Heading -->`,
-    `<Heading as="h1" text="H1 Title" />`,
-    ``,
-    `<!-- H2 Heading -->`,
-    `<Heading as="h2" text="H2 Title" />`,
-    ``,
-    `<!-- H3 Heading -->`,
-    `<Heading as="h3" text="H3 Title" />`,
-    ``,
-    `<!-- H4 Heading -->`,
-    `<Heading as="h4" text="H4 Title" />`,
-    ``,
-    `<!-- H5 Heading -->`,
-    `<Heading as="h5" text="H5 Title" />`,
-    ``,
-    `<!-- H6 Heading -->`,
-    `<Heading as="h6" text="H6 Title" />`,
-  ].join('\n'),
-  size: [
-    `<!-- H1 Heading -->`,
-    `<Heading as="h1" size={1} text="H1 Size" />`,
-    ``,
-    `<!-- H2 Heading -->`,
-    `<Heading as="h1" size={2} text="H2 Size" />`,
-    ``,
-    `<!-- H3 Heading -->`,
-    `<Heading as="h1" size={3} text="H3 Size" />`,
-    ``,
-    `<!-- H4 Heading -->`,
-    `<Heading as="h1" size={4} text="H4 Size" />`,
-    ``,
-    `<!-- H5 Heading -->`,
-    `<Heading as="h1" size={5} text="H5 Size" />`,
-    ``,
-    `<!-- H6 Heading -->`,
-    `<Heading as="h1" size={6} text="H6 Size" />`,
-  ].join('\n'),
-};
-
 const TypoGraphy = () => {
   return (
     <div className="TypoGraphy">
@@ -114,4 +72,47 @@ const TypoGraphy = () => {
     </div>
   );
 };
+
+const HeadingCode = {
+  overview: [`<!-- Default Heading -->`, `<Heading as="h1" text="Default Title" />`, ``, `<!-- H3 Heading -->`, `<Heading as="h3" text="H3 Title" />`].join('\n'),
+  level: [
+    `<!-- H1 Heading -->`,
+    `<Heading as="h1" text="H1 Title" />`,
+    ``,
+    `<!-- H2 Heading -->`,
+    `<Heading as="h2" text="H2 Title" />`,
+    ``,
+    `<!-- H3 Heading -->`,
+    `<Heading as="h3" text="H3 Title" />`,
+    ``,
+    `<!-- H4 Heading -->`,
+    `<Heading as="h4" text="H4 Title" />`,
+    ``,
+    `<!-- H5 Heading -->`,
+    `<Heading as="h5" text="H5 Title" />`,
+    ``,
+    `<!-- H6 Heading -->`,
+    `<Heading as="h6" text="H6 Title" />`,
+  ].join('\n'),
+  size: [
+    `<!-- H1 Heading -->`,
+    `<Heading as="h1" size={1} text="H1 Size" />`,
+    ``,
+    `<!-- H2 Heading -->`,
+    `<Heading as="h1" size={2} text="H2 Size" />`,
+    ``,
+    `<!-- H3 Heading -->`,
+    `<Heading as="h1" size={3} text="H3 Size" />`,
+    ``,
+    `<!-- H4 Heading -->`,
+    `<Heading as="h1" size={4} text="H4 Size" />`,
+    ``,
+    `<!-- H5 Heading -->`,
+    `<Heading as="h1" size={5} text="H5 Size" />`,
+    ``,
+    `<!-- H6 Heading -->`,
+    `<Heading as="h1" size={6} text="H6 Size" />`,
+  ].join('\n'),
+};
+
 export default TypoGraphy;

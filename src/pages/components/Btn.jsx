@@ -9,7 +9,7 @@ const StyledPreview = styled.div`
   flex-wrap: wrap;
   padding: 32px;
   background-color: #fff;
-  border: 1px solid #091E4224;
+  border: 1px solid #091e4224;
   border-radius: 5px;
   color: #333;
 `;
@@ -24,42 +24,6 @@ const Desc = styled.p`
   font-sizze: 14px;
   line-height: 24px;
 `;
-
-const ButtonCode = {
-  overview: [
-    `<!-- Primary Button> -->`,
-    `<Button text="Primary Button" />`,
-    ``,
-    `<!-- Secondary Button> -->`,
-    `<Button variant="secondary" text="Secondary Button" />`,
-    ``,
-    `<!-- Tertiary Button> -->`,
-    `<Button variant="tertiary" text="Tertiary Button" />`,
-  ].join(`\n`),
-  variant: [
-    `<!-- Primary Button> -->`,
-    `<Button text="Primary Button" />`,
-    ``,
-    `<!-- Secondary Button> -->`,
-    `<Button variant="secondary" text="Secondary Button" />`,
-    ``,
-    `<!-- Tertiary Button> -->`,
-    `<Button variant="tertiary" text="Tertiary Button" />`,
-  ].join(`\n`),
-  size: [
-    `<!-- Large Button> -->`,
-    `<Button size="lg" text="Large Button" />`,
-    ``,
-    `<!-- Medium Button> -->`,
-    `<Button text="Medium Button" />`,
-    ``,
-    `<!-- Small Button> -->`,
-    `<Button size="sm" text="Small Button" />`,
-    ``,
-    `<!-- XSmall Button> -->`,
-    `<Button size="xs" text="XSmall Button" />`,
-  ].join(`\n`),
-};
 
 const Btn = () => {
   return (
@@ -104,4 +68,41 @@ const Btn = () => {
     </div>
   );
 };
+
+const ButtonCode = {
+  overview: [
+    `<!-- Primary Button> -->`,
+    `<Button text="Primary Button" />`,
+    ``,
+    `<!-- Secondary Button> -->`,
+    `<Button variant="secondary" text="Secondary Button" />`,
+    ``,
+    `<!-- Tertiary Button> -->`,
+    `<Button variant="tertiary" text="Tertiary Button" />`,
+  ].join(`\n`),
+  variant: [
+    `<!-- Primary Button> -->`,
+    `<Button text="Primary Button" />`,
+    ``,
+    `<!-- Secondary Button> -->`,
+    `<Button variant="secondary" text="Secondary Button" />`,
+    ``,
+    `<!-- Tertiary Button> -->`,
+    `<Button variant="tertiary" text="Tertiary Button" />`,
+  ].join(`\n`),
+  size: [
+    `<!-- Large Button> -->`,
+    `<Button size="lg" text="Large Button" />`,
+    ``,
+    `<!-- Medium Button> -->`,
+    `<Button text="Medium Button" />`,
+    ``,
+    `<!-- Small Button> -->`,
+    `<Button size="sm" text="Small Button" />`,
+    ``,
+    `<!-- XSmall Button> -->`,
+    `<Button size="xs" text="XSmall Button" />`,
+  ].join(`\n`),
+};
+
 export default Btn;
