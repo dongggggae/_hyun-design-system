@@ -45,6 +45,7 @@ const colorScales = {
   redTint: '#ffe4e4',
   orangeTint: '#ffead2',
   yellowTint: '#f8f6c5',
+  tintColor: '#172b4d',
 
   // varidate
   default: '#2952CC',
