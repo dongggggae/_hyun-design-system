@@ -21,7 +21,7 @@ const ComponentContent = styled.div`
 const Desc = styled.p`
   margin-bottom: 16px;
   color: #555555;
-  font-sizze: 14px;
+  font-size: 14px;
   line-height: 24px;
 `;
 
