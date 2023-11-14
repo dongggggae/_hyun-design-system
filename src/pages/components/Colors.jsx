@@ -1,4 +1,4 @@
-import colors from '../../themes/tokens/colors';
+import colors from '../../themes/default/tokens/colors';
 import styled from '@emotion/styled';
 
 const ColorContainer = styled.div`
