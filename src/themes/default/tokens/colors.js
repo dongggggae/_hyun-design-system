@@ -57,7 +57,7 @@ const colorScales = {
 const colors = {
   ...colorScales,
 
-  comon: colorScales.gray800,
+  common: colorScales.gray800,
   muted: colorScales.gray400,
   selected: colorScales.default,
   surface: colorScales.white,

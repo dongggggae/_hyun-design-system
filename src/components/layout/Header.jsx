@@ -1,12 +1,14 @@
 import styled from '@emotion/styled';
+import { defaultTheme } from '../../themes';
 
 const StyledHeader = styled.header`
   position: fixed;
   top: 0;
-  width: 100%;
+  width: calc(100% - 250px);
   height: 70px;
+  margin-left: 250px;
   background-color: #ffffff;
-  border-bottom: 2px solid #091e4224;
+  border-bottom: 1px solid ${defaultTheme.colors.purpleTint};
   z-index: 99;
 `;
 
