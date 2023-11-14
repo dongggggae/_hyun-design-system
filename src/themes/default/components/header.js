@@ -6,8 +6,11 @@ const baseStyle = {
   width: `calc(100% - ${tokens.variables.asideWidth})`,
   height: '70px',
   marginLeft: `${tokens.variables.asideWidth}`,
-  backgroundColor: `${tokens.colors.white}`,
-  borderBottom: `1px solid ${tokens.colors.purpleTint}`,
+  backgroundColor: 'hsla(0,0%,100%,.95)',
+  borderBottom: `2px solid ${tokens.colors.divider}`,
+  color: `${tokens.colors.primaryText}`,
+  fontSize: '20px',
+  fontWeight: 'bold',
   zIndex: `${tokens.zindex.positioner}`,
 };
 

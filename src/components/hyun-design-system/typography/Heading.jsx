@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
+import { defaultTheme } from '../../../themes';
 
 const StylesHeading = {
   1: {
@@ -31,7 +32,7 @@ const StylesHeading = {
 const StyledHeading = styled.h1`
   font-size: ${(props) => StylesHeading[props.size].fontSize};
   line-height: ${(props) => StylesHeading[props.size].lineHeight};
-  color: #111111;
+  color: ${defaultTheme.colors.primaryText};
 `;
 
 const Heading = ({ as, size, text }) => {

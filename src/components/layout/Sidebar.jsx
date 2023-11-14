@@ -8,7 +8,9 @@ const MySidebar = () => {
     display: inline-block;
     width: 100%;
     height: 100%;
-    color: ${defaultTheme.colors.tintColor};
+    color: ${defaultTheme.colors.primaryText};
+    font-size: 20px;
+    font-weight: bold;
     text-decoration: none;
   `;
 
@@ -17,8 +19,8 @@ const MySidebar = () => {
     flex-direction: column;
     gap: 10px;
     width: 250px;
-    background-color: ${defaultTheme.colors.white};
-    border-right: 1px solid ${defaultTheme.colors.purpleTint};
+    background-color: ${defaultTheme.colors.surface};
+    border-right: 2px solid ${defaultTheme.colors.divider};
   `;
 
   const PREFIX = 'Sidebar';

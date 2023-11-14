@@ -2,16 +2,15 @@ import styled from '@emotion/styled';
 import Heading from '../../components/hyun-design-system/typography/Heading';
 import CodeContainer from '../../components/docs/CodeContainer';
 import Button from '../../components/hyun-design-system/button/Button';
+import { defaultTheme } from '../../themes';
 
 const StyledPreview = styled.div`
   display: flex;
   gap: 5px;
   flex-wrap: wrap;
   padding: 32px;
-  background-color: #fff;
-  border: 1px solid #091e4224;
+  border: 2px solid ${defaultTheme.colors.divider};
   border-radius: 5px;
-  color: #333;
 `;
 
 const ComponentContent = styled.div`
@@ -20,7 +19,7 @@ const ComponentContent = styled.div`
 
 const Desc = styled.p`
   margin-bottom: 16px;
-  color: #555555;
+  color: ${defaultTheme.colors.secondaryText};
   font-size: 14px;
   line-height: 24px;
 `;

@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import CodeContainer from '../../components/docs/CodeContainer';
 import Heading from '../../components/hyun-design-system/typography/Heading';
+import { defaultTheme } from '../../themes';
 
 const StyledPreview = styled.div`
   display: flex;
@@ -8,15 +9,13 @@ const StyledPreview = styled.div`
   gap: 5px;
   flex-wrap: wrap;
   padding: 32px;
-  background-color: #fafafa;
-  border: 1px solid #e8e8e8;
+  border: 2px solid ${defaultTheme.colors.divider};
   border-radius: 5px;
-  color: #333;
 `;
 
 const Desc = styled.p`
   margin-bottom: 16px;
-  color: #555555;
+  color: ${defaultTheme.colors.secondaryText};
   font-sizze: 14px;
   line-height: 24px;
 `;

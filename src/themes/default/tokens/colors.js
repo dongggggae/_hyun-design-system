@@ -1,66 +1,68 @@
 const colorScales = {
   // gray
   white: '#fff',
-  gray100: '#fafafa ',
-  gray200: '#f2f2f2 ',
-  gray300: '#e8e8e8 ',
-  gray400: '#dfdfdf ',
-  gray500: '#b7b7b7 ',
-  gray600: '#777 ',
-  gray700: '#555 ',
-  gray800: '#111 ',
-  black: '000',
+  gray100: '#FCFCFC ',
+  gray150: '#F5F5F5',
+  gray200: '#EFEFEF ',
+  gray250: '#E8E8E8',
+  gray300: '#DFDFDF',
+  gray350: '#C8C8C8',
+  gray400: '#B7B7B7',
+  gray500: '#949494',
+  gray600: '#777777',
+  gray650: '#616161',
+  gray700: '#555555',
+  gray750: '#3F3F3F',
+  gray800: '#2A2A2A',
+  gray850: '#1F1F1F',
+  gray900: '#111111',
+  black: '#000000',
+
+  //green
+  green500: '#5BDD6A',
+  green600: '#06C755',
+  green700: '#3D9E43',
+  green800: '#1E6E1E',
+
+  //red
+  red500: '#FF697A',
+  red600: '#FF334B',
+  red700: '#E5172F',
+  red800: '#C9162B',
+
+  //amber
+  amber500: '#FFD86B',
+  amber600: '#FFC53D',
+  amber700: '#FCB321',
+  amber800: '#FA9E1E',
 
   // blue
-  blue50: '#eaf5ff ',
-  blue100: '#c2e3ff ',
-  blue200: '#9ad0ff ',
-  blue300: '#5badff ',
-  blue400: '#2d89ff ',
-  blue500: '#1067ff ',
-  blue600: '#054ce2 ',
-  blue700: '#0034bf ',
-  blue800: '#002198 ',
-  blue900: '#051671 ',
+  blue400: '#96B2FF',
+  blue500: '#638DFF',
+  blue600: '#4D73FF',
+  blue700: '#2F59CC',
 
   // navy
-  navy50: '#d9e6fd',
-  navy100: '#b4cbfc',
-  navy200: '#8dacf6',
-  navy300: '#6e91ec',
-  navy400: '#4169e1',
-  navy500: '#2f50c1',
-  navy600: '#1f3bb3',
-  navy700: '#142782',
-  navy800: '#0c1a6c',
-  navy900: '#1e283d',
-
-  // tint
-  grayTint: '#f7f9fb',
-  grayblueTint: '#f3f7fd',
-  greenTint: '#e6f9cb',
-  bluegreenTint: '#d7fbf6',
-  blueTint: '#e9f4ff',
-  purpleTint: '#e7e7ff',
-  redTint: '#ffe4e4',
-  orangeTint: '#ffead2',
-  yellowTint: '#f8f6c5',
-  tintColor: '#172b4d',
-
-  // varidate
-  default: '#2952CC',
-  positive: '#38D563 ',
-  caution: '#FFB747 ',
-  negative: '#FF554A',
+  navy400: '#C8CFDC',
+  navy500: '#98A0B3',
+  navy600: '#707991',
+  navy700: '#464F69',
+  navy800: '#323B54',
+  navy900: '#202A43',
 };
 
 const colors = {
   ...colorScales,
 
-  common: colorScales.gray800,
-  muted: colorScales.gray400,
-  selected: colorScales.default,
+  primaryText: colorScales.black,
+  secondaryText: colorScales.gray600,
+  tertiaryText: colorScales.gray500,
   surface: colorScales.white,
+  green: colorScales.green600,
+  red: colorScales.red600,
+  link: colorScales.blue600,
+  placeholder: colorScales.gray350,
+  divider: colorScales.gray200,
   overlay: 'rgba(67, 90, 111, 0.7)',
 };
 export default colors;
