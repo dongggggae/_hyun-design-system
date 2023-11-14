@@ -49,9 +49,9 @@ const colorScales = {
 
   // varidate
   default: '#2952CC',
-  positive: '#317159 ',
-  caution: '#FFB020 ',
-  negative: '#D14343',
+  positive: '#38D563 ',
+  caution: '#FFB747 ',
+  negative: '#FF554A',
 };
 
 const colors = {
