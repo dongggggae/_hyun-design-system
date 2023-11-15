@@ -8,9 +8,10 @@ const typography = {
   lineHights,
   fontWeigths: {
     ligth: 300,
-    noraml: 400,
-    semibold: 500,
-    bold: 600,
+    regular: 400,
+    medium: 500,
+    semibold: 600,
+    bold: 700,
   },
   letterSpacings: {
     tightest: '-0.2px',
