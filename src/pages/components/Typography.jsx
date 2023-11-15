@@ -47,7 +47,25 @@ const TypoGraphy = () => {
         </ComponentContent>
 
         <ComponentContent>
-          <Heading as="h2" size={2} text="3. Size" />
+          <Heading as="h2" size={2} text="3. Color" />
+          <Text>
+            Color 프로퍼티를 통해 헤더 컬러를 지정하며, 기본 값은 #111111 입니다 다른 컬러를 적용하고 싶은 경우에 사용합니다.
+            <br />
+            아래는 Color 프로퍼티를 통해 컬러를 적용한 예시입니다.
+          </Text>
+          <StyledPreview>
+            <Heading as="h2" size={2} text="Default Color" />
+            <Heading as="h2" size={2} color="#777" text="Secondary Color" />
+            <Heading as="h2" size={2} color="#949494" text="Tertiary Color" />
+            <Heading as="h2" size={2} color="#638DFF" text="Blue Color" />
+            <Heading as="h2" size={2} color="#06C755" text="Green Color" />
+            <Heading as="h2" size={2} color="#FF334B" text="Red Color" />
+          </StyledPreview>
+          <CodeContainer codeString={HeadingCode.color} />
+        </ComponentContent>
+
+        <ComponentContent>
+          <Heading as="h2" size={2} text="4. Size" />
           <Text>
             Size 프로퍼티를 통해 헤더 사이즈를 지정하며, 해당 태그에 다른 크기를 적용하고 싶은 경우에 사용합니다.
             <br />
@@ -88,6 +106,25 @@ const HeadingCode = {
     ``,
     `<!-- H6 Heading -->`,
     `<Heading as="h6" text="H6 Title" />`,
+  ].join('\n'),
+  color: [
+    `<!-- Heading Default Color -->`,
+    `<Heading as="h2" size={2} text="Default Color" />`,
+    ``,
+    `<!-- Heading Secondary Color -->`,
+    `<Heading as="h2" size={2} color="#777" text="Secondary Color" />`,
+    ``,
+    `<!-- Heading Tertiary Color -->`,
+    `<Heading as="h2" size={2} color="#949494" text="Tertiary Color" />`,
+    ``,
+    `<!-- Heading Blue Color -->`,
+    `<Heading as="h2" size={2} color="#638DFF" text="Blue Color" />`,
+    ``,
+    `<!-- Heading Green Color -->`,
+    `<Heading as="h2" size={2} color="#06C755" text="Green Color" />`,
+    ``,
+    `<!-- Heading Red Color -->`,
+    `<Heading as="h2" size={2} color="#FF334B" text="Red Color" />`,
   ].join('\n'),
   size: [
     `<!-- H1 Heading -->`,
