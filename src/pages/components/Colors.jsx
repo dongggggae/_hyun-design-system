@@ -24,6 +24,7 @@ const Colors = () => {
           {color}
         </StyledColorDiv>
       ))}
+      수정 수정 수정
     </ColorContainer>
   );
 };
