@@ -7,7 +7,6 @@ const StyledHeader = styled.header`
 
 const Header = () => {
   const theme = useTheme();
-
   const PREFIX = 'Header';
 
   return (

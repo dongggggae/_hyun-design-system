@@ -4,7 +4,6 @@ import fills from './fills';
 import radius from './radius';
 import shadows from './shadows';
 import state from './stats';
-import typography from './typography';
 import zindex from './zindex';
 
 const tokens = {
@@ -14,7 +13,6 @@ const tokens = {
   radius,
   shadows,
   state,
-  ...typography,
   zindex,
 };
 
