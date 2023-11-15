@@ -1,8 +1,52 @@
-# React + Vite
+# Hyun-design-system
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Contributors](https://img.shields.io/badge/contributors-1-blue.svg?style=flat)](#contributors-)
 
-Currently, two official plugins are available:
+## 프로젝트 목록
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [프로젝트 설명](#프로젝트-설명)
+- [기술 스텍](#기술-스텍)
+- [프로젝트 설치](#프로젝트-설치)
+- [프로젝트 운영](#프로젝트-운영)
+
+## 프로젝트 설명
+
+Hyun-design-system : 프로젝트에서 컴포넌트를 재사용 하기 위한 디자인 시스템
+
+## 기술 스텍
+
+Front End Team Repository :
+
+| STACKS                          | BADGE                                                                                                                                                                                                                                                                                                                                                                                                 |
+| ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Browsers                        | ![Google Chrome](https://img.shields.io/badge/Google%20Chrome-4285F4?style=flat&logo=GoogleChrome&logoColor=white)                                                                                                                                                                                                                                                                                    |
+| IDEs/Editors                    | ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=flat&logo=visual-studio-code&logoColor=white)                                                                                                                                                                                                                                                              |
+| Programe Language               | ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=flat&logo=javascript&logoColor=%23F7DF1E) ![TypeScript](https://img.shields.io/badge/typescript-%233178C6.svg?style=flat&logo=typescript&logoColor=%23FFFFFF)                                                                                                                                                               |
+| FrameWork Platforms & Libraries | ![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=flat&logo=npm&logoColor=white) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=flat&logo=node.js&logoColor=white) ![React](https://img.shields.io/badge/React-%2320232a.svg?style=flat&logo=react&logoColor=%2361DAFB) ![Emotion](https://img.shields.io/badge/emotion-%23DB7093.svg?style=flat&logo=emotion&logoColor=white) |
+
+## 프로젝트 설치
+
+> URL : https://github.com/dongggggae/hyun-design-system
+
+Install the dependencies and devDependencies and start the server.
+
+1. git clone https://github.com/dongggggae/hyun-design-system
+2. npm install
+3. npm run dev
+
+## 프로젝트 운영
+
+`package.json` - script
+
+- dev : "vite"
+- build : "vite build"
+- lint: "eslint"
+- preview: "vite preview"
+
+### Local Server :
+
+npm run dev
+
+### Development build:
+
+npm run build
