@@ -1,31 +1,29 @@
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 import { defaultTheme } from '../../themes';
+import { useTheme } from '../../theme/ThemeContext';
 import '../../assets/app.css';
 
-const MySidebar = () => {
-  const StyledLink = styled(Link)`
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    color: ${defaultTheme.colors.primaryText};
-    font-size: 20px;
-    font-weight: bold;
-    text-decoration: none;
-  `;
+const StyledSidebar = styled.aside`
+  ${(props) => props.theme.components.sidebar}
+`;
 
-  const StyledSidebar = styled.aside`
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 250px;
-    background-color: ${defaultTheme.colors.surface};
-    border-right: 2px solid ${defaultTheme.colors.divider};
-  `;
+const StyledLink = styled(Link)`
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  color: ${defaultTheme.colors.primaryText};
+  text-decoration: none;
+`;
 
+const Sidebar = () => {
+  const theme = useTheme();
   const PREFIX = 'Sidebar';
+
   return (
-    <StyledSidebar className={PREFIX}>
+    <StyledSidebar className={PREFIX} theme={theme}>
       <div className="p-40"></div>
       <nav>
         <ul>
@@ -43,4 +41,4 @@ const MySidebar = () => {
     </StyledSidebar>
   );
 };
-export default MySidebar;
+export default Sidebar;
