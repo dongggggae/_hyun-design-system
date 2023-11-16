@@ -8,14 +8,28 @@ const StyledButton = styled.button`
   ${(props) => props.theme.components.button.buttonTypes[props.type]}
 `;
 
-const Button = ({ type, size, text }) => {
+const Button = ({ type, size, text, children, reverse, onClick }) => {
   const PREFIX = 'Btn';
   const classNames = [PREFIX, `${PREFIX}-${type}`].join(' ');
   const theme = useTheme();
 
+  const handleClick = () => {
+    onClick();
+  };
+
   return (
-    <StyledButton className={classNames} type={type} size={size} theme={theme}>
-      {text}
+    <StyledButton className={classNames} type={type} size={size} theme={theme} onClick={handleClick}>
+      {reverse ? (
+        <>
+          {text}
+          {children}
+        </>
+      ) : (
+        <>
+          {children}
+          {text}
+        </>
+      )}
     </StyledButton>
   );
 };
@@ -23,12 +37,16 @@ const Button = ({ type, size, text }) => {
 Button.defaultProps = {
   type: 'solidGreen',
   size: 'md',
+  reverse: false,
 };
 
 Button.propTypes = {
   type: PropTypes.oneOf(['solidGreen', 'solidRed', 'outlineGreen', 'outlineGray']),
   size: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']),
   text: PropTypes.string,
+  children: PropTypes.node,
+  reverse: PropTypes.bool,
+  onClick: PropTypes.func,
 };
 
 export default Button;

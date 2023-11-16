@@ -3,11 +3,12 @@ import Heading from '../../components/hyun-design-system/typography/Heading';
 import Text from '../../components/hyun-design-system/typography/Text';
 import CodeContainer from '../../components/docs/CodeContainer';
 import Button from '../../components/hyun-design-system/button/Button';
+import Icon from '../../components/hyun-design-system/Icon/Icon';
 import { defaultTheme } from '../../themes';
 
 const StyledPreview = styled.div`
   display: flex;
-  gap: 5px;
+  gap: 10px;
   flex-wrap: wrap;
   align-items: center;
   padding: 32px;
@@ -62,6 +63,36 @@ const Btn = () => {
           </StyledPreview>
           <CodeContainer codeString={ButtonCode.size} />
         </ComponentContent>
+
+        <ComponentContent>
+          <Heading as="h2" size={2} text="4. 아이콘" />
+          <Text>
+            버튼 아이콘은 Icon 컴포넌트를 통해 아이콘을 지정합니다.
+            <br />
+            reverse 프로퍼티를 통해 Icon 과 Text의 위치를 변경할 수 있습니다. 기본값은 &#39;false&#39;입니다.
+          </Text>
+          <StyledPreview>
+            <Button>
+              <Icon name="plus" color="white" />
+            </Button>
+            <Button text="Left Icon Button">
+              <Icon name="plus" color="white" />
+            </Button>
+            <Button text="Right Icon Button" reverse={true}>
+              <Icon name="plus" color="white" />
+            </Button>
+          </StyledPreview>
+          <CodeContainer codeString={ButtonCode.icon} />
+        </ComponentContent>
+
+        <ComponentContent>
+          <Heading as="h2" size={2} text="5. Events" />
+          <Text>onClick 프로퍼티를 통해 클릭 이벤트를 발생시킵니다.</Text>
+          <StyledPreview>
+            <Button text="Click Button" onClick={() => alert('Click Event')} />
+          </StyledPreview>
+          <CodeContainer codeString={ButtonCode.event} />
+        </ComponentContent>
       </div>
     </div>
   );
@@ -107,6 +138,23 @@ const ButtonCode = {
     `<!-- XSmall Button> -->`,
     `<Button size="xs" text="XSmall Button" />`,
   ].join(`\n`),
+  icon: [
+    `<!-- Only Icon Button> -->`,
+    `<Button>`,
+    `<Icon name="plus" color="white" />`,
+    `</Button>`,
+    ``,
+    `<!-- Left Icon Button> -->`,
+    `<Button text="Left Icon Button">`,
+    `<Icon name="plus" color="white" />`,
+    `</Button>`,
+    ``,
+    `<!-- Right Icon Button> -->`,
+    `<Button text="Right Icon Button" reverse={true}>`,
+    `<Icon name="plus" color="white" />`,
+    `</Button>`,
+  ].join(`\n`),
+  event: [`<Button text="Click Button" onClick={() => alert('Click Event')} />`].join(`\n`),
 };
 
 export default Btn;
