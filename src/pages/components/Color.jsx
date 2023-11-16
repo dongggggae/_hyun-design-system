@@ -14,7 +14,7 @@ const StyledColorDiv = styled.p`
   background-color: ${(props) => colors[props.color]};
 `;
 
-const Color = () => {
+const ComponentPage = () => {
   const colorKeys = Object.keys(colors);
 
   return (
@@ -24,9 +24,8 @@ const Color = () => {
           {color}
         </StyledColorDiv>
       ))}
-      수정 수정 수정
     </ColorContainer>
   );
 };
 
-export default Color;
+export default ComponentPage;
