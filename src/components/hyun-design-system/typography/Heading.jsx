@@ -19,7 +19,7 @@ const Heading = ({ as, size, text, color, spacing }) => {
   );
 };
 
-StyledHeading.defaultProps = {
+Heading.defaultProps = {
   as: 'h1',
   size: 1,
   text: '',

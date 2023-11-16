@@ -20,10 +20,9 @@ const Button = ({ type, size, text }) => {
   );
 };
 
-StyledButton.defaultProps = {
+Button.defaultProps = {
   type: 'solidGreen',
   size: 'md',
-  text: 'Button',
 };
 
 Button.propTypes = {

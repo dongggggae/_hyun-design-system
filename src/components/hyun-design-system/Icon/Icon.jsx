@@ -16,6 +16,10 @@ const Icon = ({ name, size, color }) => {
   const theme = useTheme();
   const SelectedIcon = theme.components.icon.iconTypes[name];
 
+  if (!SelectedIcon) {
+    return null;
+  }
+
   return (
     <StyledIcon size={size} theme={theme} color={color}>
       <SelectedIcon className={PREFIX} />
@@ -23,8 +27,13 @@ const Icon = ({ name, size, color }) => {
   );
 };
 
+Icon.defaultProps = {
+  size: 'md',
+  color: 'black',
+};
+
 Icon.propTypes = {
-  name: PropTypes.string,
+  name: PropTypes.string.isRequired,
   size: PropTypes.oneOf(['lg', 'md', 'sm']),
   color: PropTypes.string,
 };
