@@ -9,6 +9,7 @@ const StyledPreview = styled.div`
   display: flex;
   gap: 5px;
   flex-wrap: wrap;
+  align-items: center;
   padding: 32px;
   border: 2px solid ${defaultTheme.colors.divider};
   border-radius: 5px;
@@ -26,20 +27,22 @@ const Btn = () => {
           <Heading as="h2" size={2} text="1. 개요" />
           <Text>Button 컴포넌트를 통해 버튼 요소를 생성합니다.</Text>
           <StyledPreview>
-            <Button variant="primary" text="Primary Button"></Button>
-            <Button variant="secondary" text="Secondary Button"></Button>
-            <Button variant="tertiary" text="Tertiary Button"></Button>
+            <Button type="solidGreen" text="SolidGreen Button"></Button>
+            <Button type="solidRed" text="SolidRed Button"></Button>
+            <Button type="outlineGreen" text="OutlineGreen Button"></Button>
+            <Button type="outlineGray" text="OutlineGray Button"></Button>
           </StyledPreview>
           <CodeContainer codeString={ButtonCode.overview} />
         </ComponentContent>
 
         <ComponentContent>
           <Heading as="h2" size={2} text="2. 스타일" />
-          <Text>버튼 스타일은 variant 프로퍼티를 통해 변경합니다. 기본 값은 primary 입니다.</Text>
+          <Text>버튼 스타일은 type 프로퍼티를 통해 변경합니다. 기본 값은 &#39;solidGreen&#39; 입니다.</Text>
           <StyledPreview>
-            <Button text="Primary Button" />
-            <Button variant="secondary" text="Secondary Button" />
-            <Button variant="tertiary" text="Tertiary Button" />
+            <Button type="solidGreen" text="SolidGreen Button"></Button>
+            <Button type="solidRed" text="SolidRed Button"></Button>
+            <Button type="outlineGreen" text="OutlineGreen Button"></Button>
+            <Button type="outlineGray" text="OutlineGray Button"></Button>
           </StyledPreview>
           <CodeContainer codeString={ButtonCode.variant} />
         </ComponentContent>
@@ -66,24 +69,30 @@ const Btn = () => {
 
 const ButtonCode = {
   overview: [
-    `<!-- Primary Button> -->`,
-    `<Button text="Primary Button" />`,
+    `<!-- SolidGreen Button> -->`,
+    `<Button text="SolidGreen Button" />`,
     ``,
-    `<!-- Secondary Button> -->`,
-    `<Button variant="secondary" text="Secondary Button" />`,
+    `<!-- SolidRed Button> -->`,
+    `<Button type="solidRed" text="SolidRed Button" />`,
     ``,
-    `<!-- Tertiary Button> -->`,
-    `<Button variant="tertiary" text="Tertiary Button" />`,
+    `<!-- OutlineGreen Button> -->`,
+    `<Button type="outlineGreen" text="OutlineGreen Button" />`,
+    ``,
+    `<!-- OutlineGray Button> -->`,
+    `<Button type="outlineGray" text="OutlineGray Button" />`,
   ].join(`\n`),
   variant: [
-    `<!-- Primary Button> -->`,
-    `<Button text="Primary Button" />`,
+    `<!-- SolidGreen Button> -->`,
+    `<Button text="SolidGreen Button" />`,
     ``,
-    `<!-- Secondary Button> -->`,
-    `<Button variant="secondary" text="Secondary Button" />`,
+    `<!-- SolidRed Button> -->`,
+    `<Button type="solidRed" text="SolidRed Button" />`,
     ``,
-    `<!-- Tertiary Button> -->`,
-    `<Button variant="tertiary" text="Tertiary Button" />`,
+    `<!-- OutlineGreen Button> -->`,
+    `<Button type="outlineGreen" text="OutlineGreen Button" />`,
+    ``,
+    `<!-- OutlineGray Button> -->`,
+    `<Button type="outlineGray" text="OutlineGray Button" />`,
   ].join(`\n`),
   size: [
     `<!-- Large Button> -->`,
