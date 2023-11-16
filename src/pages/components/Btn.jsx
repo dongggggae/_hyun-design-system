@@ -20,7 +20,7 @@ const ComponentContent = styled.div`
   margin-bottom: 50px;
 `;
 
-const Btn = () => {
+const ComponentPage = () => {
   return (
     <div className="Docs">
       <div className="Btn">
@@ -45,7 +45,7 @@ const Btn = () => {
             <Button type="outlineGreen" text="OutlineGreen Button"></Button>
             <Button type="outlineGray" text="OutlineGray Button"></Button>
           </StyledPreview>
-          <CodeContainer codeString={ButtonCode.variant} />
+          <CodeContainer codeString={ButtonCode.type} />
         </ComponentContent>
 
         <ComponentContent>
@@ -112,7 +112,7 @@ const ButtonCode = {
     `<!-- OutlineGray Button> -->`,
     `<Button type="outlineGray" text="OutlineGray Button" />`,
   ].join(`\n`),
-  variant: [
+  type: [
     `<!-- SolidGreen Button> -->`,
     `<Button text="SolidGreen Button" />`,
     ``,
@@ -157,4 +157,4 @@ const ButtonCode = {
   event: [`<Button text="Click Button" onClick={() => alert('Click Event')} />`].join(`\n`),
 };
 
-export default Btn;
+export default ComponentPage;

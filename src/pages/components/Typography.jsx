@@ -18,7 +18,7 @@ const ComponentContent = styled.div`
   margin-bottom: 50px;
 `;
 
-const TypoGraphy = () => {
+const ComponentPage = () => {
   return (
     <div className="Docs">
       <div className="TypoGraphy">
@@ -49,7 +49,7 @@ const TypoGraphy = () => {
         <ComponentContent>
           <Heading as="h2" size={2} text="3. Color" />
           <Text>
-            Color 프로퍼티를 통해 헤더 컬러를 지정하며, 기본 값은 #111111 입니다 다른 컬러를 적용하고 싶은 경우에 사용합니다.
+            Color 프로퍼티를 통해 헤더 컬러를 지정하며, 기본 값은 &#39;#111111&#39; 입니다 다른 컬러를 적용하고 싶은 경우에 사용합니다.
             <br />
             아래는 Color 프로퍼티를 통해 컬러를 적용한 예시입니다.
           </Text>
@@ -147,4 +147,4 @@ const HeadingCode = {
   ].join('\n'),
 };
 
-export default TypoGraphy;
+export default ComponentPage;
