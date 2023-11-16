@@ -14,7 +14,7 @@ const StyledColorDiv = styled.p`
   background-color: ${(props) => colors[props.color]};
 `;
 
-const Colors = () => {
+const Color = () => {
   const colorKeys = Object.keys(colors);
 
   return (
@@ -29,4 +29,4 @@ const Colors = () => {
   );
 };
 
-export default Colors;
+export default Color;
