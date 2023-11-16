@@ -1,7 +1,8 @@
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
-import { defaultTheme } from '../../themes';
 import { useTheme } from '../../theme/ThemeContext';
+import navData from '../../data/nav';
+
 import '../../assets/app.css';
 
 const StyledSidebar = styled.aside`
@@ -14,12 +15,13 @@ const StyledLink = styled(Link)`
   height: 100%;
   font-size: 20px;
   font-weight: bold;
-  color: ${defaultTheme.colors.primaryText};
+  color: ${(props) => props.theme.colors.link};
   text-decoration: none;
 `;
 
 const Sidebar = () => {
   const theme = useTheme();
+  console.log(theme);
   const PREFIX = 'Sidebar';
 
   return (
@@ -27,15 +29,13 @@ const Sidebar = () => {
       <div className="p-40"></div>
       <nav>
         <ul>
-          <li>
-            <StyledLink to="/components/Btn">Button</StyledLink>
-          </li>
-          <li>
-            <StyledLink to="/components/Typography">Typography</StyledLink>
-          </li>
-          <li>
-            <StyledLink to="/components/Colors">Color</StyledLink>
-          </li>
+          {navData.map((link, idx) => (
+            <li key={idx}>
+              <StyledLink to={link.to} theme={theme}>
+                {link.name}
+              </StyledLink>
+            </li>
+          ))}
         </ul>
       </nav>
     </StyledSidebar>

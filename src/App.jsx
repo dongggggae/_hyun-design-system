@@ -4,7 +4,7 @@ import { ThemeProvider } from './theme/ThemeContext';
 import Layout from './layouts/Layout';
 import Btn from './pages/components/Btn';
 import Typography from './pages/components/Typography';
-import Colors from './pages/components/Colors';
+import Color from './pages/components/Color';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route path="components/Btn" element={<Btn />} />
           <Route path="components/Typography" element={<Typography />} />
-          <Route path="components/Colors" element={<Colors />} />
+          <Route path="components/Color" element={<Color />} />
         </Route>
       </Routes>
     </ThemeProvider>
