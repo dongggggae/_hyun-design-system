@@ -5,6 +5,7 @@ import Layout from './layouts/Layout';
 import Btn from './pages/components/Btn';
 import Typography from './pages/components/Typography';
 import Color from './pages/components/Color';
+import Icon from './pages/components/Icon';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="components/Btn" element={<Btn />} />
           <Route path="components/Typography" element={<Typography />} />
           <Route path="components/Color" element={<Color />} />
+          <Route path="components/Icon" element={<Icon />} />
         </Route>
       </Routes>
     </ThemeProvider>
