@@ -1,6 +1,6 @@
 const colorScales = {
   // gray
-  white: '#fff',
+  white: '#ffffff',
   gray100: '#FCFCFC ',
   gray150: '#F5F5F5',
   gray200: '#EFEFEF ',
@@ -18,12 +18,6 @@ const colorScales = {
   gray900: '#111111',
   black: '#000000',
 
-  //green
-  green500: '#5BDD6A',
-  green600: '#06C755',
-  green700: '#3D9E43',
-  green800: '#1E6E1E',
-
   //red
   red500: '#FF697A',
   red600: '#FF334B',
@@ -35,6 +29,12 @@ const colorScales = {
   amber600: '#FFC53D',
   amber700: '#FCB321',
   amber800: '#FA9E1E',
+
+  //green
+  green500: '#5BDD6A',
+  green600: '#06C755',
+  green700: '#3D9E43',
+  green800: '#1E6E1E',
 
   // blue
   blue400: '#96B2FF',

@@ -34,3 +34,8 @@
 .IconPreview .Text {
   margin-bottom: 0;
 }
+
+.Color .Text {
+  margin: 0;
+  padding: 10px 0 16px 0;
+}
