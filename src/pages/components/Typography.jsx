@@ -49,9 +49,9 @@ const ComponentPage = () => {
         <ComponentContent>
           <Heading as="h2" size={2} text="3. Color" />
           <Text>
-            Color 프로퍼티를 통해 헤더 컬러를 지정하며, 기본 값은 &#39;#111111&#39; 입니다 다른 컬러를 적용하고 싶은 경우에 사용합니다.
+            color 프로퍼티를 통해 헤더 컬러를 지정하며, 기본 값은 &#39;#111111&#39; 입니다 다른 컬러를 적용하고 싶은 경우에 사용합니다.
             <br />
-            아래는 Color 프로퍼티를 통해 컬러를 적용한 예시입니다.
+            아래는 color 프로퍼티를 통해 컬러를 적용한 예시입니다.
           </Text>
           <StyledPreview>
             <Heading as="h2" size={2} text="Default Color" />
@@ -67,7 +67,7 @@ const ComponentPage = () => {
         <ComponentContent>
           <Heading as="h2" size={2} text="4. Size" />
           <Text>
-            Size 프로퍼티를 통해 헤더 사이즈를 지정하며, 해당 태그에 다른 크기를 적용하고 싶은 경우에 사용합니다.
+            size 프로퍼티를 통해 헤더 사이즈를 지정하며, 해당 태그에 다른 크기를 적용하고 싶은 경우에 사용합니다.
             <br />
             아래는 h1 태그로 Size 프로퍼티를 통해 사이즈를 적용한 예시입니다.
           </Text>

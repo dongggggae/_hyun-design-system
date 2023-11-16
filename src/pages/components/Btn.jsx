@@ -51,9 +51,9 @@ const ComponentPage = () => {
         <ComponentContent>
           <Heading as="h2" size={2} text="3. 사이즈" />
           <Text>
-            버튼 사이즈는 size 프로퍼티를 통해 요소의 역할을 결정합니다. 기본값은 &#39;md&#39;입니다.
+            size 프로퍼티를 통해 요소의 역할을 결정합니다. 기본값은 &#39;md&#39; 입니다.
             <br />
-            size 프로퍼티 속성은 &#39;lg&#39;, &#39;md&#39;, &#39;sm&#39; &#39;xs&#39;가 있습니다.
+            size 프로퍼티 속성은 &#39;lg&#39;, &#39;md&#39;, &#39;sm&#39; &#39;xs&#39; 가 있습니다.
           </Text>
           <StyledPreview>
             <Button size="lg" text="Large Button" />
@@ -67,7 +67,7 @@ const ComponentPage = () => {
         <ComponentContent>
           <Heading as="h2" size={2} text="4. 아이콘" />
           <Text>
-            버튼 아이콘은 Icon 컴포넌트를 통해 아이콘을 지정합니다.
+            버튼 아이콘은 Icon 컴포넌트를 통해 아이콘을 생성합니다.
             <br />
             reverse 프로퍼티를 통해 Icon 과 Text의 위치를 변경할 수 있습니다. 기본값은 &#39;false&#39;입니다.
           </Text>

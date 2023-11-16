@@ -57,9 +57,9 @@ const ComponentPage = () => {
         <ComponentContent>
           <Heading as="h2" size={2} text="2. Color" />
           <Text>
-            Color 프로퍼티를 통해 아이콘 컬러를 지정하며, 기본 값은 &#39;#000000&#39; 입니다 다른 컬러를 적용하고 싶은 경우에 사용합니다.
+            color 프로퍼티를 통해 아이콘 컬러를 지정하며, 기본 값은 &#39;#000000&#39; 입니다 다른 컬러를 적용하고 싶은 경우에 사용합니다.
             <br />
-            아래는 Color 프로퍼티를 통해 컬러를 적용한 예시입니다.
+            아래는 color 프로퍼티를 통해 컬러를 적용한 예시입니다.
           </Text>
           <StyledPreview>
             <Icon name="close" size="lg" />
@@ -73,7 +73,7 @@ const ComponentPage = () => {
         <ComponentContent>
           <Heading as="h2" size={2} text="3. Size" />
           <Text>
-            아이콘 사이즈는 size 프로퍼티를 통해 요소의 역할을 결정합니다. 기본값은 &#39;md&#39;입니다.
+            size 프로퍼티를 통해 아이콘의 사이즈를 지정하며, 기본값은 &#39;md&#39; 입니다.
             <br />
             size 프로퍼티 속성은 &#39;lg&#39;, &#39;md&#39;, &#39;sm&#39; 가 있습니다.
           </Text>
