@@ -18,7 +18,7 @@ const Text = ({ size, children, color, spacing }) => {
   );
 };
 
-StyledText.defaultProps = {
+Text.defaultProps = {
   size: 'md',
   color: 'secondaryText',
   spacing: 'normal',
