@@ -1,4 +1,4 @@
 const variables = {
-  asideWidth: '250px',
+  asideWidth: '210px',
 };
 export default variables;
