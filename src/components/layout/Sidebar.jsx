@@ -21,7 +21,6 @@ const StyledLink = styled(Link)`
 
 const Sidebar = () => {
   const theme = useTheme();
-  console.log(theme);
   const PREFIX = 'Sidebar';
 
   return (
