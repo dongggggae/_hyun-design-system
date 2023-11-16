@@ -2,10 +2,6 @@ import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { useTheme } from '../../../theme/ThemeContext';
 
-// const StyledIcon = styled(SelectedIcon)`
-//   ${(props) => props.theme.components.icon.iconSizes[props.size]}
-// `;
-
 const StyledIcon = styled.span`
   ${(props) => props.theme.components.icon.baseStyle}
 
