@@ -14,5 +14,5 @@ export const ThemeProvider = ({ children }) => {
 };
 
 ThemeProvider.propTypes = {
-  children: PropTypes.node, // Change the prop type to PropTypes.node
+  children: PropTypes.node, 
 };
