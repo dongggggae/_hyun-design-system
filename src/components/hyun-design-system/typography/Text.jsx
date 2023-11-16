@@ -1,11 +1,10 @@
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { useTheme } from '../../../theme/ThemeContext';
-import { defaultTheme } from '../../../themes';
 
 const StyledText = styled.p`
   ${(props) => props.theme.components.typography.textSizes[props.size]};
-  color: ${(props) => props.color};
+  color: ${(props) => props.theme.colors[props.color]};
 `;
 
 const Text = ({ size, children, color, spacing }) => {
@@ -21,7 +20,7 @@ const Text = ({ size, children, color, spacing }) => {
 
 StyledText.defaultProps = {
   size: 'md',
-  color: `${defaultTheme.colors.secondaryText}`,
+  color: 'secondaryText',
   spacing: 'normal',
 };
 

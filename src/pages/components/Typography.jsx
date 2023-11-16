@@ -55,11 +55,11 @@ const TypoGraphy = () => {
           </Text>
           <StyledPreview>
             <Heading as="h2" size={2} text="Default Color" />
-            <Heading as="h2" size={2} color="#777" text="Secondary Color" />
-            <Heading as="h2" size={2} color="#949494" text="Tertiary Color" />
-            <Heading as="h2" size={2} color="#638DFF" text="Blue Color" />
-            <Heading as="h2" size={2} color="#06C755" text="Green Color" />
-            <Heading as="h2" size={2} color="#FF334B" text="Red Color" />
+            <Heading as="h2" size={2} color="secondaryText" text="Secondary Color" />
+            <Heading as="h2" size={2} color="tertiaryText" text="Tertiary Color" />
+            <Heading as="h2" size={2} color="blue500" text="Blue Color" />
+            <Heading as="h2" size={2} color="green600" text="Green Color" />
+            <Heading as="h2" size={2} color="red600" text="Red Color" />
           </StyledPreview>
           <CodeContainer codeString={HeadingCode.color} />
         </ComponentContent>
@@ -112,19 +112,19 @@ const HeadingCode = {
     `<Heading as="h2" size={2} text="Default Color" />`,
     ``,
     `<!-- Heading Secondary Color -->`,
-    `<Heading as="h2" size={2} color="#777" text="Secondary Color" />`,
+    `<Heading as="h2" size={2} color="secondaryText" text="Secondary Color" />`,
     ``,
     `<!-- Heading Tertiary Color -->`,
-    `<Heading as="h2" size={2} color="#949494" text="Tertiary Color" />`,
+    `<Heading as="h2" size={2} color="tertiaryText" text="Tertiary Color" />`,
     ``,
     `<!-- Heading Blue Color -->`,
-    `<Heading as="h2" size={2} color="#638DFF" text="Blue Color" />`,
+    `<Heading as="h2" size={2} color="blue500" text="Blue Color" />`,
     ``,
     `<!-- Heading Green Color -->`,
-    `<Heading as="h2" size={2} color="#06C755" text="Green Color" />`,
+    `<Heading as="h2" size={2} color="green600" text="Green Color" />`,
     ``,
     `<!-- Heading Red Color -->`,
-    `<Heading as="h2" size={2} color="#FF334B" text="Red Color" />`,
+    `<Heading as="h2" size={2} color="red600" text="Red Color" />`,
   ].join('\n'),
   size: [
     `<!-- H1 Heading -->`,
