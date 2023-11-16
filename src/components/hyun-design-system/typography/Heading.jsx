@@ -1,11 +1,10 @@
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { useTheme } from '../../../theme/ThemeContext';
-import { defaultTheme } from '../../../themes';
 
 const StyledHeading = styled.h1`
   ${(props) => props.theme.components.typography.headingSizes[props.size]};
-  color: ${(props) => props.color};
+  color: ${(props) => props.theme.colors[props.color]};
   letter-spacing: ${(props) => props.theme.components.typography.fontSpacing[props.spacing]};
 `;
 
@@ -24,7 +23,7 @@ StyledHeading.defaultProps = {
   as: 'h1',
   size: 1,
   text: '',
-  color: `${defaultTheme.colors.primaryText}`,
+  color: 'primaryText',
   spacing: 'normal',
 };
 
