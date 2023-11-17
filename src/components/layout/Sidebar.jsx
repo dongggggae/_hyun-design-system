@@ -2,7 +2,6 @@ import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 import { useTheme } from '../../theme/ThemeContext';
 import navData from '../../data/nav';
-import '../../assets/docs/app.css';
 
 const StyledSidebar = styled.aside`
   ${(props) => props.theme.components.sidebar}
