@@ -37,7 +37,6 @@ const ComponentContent = styled.div`
 const ComponentPage = () => {
   const theme = useTheme();
   const iconMap = theme.components.icon.iconTypes;
-  console.log(iconMap);
 
   return (
     <div className="Docs">

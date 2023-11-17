@@ -25,13 +25,6 @@ const ColorBox = styled.div`
   background-color: ${(props) => colors[props.color]};
 `;
 
-const ColorCode = styled.p`
-  position: absolute;
-  top: 0;
-  left: 15px;
-  line-height: 40px;
-`;
-
 const ComponentPage = () => {
   const colorKeys = Object.keys(colors);
 
@@ -45,7 +38,6 @@ const ComponentPage = () => {
             {colorKeys.slice(0, 17).map((color, index) => (
               <ColorUnit key={index}>
                 <ColorBox color={color}></ColorBox>
-                <ColorCode>{colors[color]}</ColorCode>
                 <Text>{color}</Text>
               </ColorUnit>
             ))}
@@ -59,7 +51,6 @@ const ComponentPage = () => {
             {colorKeys.slice(17, 25).map((color, index) => (
               <ColorUnit key={index}>
                 <ColorBox color={color}></ColorBox>
-                <ColorCode>{colors[color]}</ColorCode>
                 <Text>{color}</Text>
               </ColorUnit>
             ))}
@@ -70,10 +61,9 @@ const ComponentPage = () => {
           <Heading as="h2" size={2} text="3. Green & Blue & Navy" />
           <Text>다음은 Green & Blue & Navy Scale을 나타냅니다.</Text>
           <ColorWrap>
-            {colorKeys.slice(26, 39).map((color, index) => (
+            {colorKeys.slice(25, 39).map((color, index) => (
               <ColorUnit key={index}>
                 <ColorBox color={color}></ColorBox>
-                <ColorCode>{colors[color]}</ColorCode>
                 <Text>{color}</Text>
               </ColorUnit>
             ))}
