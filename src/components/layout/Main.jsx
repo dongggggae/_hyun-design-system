@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const StyledMain = styled.main`
   position: relative;
   margin-top: 70px;
-  margin-left: 250px;
+  margin-left: 210px;
   padding: 20px 10px 0 30px;
 `;
 
