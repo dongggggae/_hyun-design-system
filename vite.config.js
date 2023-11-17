@@ -7,4 +7,7 @@ export default defineConfig({
   server: {
     port: 8080,
   },
+  css: {
+    devSourcemap: true,
+  },
 });
