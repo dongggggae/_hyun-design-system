@@ -2,8 +2,7 @@ import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 import { useTheme } from '../../theme/ThemeContext';
 import navData from '../../data/nav';
-
-import '../../assets/app.css';
+import '../../assets/docs/app.css';
 
 const StyledSidebar = styled.aside`
   ${(props) => props.theme.components.sidebar}
@@ -25,7 +24,6 @@ const Sidebar = () => {
 
   return (
     <StyledSidebar className={PREFIX} theme={theme}>
-      <div className="p-40"></div>
       <nav>
         <ul>
           {navData.map((link, idx) => (
