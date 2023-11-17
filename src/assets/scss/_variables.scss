@@ -1,0 +1,123 @@
+// Variables
+
+// Colors
+$white: #ffffff;
+$gray100: #fcfcfc;
+$gray150: #f5f5f5;
+$gray200: #efefef;
+$gray250: #e8e8e8;
+$gray300: #dfdfdf;
+$gray350: #c8c8c8;
+$gray400: #b7b7b7;
+$gray500: #949494;
+$gray600: #777777;
+$gray650: #616161;
+$gray700: #555555;
+$gray750: #3f3f3f;
+$gray800: #2a2a2a;
+$gray850: #1f1f1f;
+$gray900: #111111;
+$black: #000000;
+$red500: #ff697a;
+$red600: #ff334b;
+$red700: #e5172f;
+$red800: #c9162b;
+$amber500: #ffd86b;
+$amber600: #ffc53d;
+$amber700: #fcb321;
+$amber800: #fa9e1e;
+$green500: #5bdd6a;
+$green600: #06c755;
+$green700: #3d9e43;
+$green800: #1e6e1e;
+$blue400: #96b2ff;
+$blue500: #638dff;
+$blue600: #4d73ff;
+$blue700: #2f59cc;
+$navy400: #c8cfdc;
+$navy500: #98a0b3;
+$navy600: #707991;
+$navy700: #464f69;
+$navy800: #323b54;
+$navy900: #202a43;
+
+$root-color: ();
+$root-color: map-merge(
+  (
+    'white': #{$white},
+    'gray100': #{$gray100},
+    'gray150': #{$gray150},
+    'gray200': #{$gray200},
+    'gray250': #{$gray250},
+    'gray300': #{$gray300},
+    'gray350': #{$gray350},
+    'gray400': #{$gray400},
+    'gray500': #{$gray500},
+    'gray600': #{$gray600},
+    'gray650': #{$gray650},
+    'gray700': #{$gray700},
+    'gray750': #{$gray750},
+    'gray800': #{$gray800},
+    'gray850': #{$gray850},
+    'gray900': #{$gray900},
+    'black': #{$black},
+    'red500': #{$red500},
+    'red600': #{$red600},
+    'red700': #{$red700},
+    'red800': #{$red800},
+    'amber500': #{$amber500},
+    'amber600': #{$amber600},
+    'amber700': #{$amber700},
+    'amber800': #{$amber800},
+    'green500': #{$green500},
+    'green600': #{$green600},
+    'green700': #{$green700},
+    'green800': #{$green800},
+    'blue400': #{$blue400},
+    'blue500': #{$blue500},
+    'blue600': #{$blue600},
+    'blue700': #{$blue700},
+    'navy400': #{$navy400},
+    'navy500': #{$navy500},
+    'navy600': #{$navy600},
+    'navy700': #{$navy700},
+    'navy800': #{$navy800},
+    'navy900': #{$navy900},
+  ),
+  $root-color
+);
+
+// PREFIX
+$prefix: hds-;
+
+// Font
+$font-face-name: AppleSDGothicNeo;
+$font-face-path: '../fonts/';
+$font-face-exts: woff;
+$font-face-files: (
+  'Light': 300 normal,
+  'Regular': 400 normal,
+  'Medium': 500 normal,
+  'SemiBold': 600 normal,
+  'Bold': 700 normal,
+);
+
+// Font System
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-size-base: 16px;
+$font-weight-base: $font-weight-regular;
+$line-height-base: 1.2;
+$font-family-system: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', Roboto, 'Noto Sans KR', 'Segoe UI', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji';
+$font-family-hds: AppleSDGothicNeo;
+$word-break-base: keep-all;
+
+// Body
+$body-bg: $white;
+$body-font-family: $font-family-hds, $font-family-system;
+$body-font-size: $font-size-base;
+$body-font-color: $black;
+$body-wodr-break: $word-break-base;

@@ -1,0 +1,5 @@
+// Fonts
+
+@each $file, $value in $font-face-files {
+  @include font-face($font-face-name, $font-face-path + $file, $value, $font-face-exts);
+}
