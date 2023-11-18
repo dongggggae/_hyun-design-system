@@ -121,3 +121,18 @@ $body-font-family: $font-family-hds, $font-family-system;
 $body-font-size: $font-size-base;
 $body-font-color: $black;
 $body-wodr-break: $word-break-base;
+
+// Layout
+$layout-occupy-start-top: 70px;
+$layout-occupy-start-left: 210px;
+$layout-border-width: 2px;
+$layout-border-wtyle: solid;
+$layout-border-color: $gray200;
+
+// Zindex
+$zindex-foucsed: 2;
+$zindex-stack: 5;
+$zindex-positioner: 10;
+$zindex-layout: 20;
+$zindex-overlay: 90;
+$zindex-toaster: 99;

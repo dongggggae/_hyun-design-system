@@ -1,11 +1,7 @@
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
-import { useTheme } from '../../theme/ThemeContext';
 import navData from '../../data/nav';
-
-const StyledSidebar = styled.aside`
-  ${(props) => props.theme.components.sidebar}
-`;
+import { useTheme } from '../../theme/ThemeContext';
 
 const StyledLink = styled(Link)`
   display: inline-block;
@@ -22,7 +18,7 @@ const Sidebar = () => {
   const PREFIX = 'Sidebar';
 
   return (
-    <StyledSidebar className={PREFIX} theme={theme}>
+    <aside className={PREFIX}>
       <nav>
         <ul>
           {navData.map((link, idx) => (
@@ -34,7 +30,7 @@ const Sidebar = () => {
           ))}
         </ul>
       </nav>
-    </StyledSidebar>
+    </aside>
   );
 };
 export default Sidebar;
