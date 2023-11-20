@@ -12,18 +12,18 @@
   --#{$prefix}sidebar-nav-link-font-size: 20px;
 
   position: fixed;
-  top: 0;
+  top: #{$layout-occupy-start-top};
   left: 0;
   bottom: 0;
   width: var(--#{$prefix}sidebar-width);
   background-color: var(--#{$prefix}sidebar-bg);
   border-right: var(--#{$prefix}sidebar-border-width) var(--#{$prefix}sidebar-border-style) var(--#{$prefix}sidebar-border-color);
-  z-index: $zindex-layout;
+  z-index: $zindex-layout-sidebar;
 }
 
 // Header
 .Header {
-  --#{$prefix}header-width: calc(100% - #{$layout-occupy-start-left});
+  --#{$prefix}header-width: 100%;
   --#{$prefix}header-height: 70px;
   --#{$prefix}header-bg: hsla(0, 0%, 100%, 0.9);
   --#{$prefix}header-border-width: 2px;
@@ -35,11 +35,10 @@
   top: 0;
   width: var(--#{$prefix}header-width);
   height: var(--#{$prefix}header-height);
-  margin-left: $layout-occupy-start-left;
   background-color: var(--#{$prefix}header-bg);
   border-bottom: var(--#{$prefix}header-border-width) var(--#{$prefix}header-border-style) var(--#{$prefix}header-border-color);
   color: var(--#{$prefix}header-color);
-  z-index: $zindex-positioner;
+  z-index:  $zindex-layout-header;
 }
 
 // Main
