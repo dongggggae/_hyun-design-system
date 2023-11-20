@@ -1,10 +1,12 @@
+import { lazy, Suspense } from 'react';
 import styled from '@emotion/styled';
 import Heading from '../../components/hyun-design-system/typography/Heading';
 import Text from '../../components/hyun-design-system/typography/Text';
-import CodeContainer from '../../components/docs/CodeContainer';
 import Button from '../../components/hyun-design-system/button/Button';
 import Icon from '../../components/hyun-design-system/Icon/Icon';
 import { defaultTheme } from '../../themes';
+
+const LazyCodeContainer = lazy(() => import('../../components/docs/CodeContainer'));
 
 const StyledPreview = styled.div`
   display: flex;
@@ -33,7 +35,9 @@ const ComponentPage = () => {
             <Button type="outlineGreen" text="OutlineGreen Button"></Button>
             <Button type="outlineGray" text="OutlineGray Button"></Button>
           </StyledPreview>
-          <CodeContainer codeString={ButtonCode.overview} />
+          <Suspense fallback={<div>Loading...</div>}>
+            <LazyCodeContainer codeString={ButtonCode.overview} />
+          </Suspense>
         </ComponentContent>
 
         <ComponentContent>
@@ -45,9 +49,10 @@ const ComponentPage = () => {
             <Button type="outlineGreen" text="OutlineGreen Button"></Button>
             <Button type="outlineGray" text="OutlineGray Button"></Button>
           </StyledPreview>
-          <CodeContainer codeString={ButtonCode.type} />
+          <Suspense fallback={<div>Loading...</div>}>
+            <LazyCodeContainer codeString={ButtonCode.type} />
+          </Suspense>
         </ComponentContent>
-
         <ComponentContent>
           <Heading as="h2" size={2} text="3. 사이즈" />
           <Text>
@@ -61,9 +66,10 @@ const ComponentPage = () => {
             <Button size="sm" text="Small Button" />
             <Button size="xs" text="XSmall Button" />
           </StyledPreview>
-          <CodeContainer codeString={ButtonCode.size} />
+          <Suspense fallback={<div>Loading...</div>}>
+            <LazyCodeContainer codeString={ButtonCode.size} />
+          </Suspense>
         </ComponentContent>
-
         <ComponentContent>
           <Heading as="h2" size={2} text="4. 아이콘" />
           <Text>
@@ -82,16 +88,19 @@ const ComponentPage = () => {
               <Icon name="plus" color="white" />
             </Button>
           </StyledPreview>
-          <CodeContainer codeString={ButtonCode.icon} />
+          <Suspense fallback={<div>Loading...</div>}>
+            <LazyCodeContainer codeString={ButtonCode.icon} />
+          </Suspense>
         </ComponentContent>
-
         <ComponentContent>
           <Heading as="h2" size={2} text="5. Events" />
           <Text>onClick 프로퍼티를 통해 클릭 이벤트를 발생시킵니다.</Text>
           <StyledPreview>
             <Button text="Click Button" onClick={() => alert('Click Event')} />
           </StyledPreview>
-          <CodeContainer codeString={ButtonCode.event} />
+          <Suspense fallback={<div>Loading...</div>}>
+            <LazyCodeContainer codeString={ButtonCode.event} />
+          </Suspense>
         </ComponentContent>
       </div>
     </div>

@@ -9,7 +9,18 @@ export default defineConfig({
     port: 8080,
   },
   css: {
-    devSourcemap: true,
+    devSourcemap: false,
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom'],
+  },
+  build: {
+    rollupOptions: {
+      plugins: [terser()],
+      output: {
+        manualChunks: { react: ['react', 'react-dom', 'react-router-dom', 'react-syntax-highlighter'] },
+      },
+    },
   },
   optimizeDeps: {
     include: ['react', 'react-dom'],
