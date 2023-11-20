@@ -1,8 +1,10 @@
+import { lazy, Suspense } from 'react';
 import styled from '@emotion/styled';
-import CodeContainer from '../../components/docs/CodeContainer';
 import Heading from '../../components/hyun-design-system/typography/Heading';
 import Text from '../../components/hyun-design-system/typography/Text';
 import { defaultTheme } from '../../themes';
+
+const LazyCodeContainer = lazy(() => import('../../components/docs/CodeContainer'));
 
 const StyledPreview = styled.div`
   display: flex;
@@ -29,7 +31,9 @@ const ComponentPage = () => {
             <Heading as="h1" text="Default Title" />
             <Heading as="h3" text="H3 Title" />
           </StyledPreview>
-          <CodeContainer codeString={HeadingCode.overview} />
+          <Suspense fallback={<div>Loading...</div>}>
+            <LazyCodeContainer codeString={HeadingCode.overview} />
+          </Suspense>
         </ComponentContent>
 
         <ComponentContent>
@@ -43,7 +47,9 @@ const ComponentPage = () => {
             <Heading as="h5" text="H5 Title" />
             <Heading as="h6" text="H6 Title" />
           </StyledPreview>
-          <CodeContainer codeString={HeadingCode.level} />
+          <Suspense fallback={<div>Loading...</div>}>
+            <LazyCodeContainer codeString={HeadingCode.level} />
+          </Suspense>
         </ComponentContent>
 
         <ComponentContent>
@@ -61,7 +67,9 @@ const ComponentPage = () => {
             <Heading as="h2" size={2} color="green600" text="Green Color" />
             <Heading as="h2" size={2} color="red600" text="Red Color" />
           </StyledPreview>
-          <CodeContainer codeString={HeadingCode.color} />
+          <Suspense fallback={<div>Loading...</div>}>
+            <LazyCodeContainer codeString={HeadingCode.color} />
+          </Suspense>
         </ComponentContent>
 
         <ComponentContent>
@@ -79,7 +87,9 @@ const ComponentPage = () => {
             <Heading as="h5" size={5} text="H5 Size" />
             <Heading as="h6" size={6} text="H6 Size" />
           </StyledPreview>
-          <CodeContainer codeString={HeadingCode.size} />
+          <Suspense fallback={<div>Loading...</div>}>
+            <LazyCodeContainer codeString={HeadingCode.size} />
+          </Suspense>
         </ComponentContent>
       </div>
     </div>

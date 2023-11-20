@@ -1,10 +1,12 @@
+import { lazy, Suspense } from 'react';
 import styled from '@emotion/styled';
 import Heading from '../../components/hyun-design-system/typography/Heading';
 import Text from '../../components/hyun-design-system/typography/Text';
-import CodeContainer from '../../components/docs/CodeContainer';
 import Icon from '../../components/hyun-design-system/Icon/Icon';
 import { defaultTheme } from '../../themes';
 import { useTheme } from '../../theme/ThemeContext';
+
+const LazyCodeContainer = lazy(() => import('../../components/docs/CodeContainer'));
 
 const StyledPreview = styled.div`
   display: flex;
@@ -50,7 +52,9 @@ const ComponentPage = () => {
             <Icon name="arrowRight" size="lg" />
             <Icon name="arrowDown" size="lg" />
           </StyledPreview>
-          <CodeContainer codeString={IconCode.overview} />
+          <Suspense fallback={<div>Loading...</div>}>
+            <LazyCodeContainer codeString={IconCode.overview} />
+          </Suspense>
         </ComponentContent>
 
         <ComponentContent>
@@ -66,7 +70,9 @@ const ComponentPage = () => {
             <Icon name="close" size="lg" color="amber600" />
             <Icon name="close" size="lg" color="red600" />
           </StyledPreview>
-          <CodeContainer codeString={IconCode.color} />
+          <Suspense fallback={<div>Loading...</div>}>
+            <LazyCodeContainer codeString={IconCode.color} />
+          </Suspense>
         </ComponentContent>
 
         <ComponentContent>
@@ -81,14 +87,14 @@ const ComponentPage = () => {
             <Icon name="close" />
             <Icon name="close" size="sm" />
           </StyledPreview>
-          <CodeContainer codeString={IconCode.size} />
+          <Suspense fallback={<div>Loading...</div>}>
+            <LazyCodeContainer codeString={IconCode.size} />
+          </Suspense>
         </ComponentContent>
 
         <ComponentContent>
           <Heading as="h2" size={2} text="4. 아이콘 종류" />
-          <Text>
-            아이콘은 다음과 같은 종류를 가집니다.
-          </Text>
+          <Text>아이콘은 다음과 같은 종류를 가집니다.</Text>
           <StyledPreview theme={theme}>
             {Object.keys(iconMap).map((name, idx) => (
               <IconPreview key={idx} className="IconPreview">
