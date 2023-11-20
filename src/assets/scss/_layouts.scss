@@ -19,6 +19,21 @@
   background-color: var(--#{$prefix}sidebar-bg);
   border-right: var(--#{$prefix}sidebar-border-width) var(--#{$prefix}sidebar-border-style) var(--#{$prefix}sidebar-border-color);
   z-index: $zindex-layout-sidebar;
+
+  & nav {
+    height: 100%;
+    ul {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      gap: 15px;
+      li {
+        display: flex;
+        align-items: center;
+        padding: 15px 0 15px 20px;
+      }
+    }
+  }
 }
 
 // Header
@@ -38,7 +53,15 @@
   background-color: var(--#{$prefix}header-bg);
   border-bottom: var(--#{$prefix}header-border-width) var(--#{$prefix}header-border-style) var(--#{$prefix}header-border-color);
   color: var(--#{$prefix}header-color);
-  z-index:  $zindex-layout-header;
+  z-index: $zindex-layout-header;
+
+  &Inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+    height: 100%;
+  }
 }
 
 // Main
