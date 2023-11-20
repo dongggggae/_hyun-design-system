@@ -1,7 +1,7 @@
 const navData = [
-  { name: 'Button', to: 'components/Btn' },
-  { name: 'Typography', to: 'components/Typography' },
-  { name: 'Color', to: 'components/Color' },
-  { name: 'Icon', to: 'components/Icon' },
+  { name: 'Button', to: 'components/ButtonPage' },
+  { name: 'Typography', to: 'components/TypographyPage' },
+  { name: 'Color', to: 'components/ColorPage' },
+  { name: 'Icon', to: 'components/IconPage' },
 ];
 export default navData;

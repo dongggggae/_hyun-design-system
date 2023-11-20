@@ -13,7 +13,7 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 `;
 
-const Sidebar = () => {
+const LayoutSidebar = () => {
   const theme = useTheme();
   const PREFIX = 'Sidebar';
 
@@ -33,4 +33,4 @@ const Sidebar = () => {
     </aside>
   );
 };
-export default Sidebar;
+export default LayoutSidebar;
