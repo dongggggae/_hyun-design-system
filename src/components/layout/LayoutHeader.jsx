@@ -1,6 +1,6 @@
 import Heading from '../hyun-design-system/typography/Heading';
 
-const Header = () => {
+const LayoutHeader = () => {
   const PREFIX = 'Header';
 
   return (
@@ -11,4 +11,4 @@ const Header = () => {
     </header>
   );
 };
-export default Header;
+export default LayoutHeader;

@@ -1,17 +1,17 @@
 import { Outlet } from 'react-router-dom';
-import Header from '../components/layout/Header';
-import Sidebar from '../components/layout/Sidebar';
-import Main from '../components/layout/Main';
+import LayoutHeader from '../components/layout/LayoutHeader';
+import LayoutSidebar from '../components/layout/LayoutSidebar';
+import LayoutMain from '../components/layout/LayoutMain';
 
 const Layout = () => {
   const PREFIX = 'Wrap';
   return (
     <div className={PREFIX}>
-      <Header></Header>
-      <Sidebar></Sidebar>
-      <Main>
+      <LayoutHeader></LayoutHeader>
+      <LayoutSidebar></LayoutSidebar>
+      <LayoutMain>
         <Outlet />
-      </Main>
+      </LayoutMain>
     </div>
   );
 };

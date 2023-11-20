@@ -2,20 +2,20 @@
 import { Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './theme/ThemeContext';
 import Layout from './layouts/Layout';
-import Btn from './pages/components/Btn';
-import Typography from './pages/components/Typography';
-import Color from './pages/components/Color';
-import Icon from './pages/components/Icon';
+import ButtonPage from './pages/components/ButtonPage';
+import TypographyPage from './pages/components/TypographyPage';
+import ColorPage from './pages/components/ColorPage';
+import IconPage from './pages/components/IconPage';
 
 function App() {
   return (
     <ThemeProvider>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route path="components/Btn" element={<Btn />} />
-          <Route path="components/Typography" element={<Typography />} />
-          <Route path="components/Color" element={<Color />} />
-          <Route path="components/Icon" element={<Icon />} />
+          <Route path="components/ButtonPage" element={<ButtonPage />} />
+          <Route path="components/TypographyPage" element={<TypographyPage />} />
+          <Route path="components/ColorPage" element={<ColorPage />} />
+          <Route path="components/IconPage" element={<IconPage />} />
         </Route>
       </Routes>
     </ThemeProvider>

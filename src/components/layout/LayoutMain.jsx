@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 
-const Main = ({ children }) => {
+const LayoutMain = ({ children }) => {
   const PREFIX = 'Main';
   return <main className={PREFIX}>{children}</main>;
 };
 
-Main.propTypes = {
+LayoutMain.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default Main;
+export default LayoutMain;
