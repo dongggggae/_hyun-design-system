@@ -6,7 +6,7 @@ const headingSizes = {
   },
   2: {
     fontSize: '48px',
-    fontWeight: 600,
+    fontWeight: 700,
     lineHeight: '64px',
   },
   3: {
@@ -16,7 +16,7 @@ const headingSizes = {
   },
   4: {
     fontSize: '32px',
-    fontWeight: 500,
+    fontWeight: 600,
     lineHeight: '48px',
   },
   5: {
