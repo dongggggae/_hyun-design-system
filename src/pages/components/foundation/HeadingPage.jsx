@@ -1,8 +1,15 @@
 import { lazy, Suspense } from 'react';
 import styled from '@emotion/styled';
+<<<<<<< HEAD:src/pages/components/TypographyPage.jsx
 import Heading from '../../components/hyun-design-system/typography/Heading';
 import Text from '../../components/hyun-design-system/typography/Text';
 import { defaultTheme } from '../../themes';
+=======
+import CodeContainer from '../../../components/docs/CodeContainer';
+import Heading from '../../../components/hyun-design-system/typography/Heading';
+import Text from '../../../components/hyun-design-system/typography/Text';
+import { defaultTheme } from '../../../themes';
+>>>>>>> 852e182 (클래스명 수정 + nav 페이지 추가):src/pages/components/foundation/HeadingPage.jsx
 
 const LazyCodeContainer = lazy(() => import('../../components/docs/CodeContainer'));
 

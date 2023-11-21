@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 const LayoutMain = ({ children }) => {
-  const PREFIX = 'Main';
+  const PREFIX = 'main';
   return <main className={PREFIX}>{children}</main>;
 };
 

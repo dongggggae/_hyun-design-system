@@ -10,7 +10,7 @@ const StyledButton = styled.button`
 `;
 
 const Button = memo(({ type, size, text, children, reverse, onClick }) => {
-  const PREFIX = 'Btn';
+  const PREFIX = 'btn';
   const classNames = [PREFIX, `${PREFIX}-${type}`].join(' ');
   const theme = useTheme();
 

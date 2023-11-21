@@ -5,7 +5,7 @@ import { tomorrow } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
 const CodeContainer = memo(({ codeString }) => {
   return (
-    <div className="CodeContainer">
+    <div className="code__container">
       <SyntaxHighlighter language="jsx" style={tomorrow}>
         {codeString}
       </SyntaxHighlighter>

@@ -6,14 +6,14 @@ import { useTheme } from '../../../theme/ThemeContext';
 const StyledIcon = styled.span`
   ${(props) => props.theme.components.icon.baseStyle}
 
-  .Icon {
+  .icon {
     ${(props) => props.theme.components.icon.iconSizes[props.size]}
     color:${(props) => props.theme.colors[props.color]};
   }
 `;
 
 const Icon = memo(({ name, size, color }) => {
-  const PREFIX = 'Icon';
+  const PREFIX = 'icon';
   const theme = useTheme();
   const SelectedIcon = theme.components.icon.iconTypes[name];
 
