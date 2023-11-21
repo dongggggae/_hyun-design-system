@@ -1,5 +1,5 @@
 // Sidebar
-.Sidebar {
+.sidebar {
   --#{$prefix}sidebar-width: 210px;
   --#{$prefix}sidebar-padding-x: 0;
   --#{$prefix}sidebar-padding-y: 0;
@@ -7,9 +7,13 @@
   --#{$prefix}sidebar-border-width: 2px;
   --#{$prefix}sidebar-border-style: solid;
   --#{$prefix}sidebar-border-color: #{$gray200};
+  --#{$prefix}sidebar-navigation-padding-x: 20px;
+  --#{$prefix}sidebar-navigation-padding-y: 30px;
   --#{$prefix}sidebar-nav-link-bg: transparent;
-  --#{$prefix}sidebar-nav-link-color: #{$blue600};
-  --#{$prefix}sidebar-nav-link-font-size: 20px;
+  --#{$prefix}sidebar-nav-link-color: #{$blue500};
+  --#{$prefix}sidebar-nav-link-active-color: #{$blue700};
+  --#{$prefix}sidebar-nav-group-items-padding-y: 0;
+  --#{$prefix}sidebar-nav-group-items-padding-x: 0;
 
   position: fixed;
   top: #{$layout-occupy-start-top};
@@ -20,24 +24,96 @@
   border-right: var(--#{$prefix}sidebar-border-width) var(--#{$prefix}sidebar-border-style) var(--#{$prefix}sidebar-border-color);
   z-index: $zindex-layout-sidebar;
 
-  & nav {
+  .navigation {
     height: 100%;
-    ul {
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      gap: 15px;
-      li {
+    overflow: hidden;
+    overflow-y: scroll;
+    padding: var(--#{$prefix}sidebar-navigation-padding-y) var(--#{$prefix}sidebar-navigation-padding-x);
+  }
+
+  &__nav {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    & .nav__group {
+      position: relative;
+      transition: all 0.15s ease-in-out;
+
+      & > .nav__link {
         display: flex;
-        align-items: center;
-        padding: 15px 0 15px 20px;
+        justify-content: space-between;
+
+        span {
+          margin-right: 5px;
+          .icon {
+            transition: 0.15s ease-in-out;
+          }
+        }
+      }
+
+      &-items {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        margin-top: 10px;
+        padding: var(--#{$prefix}sidebar-nav-group-items-padding-y) var(--#{$prefix}sidebar-nav-group-items-padding-x);
+        transition: height 0.15s ease-in-out;
+
+        & > li {
+          margin-top: 10px;
+
+          &:first-of-type {
+            margin-top: 0;
+          }
+        }
+
+        .nav__link {
+          padding-left: 10px;
+          font-size: 18px;
+        }
+      }
+
+      &:not(.show) .nav__group-items {
+        display: none;
+      }
+
+      &.show > .nav__link {
+        color: var(--#{$prefix}sidebar-nav-link-active-color);
+
+        .icon {
+          transform: rotate(180deg);
+          
+        }
+      }
+    }
+
+    & > li {
+      margin-top: 15px;
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+
+    & .nav__link {
+      display: flex;
+      align-items: center;
+      color: var(--#{$prefix}sidebar-nav-link-color);
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 26px;
+      text-decoration: none;
+      white-space: nowrap;
+
+      &.active {
+        color: var(--#{$prefix}sidebar-nav-link-active-color);
       }
     }
   }
 }
 
 // Header
-.Header {
+.header {
   --#{$prefix}header-width: 100%;
   --#{$prefix}header-height: 70px;
   --#{$prefix}header-bg: hsla(0, 0%, 100%, 0.9);
@@ -55,7 +131,7 @@
   color: var(--#{$prefix}header-color);
   z-index: $zindex-layout-header;
 
-  &Inner {
+  &__inner {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -65,7 +141,7 @@
 }
 
 // Main
-.Main {
+.main {
   --#{$prefix}main-padding-y: 20px;
   --#{$prefix}main-padding-left: 25px;
   --#{$prefix}main-padding-right: 10px;
