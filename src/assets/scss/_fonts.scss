@@ -6,6 +6,6 @@
     font-family: unquote($font-face-name);
     font-weight: $weight;
     font-style: $style;
-    src: url(quote("#{$font-face-path}#{$font-face-name}#{$file}.#{$font-face-exts}")) format('woff');
+    src: url(quote('#{$font-face-path}#{$font-face-name}#{$file}.#{$font-face-exts}')) format('woff');
   }
 }
