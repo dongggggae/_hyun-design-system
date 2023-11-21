@@ -3,16 +3,16 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import Icon from '../hyun-design-system/icon/Icon';
 
-const LayoutSidebarNav = ({ navData, openGroup, toggleGroup }) => {
+const LayoutSidebarNav = ({ navData, openGroups, toggleOpenGroup }) => {
   return (
     <nav className="navigation">
       <ul className="sidebar__nav">
         {navData.map((item, idx) => (
           <React.Fragment key={idx}>
             {item.type === 'group' ? (
-              <li className={`nav__group ${openGroup === idx ? 'show' : ''}`} key={idx}>
+              <li className={`nav__group ${openGroups[idx] ? 'show' : ''}`} key={idx}>
                 {item.children && item.children.length > 0 ? (
-                  <Link className="nav__link" onClick={() => toggleGroup(idx)}>
+                  <Link className="nav__link" onClick={() => toggleOpenGroup(idx)}>
                     {item.name}
                     <Icon name="arrowDown" size="sm" color="gray300" />
                   </Link>
@@ -45,8 +45,8 @@ const LayoutSidebarNav = ({ navData, openGroup, toggleGroup }) => {
 
 LayoutSidebarNav.propTypes = {
   navData: PropTypes.array,
-  openGroup: PropTypes.number,
-  toggleGroup: PropTypes.func,
+  openGroups: PropTypes.array,
+  toggleOpenGroup: PropTypes.func,
 };
 
 export default LayoutSidebarNav;

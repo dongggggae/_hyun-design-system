@@ -1,17 +1,19 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import LayoutSidebarNav from './LayoutSidebarNav';
 import navData from '../../data/nav';
 
 const LayoutSidebar = () => {
-  const [openGroup, setOpenGroup] = useState(null);
+  const [openGroups, setOpenGroups] = useState(Array(navData.length).fill(false));
 
-  const toggleGroup = (idx) => {
-    setOpenGroup(openGroup === idx ? null : idx);
+  const toggleOpenGroup = (idx) => {
+    const newOpenGroups = [...openGroups];
+    newOpenGroups[idx] = !newOpenGroups[idx];
+    setOpenGroups(newOpenGroups);
   };
 
   return (
     <aside className="sidebar">
-      <LayoutSidebarNav navData={navData} openGroup={openGroup} toggleGroup={toggleGroup} />
+      <LayoutSidebarNav navData={navData} openGroups={openGroups} toggleOpenGroup={toggleOpenGroup} />
     </aside>
   );
 };
