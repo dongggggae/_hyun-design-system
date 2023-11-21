@@ -9,7 +9,7 @@ const StyledText = styled.p`
 
 const Text = ({ size, children, color, spacing }) => {
   const theme = useTheme();
-  const PREFIX = 'Text';
+  const PREFIX = 'text';
 
   return (
     <StyledText className={PREFIX} size={size} theme={theme} color={color} spacing={spacing}>

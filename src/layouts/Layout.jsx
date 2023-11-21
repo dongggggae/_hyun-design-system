@@ -1,14 +1,17 @@
 import { Outlet } from 'react-router-dom';
 import LayoutHeader from '../components/layout/LayoutHeader';
 import LayoutSidebar from '../components/layout/LayoutSidebar';
+import LayoutSidebarNav from '../components/layout/LayoutSidebarNav';
 import LayoutMain from '../components/layout/LayoutMain';
 
 const Layout = () => {
-  const PREFIX = 'Wrap';
+  const PREFIX = 'wrap';
   return (
     <div className={PREFIX}>
       <LayoutHeader></LayoutHeader>
-      <LayoutSidebar></LayoutSidebar>
+      <LayoutSidebar>
+        <LayoutSidebarNav></LayoutSidebarNav>
+      </LayoutSidebar>
       <LayoutMain>
         <Outlet />
       </LayoutMain>

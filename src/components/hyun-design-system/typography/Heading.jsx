@@ -10,7 +10,7 @@ const StyledHeading = styled.h1`
 
 const Heading = ({ as, size, text, color, spacing }) => {
   const theme = useTheme();
-  const PREFIX = 'Heading';
+  const PREFIX = 'heading';
 
   return (
     <StyledHeading className={PREFIX} as={as} size={size} theme={theme} color={color} spacing={spacing}>
