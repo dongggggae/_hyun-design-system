@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { useTheme } from '../../../theme/ThemeContext';
@@ -8,7 +9,7 @@ const StyledButton = styled.button`
   ${(props) => props.theme.components.button.buttonTypes[props.type]}
 `;
 
-const Button = ({ type, size, text, children, reverse, onClick }) => {
+const Button = memo(({ type, size, text, children, reverse, onClick }) => {
   const PREFIX = 'Btn';
   const classNames = [PREFIX, `${PREFIX}-${type}`].join(' ');
   const theme = useTheme();
@@ -34,7 +35,7 @@ const Button = ({ type, size, text, children, reverse, onClick }) => {
       )}
     </StyledButton>
   );
-};
+});
 
 Button.defaultProps = {
   type: 'solidGreen',
@@ -50,5 +51,7 @@ Button.propTypes = {
   reverse: PropTypes.bool,
   onClick: PropTypes.func,
 };
+
+Button.displayName = 'Button';
 
 export default Button;

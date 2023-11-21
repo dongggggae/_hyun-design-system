@@ -1,8 +1,9 @@
+import { memo } from 'react';
 import PropTypes from 'prop-types';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { tomorrow } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
-const CodeContainer = ({ codeString }) => {
+const CodeContainer = memo(({ codeString }) => {
   return (
     <div className="CodeContainer">
       <SyntaxHighlighter language="jsx" style={tomorrow}>
@@ -10,9 +11,12 @@ const CodeContainer = ({ codeString }) => {
       </SyntaxHighlighter>
     </div>
   );
-};
+});
 
 CodeContainer.propTypes = {
   codeString: PropTypes.string.isRequired,
 };
+
+CodeContainer.displayName = 'CodeContainer';
+
 export default CodeContainer;

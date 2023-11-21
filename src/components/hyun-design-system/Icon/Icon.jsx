@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { useTheme } from '../../../theme/ThemeContext';
@@ -11,7 +12,7 @@ const StyledIcon = styled.span`
   }
 `;
 
-const Icon = ({ name, size, color }) => {
+const Icon = memo(({ name, size, color }) => {
   const PREFIX = 'Icon';
   const theme = useTheme();
   const SelectedIcon = theme.components.icon.iconTypes[name];
@@ -25,7 +26,7 @@ const Icon = ({ name, size, color }) => {
       <SelectedIcon className={PREFIX} />
     </StyledIcon>
   );
-};
+});
 
 Icon.defaultProps = {
   size: 'md',
@@ -37,5 +38,7 @@ Icon.propTypes = {
   size: PropTypes.oneOf(['lg', 'md', 'sm']),
   color: PropTypes.string,
 };
+
+Icon.displayName = 'Icon';
 
 export default Icon;
