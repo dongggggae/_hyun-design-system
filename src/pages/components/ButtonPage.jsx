@@ -24,8 +24,8 @@ const ComponentContent = styled.div`
 
 const ComponentPage = () => {
   return (
-    <div className="Docs">
-      <div className="Btn">
+    <div className="docs">
+      <div className="page__button">
         <ComponentContent>
           <Heading as="h2" size={2} text="1. 개요" />
           <Text>Button 컴포넌트를 통해 버튼 요소를 생성합니다.</Text>

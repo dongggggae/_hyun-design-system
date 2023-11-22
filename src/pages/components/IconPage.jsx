@@ -30,6 +30,10 @@ const IconPreview = styled.div`
   row-gap: 15px;
   background-color: ${defaultTheme.colors.gray150};
   border-radius: 5px;
+
+  .text {
+    margin-bottom: 0;
+  }
 `;
 
 const ComponentContent = styled.div`
@@ -41,8 +45,8 @@ const ComponentPage = () => {
   const iconMap = theme.components.icon.iconTypes;
 
   return (
-    <div className="Docs">
-      <div className="Btn">
+    <div className="docs">
+      <div className="page__icon">
         <ComponentContent>
           <Heading as="h2" size={2} text="1. 개요" />
           <Text>Icon 컴포넌트를 통해 아이콘 요소를 생성합니다.</Text>
@@ -97,7 +101,7 @@ const ComponentPage = () => {
           <Text>아이콘은 다음과 같은 종류를 가집니다.</Text>
           <StyledPreview theme={theme}>
             {Object.keys(iconMap).map((name, idx) => (
-              <IconPreview key={idx} className="IconPreview">
+              <IconPreview key={idx}>
                 <Icon name={name} />
                 <Text>{name}</Text>
               </IconPreview>

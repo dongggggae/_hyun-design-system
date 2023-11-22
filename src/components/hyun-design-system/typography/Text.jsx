@@ -8,12 +8,12 @@ const StyledText = styled.p`
   color: ${(props) => props.theme.colors[props.color]};
 `;
 
-const Text = React.memo(({ size, children, color, spacing }) => {
+const Text = React.memo(({ size, children, color }) => {
   const theme = useTheme();
   const PREFIX = 'text';
 
   return (
-    <StyledText className={PREFIX} size={size} theme={theme} color={color} spacing={spacing}>
+    <StyledText className={PREFIX} size={size} theme={theme} color={color}>
       {children}
     </StyledText>
   );
@@ -22,14 +22,12 @@ const Text = React.memo(({ size, children, color, spacing }) => {
 Text.defaultProps = {
   size: 'md',
   color: 'secondaryText',
-  spacing: 'normal',
 };
 
 Text.propTypes = {
   size: PropTypes.oneOf(['lg', 'md', 'sm', 'xs', 'xxs']),
   children: PropTypes.node.isRequired,
   color: PropTypes.string,
-  spacing: PropTypes.string,
 };
 
 Text.displayName = 'Text';

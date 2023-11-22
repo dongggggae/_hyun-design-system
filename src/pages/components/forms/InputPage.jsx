@@ -39,8 +39,8 @@ const ComponentPage = () => {
   const iconMap = theme.components.icon.iconTypes;
 
   return (
-    <div className="Docs">
-      <div className="Btn">
+    <div className="docs">
+      <div className="page__forms">
         <ComponentContent>
           <Heading as="h2" size={2} text="1. 개요" />
           <Text>Icon 컴포넌트를 통해 아이콘 요소를 생성합니다.</Text>

@@ -29,8 +29,8 @@ const ComponentPage = () => {
   const colorKeys = Object.keys(colors);
 
   return (
-    <div className="Docs">
-      <div className="Color">
+    <div className="docs">
+      <div className="page__foundation">
         <ComponentContent>
           <Heading as="h2" size={2} text="1. Gray" />
           <Text>다음은 Gray Scale을 나타냅니다.</Text>
