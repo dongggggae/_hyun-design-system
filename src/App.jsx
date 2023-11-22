@@ -8,6 +8,7 @@ import ColorPage from './pages/components/foundation/ColorPage';
 import HeadingPage from './pages/components/foundation/HeadingPage';
 import TextPage from './pages/components/foundation/TextPage';
 import ButtonPage from './pages/components/ButtonPage';
+import BadgePage from './pages/components/BadgePage';
 import IconPage from './pages/components/IconPage';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="components/foundation/HeadingPage" element={<HeadingPage />} />
           <Route path="components/foundation/TextPage" element={<TextPage />} />
           <Route path="components/ButtonPage" element={<ButtonPage />} />
+          <Route path="components/BadgePage" element={<BadgePage />} />
           <Route path="components/IconPage" element={<IconPage />} />
         </Route>
       </Routes>
