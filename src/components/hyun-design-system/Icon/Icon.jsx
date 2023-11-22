@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { useTheme } from '../../../theme/ThemeContext';
@@ -12,7 +12,7 @@ const StyledIcon = styled.span`
   }
 `;
 
-const Icon = memo(({ name, size, color }) => {
+const Icon = React.memo(({ name, size, color }) => {
   const PREFIX = 'icon';
   const theme = useTheme();
   const SelectedIcon = theme.components.icon.iconTypes[name];

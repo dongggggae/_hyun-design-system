@@ -1,3 +1,4 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { useTheme } from '../../../theme/ThemeContext';
@@ -8,7 +9,7 @@ const StyledHeading = styled.h1`
   letter-spacing: ${(props) => props.theme.components.typography.fontSpacing[props.spacing]};
 `;
 
-const Heading = ({ as, size, text, color, spacing }) => {
+const Heading = React.memo(({ as, size, text, color, spacing }) => {
   const theme = useTheme();
   const PREFIX = 'heading';
 
@@ -17,7 +18,7 @@ const Heading = ({ as, size, text, color, spacing }) => {
       {text}
     </StyledHeading>
   );
-};
+});
 
 Heading.defaultProps = {
   as: 'h1',
@@ -34,5 +35,7 @@ Heading.propTypes = {
   color: PropTypes.string,
   spacing: PropTypes.string,
 };
+
+Heading.displayName = 'Heading';
 
 export default Heading;

@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { useTheme } from '../../../theme/ThemeContext';
@@ -9,7 +9,7 @@ const StyledButton = styled.button`
   ${(props) => props.theme.components.button.buttonTypes[props.type]}
 `;
 
-const Button = memo(({ type, size, text, children, reverse, onClick }) => {
+const Button = React.memo(({ type, size, text, children, reverse, onClick }) => {
   const PREFIX = 'btn';
   const classNames = [PREFIX, `${PREFIX}-${type}`].join(' ');
   const theme = useTheme();

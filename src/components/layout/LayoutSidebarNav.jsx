@@ -1,9 +1,14 @@
 import React from 'react';
+import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import Icon from '../hyun-design-system/icon/Icon';
 
-const LayoutSidebarNav = ({ navData, openGroups, toggleOpenGroup }) => {
+const LayoutSidebarNav = React.memo(({ navData, openGroups, toggleOpenGroup }) => {
+  useEffect(() => {
+    console.log('a');
+  });
+
   return (
     <nav className="navigation">
       <ul className="sidebar__nav">
@@ -41,12 +46,14 @@ const LayoutSidebarNav = ({ navData, openGroups, toggleOpenGroup }) => {
       </ul>
     </nav>
   );
-};
+});
 
 LayoutSidebarNav.propTypes = {
   navData: PropTypes.array,
   openGroups: PropTypes.array,
   toggleOpenGroup: PropTypes.func,
 };
+
+LayoutSidebarNav.displayName = 'LayoutSidebarNav';
 
 export default LayoutSidebarNav;

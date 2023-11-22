@@ -1,3 +1,4 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { useTheme } from '../../../theme/ThemeContext';
@@ -7,7 +8,7 @@ const StyledText = styled.p`
   color: ${(props) => props.theme.colors[props.color]};
 `;
 
-const Text = ({ size, children, color, spacing }) => {
+const Text = React.memo(({ size, children, color, spacing }) => {
   const theme = useTheme();
   const PREFIX = 'text';
 
@@ -16,7 +17,7 @@ const Text = ({ size, children, color, spacing }) => {
       {children}
     </StyledText>
   );
-};
+});
 
 Text.defaultProps = {
   size: 'md',
@@ -30,5 +31,7 @@ Text.propTypes = {
   color: PropTypes.string,
   spacing: PropTypes.string,
 };
+
+Text.displayName = 'Text';
 
 export default Text;
