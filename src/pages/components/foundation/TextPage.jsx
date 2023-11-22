@@ -12,6 +12,10 @@ const StyledPreview = styled.div`
   padding: 32px;
   border: 2px solid ${defaultTheme.colors.divider};
   border-radius: 5px;
+
+  .text {
+    margin-bottom: 0;
+  }
 `;
 
 const ComponentContent = styled.div`
@@ -20,130 +24,102 @@ const ComponentContent = styled.div`
 
 const ComponentPage = () => {
   return (
-    <div className="Docs">
-      <div className="TypoGraphy">
+    <div className="docs">
+      <div className="page__foundation">
         <ComponentContent>
           <Heading as="h2" size={2} text="1. 개요" />
-          <Text>Heading 컴포넌트를 통해 헤더 요소를 생성합니다.</Text>
+          <Text>Text 컴포넌트를 통해 텍스트 요소를 생성합니다.</Text>
           <StyledPreview>
-            <Heading as="h1" text="Default Title" />
-            <Heading as="h3" text="H3 Title" />
+            <Text>Default Text</Text>
           </StyledPreview>
-          <CodeContainer codeString={HeadingCode.overview} />
+          <CodeContainer codeString={TextCode.overview} />
         </ComponentContent>
 
         <ComponentContent>
-          <Heading as="h2" size={2} text="2. Tag" />
-          <Text>as 프로퍼티를 통해 렌더링 되는 태그를 변경합니다.</Text>
-          <StyledPreview>
-            <Heading as="h1" text="H1 Title" />
-            <Heading as="h2" text="H2 Title" />
-            <Heading as="h3" text="H3 Title" />
-            <Heading as="h4" text="H4 Title" />
-            <Heading as="h5" text="H5 Title" />
-            <Heading as="h6" text="H6 Title" />
-          </StyledPreview>
-          <CodeContainer codeString={HeadingCode.level} />
-        </ComponentContent>
-
-        <ComponentContent>
-          <Heading as="h2" size={2} text="3. Color" />
+          <Heading as="h2" size={2} text="2. Color" />
           <Text>
-            color 프로퍼티를 통해 헤더 컬러를 지정하며, 기본 값은 &#39;#111111&#39; 입니다 다른 컬러를 적용하고 싶은 경우에 사용합니다.
+            color 프로퍼티를 통해 헤더 컬러를 지정하며, 기본 값은 &#39;#555555&#39; 입니다 다른 컬러를 적용하고 싶은 경우에 사용합니다.
             <br />
             아래는 color 프로퍼티를 통해 컬러를 적용한 예시입니다.
           </Text>
           <StyledPreview>
-            <Heading as="h2" size={2} text="Default Color" />
-            <Heading as="h2" size={2} color="secondaryText" text="Secondary Color" />
-            <Heading as="h2" size={2} color="tertiaryText" text="Tertiary Color" />
-            <Heading as="h2" size={2} color="blue500" text="Blue Color" />
-            <Heading as="h2" size={2} color="green600" text="Green Color" />
-            <Heading as="h2" size={2} color="red600" text="Red Color" />
+            <Text size="lg" color="primaryText">
+              Primary Color
+            </Text>
+            <Text size="lg">Default Color</Text>
+            <Text size="lg" color="tertiaryText">
+              Tertiary Color
+            </Text>
+            <Text size="lg" color="blue500">
+              Blue Color
+            </Text>
+            <Text size="lg" color="green600">
+              Green Color
+            </Text>
+            <Text size="lg" color="red600">
+              Red Color
+            </Text>
           </StyledPreview>
-          <CodeContainer codeString={HeadingCode.color} />
+          <CodeContainer codeString={TextCode.color} />
         </ComponentContent>
 
         <ComponentContent>
-          <Heading as="h2" size={2} text="4. Size" />
+          <Heading as="h2" size={2} text="3. Size" />
           <Text>
             size 프로퍼티를 통해 헤더 사이즈를 지정하며, 해당 태그에 다른 크기를 적용하고 싶은 경우에 사용합니다.
             <br />
-            아래는 h1 태그로 Size 프로퍼티를 통해 사이즈를 적용한 예시입니다.
+            아래는 Size 프로퍼티를 통해 사이즈를 적용한 예시입니다.
           </Text>
           <StyledPreview>
-            <Heading as="h1" size={1} text="H1 Size" />
-            <Heading as="h2" size={2} text="H2 Size" />
-            <Heading as="h3" size={3} text="H3 Size" />
-            <Heading as="h4" size={4} text="H4 Size" />
-            <Heading as="h5" size={5} text="H5 Size" />
-            <Heading as="h6" size={6} text="H6 Size" />
+            <Text size="lg">Large Text</Text>
+            <Text>Medium Text</Text>
+            <Text size="sm">Small Text</Text>
+            <Text size="xs">XSmall Text</Text>
+            <Text size="xxs">XXSmall Text</Text>
           </StyledPreview>
-          <CodeContainer codeString={HeadingCode.size} />
+          <CodeContainer codeString={TextCode.size} />
         </ComponentContent>
       </div>
     </div>
   );
 };
 
-const HeadingCode = {
-  overview: [`<!-- Default Heading -->`, `<Heading as="h1" text="Default Title" />`, ``, `<!-- H3 Heading -->`, `<Heading as="h3" text="H3 Title" />`].join('\n'),
-  level: [
-    `<!-- H1 Heading -->`,
-    `<Heading as="h1" text="H1 Title" />`,
-    ``,
-    `<!-- H2 Heading -->`,
-    `<Heading as="h2" text="H2 Title" />`,
-    ``,
-    `<!-- H3 Heading -->`,
-    `<Heading as="h3" text="H3 Title" />`,
-    ``,
-    `<!-- H4 Heading -->`,
-    `<Heading as="h4" text="H4 Title" />`,
-    ``,
-    `<!-- H5 Heading -->`,
-    `<Heading as="h5" text="H5 Title" />`,
-    ``,
-    `<!-- H6 Heading -->`,
-    `<Heading as="h6" text="H6 Title" />`,
-  ].join('\n'),
+const TextCode = {
+  overview: [`<!-- Default Text -->`, `<<Text>Default Text</Text>`].join('\n'),
   color: [
-    `<!-- Heading Default Color -->`,
-    `<Heading as="h2" size={2} text="Default Color" />`,
+    `<!-- Text Primary Color -->`,
+    `<Text size="lg" color="primaryText">Primary Color</Text>`,
     ``,
-    `<!-- Heading Secondary Color -->`,
-    `<Heading as="h2" size={2} color="secondaryText" text="Secondary Color" />`,
+    `<!-- Text Default Color -->`,
+    `<Text size="lg">Default Color</Text>`,
     ``,
-    `<!-- Heading Tertiary Color -->`,
-    `<Heading as="h2" size={2} color="tertiaryText" text="Tertiary Color" />`,
+    `<!-- Text Tertiary Color -->`,
+    `<Text size="lg" color="tertiaryText">Tertiary Color</Text>`,
     ``,
-    `<!-- Heading Blue Color -->`,
-    `<Heading as="h2" size={2} color="blue500" text="Blue Color" />`,
+    `<!-- Text Blue Color -->`,
+    `<Text size="lg" color="blue500">Blue Color</Text>`,
     ``,
-    `<!-- Heading Green Color -->`,
-    `<Heading as="h2" size={2} color="green600" text="Green Color" />`,
+    `<!-- Text Green Color -->`,
+    `<Text size="lg" color="green600">Green Color</Text>`,
     ``,
-    `<!-- Heading Red Color -->`,
-    `<Heading as="h2" size={2} color="red600" text="Red Color" />`,
+    `<!-- Text Red Color -->`,
+    `<Text size="lg" color="red600">Red Color</Text>`,
   ].join('\n'),
   size: [
-    `<!-- H1 Heading -->`,
-    `<Heading as="h1" size={1} text="H1 Size" />`,
+    `<!-- Large Text -->`,
+    `<Text size="lg">Large Text</Text>`,
     ``,
-    `<!-- H2 Heading -->`,
-    `<Heading as="h1" size={2} text="H2 Size" />`,
+    `<!-- Medium Text -->`,
+    `<Text>Medium Text</Text>`,
     ``,
-    `<!-- H3 Heading -->`,
-    `<Heading as="h1" size={3} text="H3 Size" />`,
+    `<!-- Small Text -->`,
+    `<Text size="sm">Small Text</Text>`,
     ``,
-    `<!-- H4 Heading -->`,
-    `<Heading as="h1" size={4} text="H4 Size" />`,
+    `<!-- XSmall Text -->`,
+    `<Text size="xs">XSmall Text</Text>`,
     ``,
-    `<!-- H5 Heading -->`,
-    `<Heading as="h1" size={5} text="H5 Size" />`,
-    ``,
-    `<!-- H6 Heading -->`,
-    `<Heading as="h1" size={6} text="H6 Size" />`,
+    `<!-- XXSmall Text -->`,
+    `<Text size="xxs">XXSmall Text</Text>`,
   ].join('\n'),
 };
 
