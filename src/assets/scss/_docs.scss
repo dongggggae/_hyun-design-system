@@ -28,9 +28,15 @@
       flex-wrap: wrap;
       align-items: center;
       padding: 30px;
-      background-color: #{$gray100};
-      border: 2px solid #{$gray200};
+      background-color: $gray100;
+      border: 2px solid $gray200;
       border-radius: 5px;
+
+      &.fill {
+        > * {
+          flex: 1 1 0;
+        }
+      }
     }
 
     .icon-preview {
@@ -43,12 +49,17 @@
       height: 100px;
       column-gap: 15px;
       row-gap: 15px;
-      background-color: #{$gray150};
+      background-color: $gray150;
       border-radius: 5px;
 
       .text {
         margin-bottom: 0;
       }
     }
+  }
+
+  hr {
+    margin: 16px 0;
+    border-top: 1px solid $black;
   }
 }
