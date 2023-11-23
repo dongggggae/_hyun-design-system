@@ -1,49 +1,66 @@
-import React, { useState, useCallback, useRef } from 'react';
+import React, { useRef, useState, useCallback } from 'react';
+import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
-import Icon from '../icon/Icon';
-import Button from '../button/Button';
-import { useTheme } from '../../../theme/ThemeContext';
+import InputAddon from './InputAddon';
 
 const StyledInput = styled.div`
-  .input-wrap__addon {
-    visibility: ${(props) => (props.hasValue ? 'visible' : 'hidden')};
-  }
+  // .input-wrap__addon {
+  //   visibility: ${(props) => (props.hasValue ? 'visible' : 'hidden')};
+  // }
 `;
 
-const Input = React.memo(({ label }) => {
+const Input = React.memo(({ label, field, clear, placeholder }) => {
   const formInput = useRef();
   const [value, setValue] = useState('');
+  const [type, setType] = useState(field === 'password' ? 'password' : 'text');
+  const [showPassword, setShowPassword] = useState(false);
 
-  const handleChange = useCallback((e) => {
+  const handleChange = (e) => {
     setValue(e.target.value);
-  }, []);
+  };
 
   const handleClear = useCallback(() => {
     formInput.current.value = '';
     setValue('');
   }, []);
 
-  const PREFIX = 'input-wrap';
-  const theme = useTheme();
+  const handleTogglePassword = () => {
+    setShowPassword(!showPassword);
+    setType(type === 'text' ? 'password' : 'text');
+  };
 
   return (
-    <div className="form-group">
-      <div>
-        <label className='form-label' htmlFor="aa">{label}</label>
-      </div>
-      <StyledInput className={`${PREFIX}`} hasValue={value.length > 0} theme={theme}>
-        <input id="aa" type="text" ref={formInput} className="form__control" onChange={handleChange} />
-        <div className={`${PREFIX}__addon`}>
-          <Button size="xs" onClick={handleClear}>
-            <Icon name="closeFill" size="sm" />
-          </Button>
+    <React.Fragment>
+      {label && (
+        <div className="form-wrap">
+          <label className="form__label">{label}</label>
+          <StyledInput className="input-wrap" hasValue={value.length > 0}>
+            <input type={type} className="form__control" placeholder={placeholder} ref={formInput} onChange={handleChange} />
+            <InputAddon field={field} clear={clear} handleClear={handleClear} showPassword={showPassword} handleTogglePassword={handleTogglePassword} value={value} />
+          </StyledInput>
         </div>
-        <div className={`${PREFIX}__backdrop`}></div>
-      </StyledInput>
-      <div>{value.length}</div>
-    </div>
+      )}
+      {!label && (
+        <StyledInput className="input-wrap" hasValue={value.length > 0}>
+          <input type={type} className="form__control" placeholder={placeholder} ref={formInput} onChange={handleChange} />
+          <InputAddon field={field} clear={clear} handleClear={handleClear} showPassword={showPassword} handleTogglePassword={handleTogglePassword} value={value} />
+        </StyledInput>
+      )}
+    </React.Fragment>
   );
 });
+
+Input.defaultProps = {
+  clear: false,
+  field: 'text',
+};
+
+Input.propTypes = {
+  label: PropTypes.string,
+  placeholder: PropTypes.string,
+  field: PropTypes.oneOf(['text', 'password', 'search']),
+  clear: PropTypes.bool,
+};
 
 Input.displayName = 'Input';
 

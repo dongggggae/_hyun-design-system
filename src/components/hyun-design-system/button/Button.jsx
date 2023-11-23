@@ -11,7 +11,6 @@ const StyledButton = styled.button`
 
 const Button = React.memo(({ type, size, text, children, reverse, onClick }) => {
   const PREFIX = 'btn';
-  const classNames = [PREFIX, `${PREFIX}-${type}`].join(' ');
   const theme = useTheme();
 
   const handleClick = () => {
@@ -21,7 +20,7 @@ const Button = React.memo(({ type, size, text, children, reverse, onClick }) => 
   };
 
   return (
-    <StyledButton className={classNames} type={type} size={size} theme={theme} onClick={handleClick}>
+    <StyledButton className={PREFIX} type={type} size={size} theme={theme} onClick={handleClick}>
       {reverse ? (
         <>
           {text}

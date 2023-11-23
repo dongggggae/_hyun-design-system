@@ -17,7 +17,7 @@ const iconTypes = {
   search: FaMagnifyingGlass,
   hamburger: FaBars,
   visible: FaEye,
-  unvisible: FaEyeSlash,
+  invisible: FaEyeSlash,
   refresh: FaRotateRight,
   system: FaGear,
 };

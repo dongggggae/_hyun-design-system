@@ -5,17 +5,25 @@
   align-items: center;
   position: relative;
   width: 100%;
+  border: $form-control-border-width solid $form-control-border-color;
+  border-radius: $form-control-border-radius;
 
-  .btn {
-    position: relative;
-    background-color: $input-wrap-addon-btn-bg;
-    z-index: $form-control-zindex;
+  &:focus-within {
+    border-color: $form-control-focus-border-color;
   }
 
   &__addon {
-    position: absolute;
-    right: $input-wrap-addon-position;
+    display: flex;
+    align-items: center;
     margin: $input-wrap-addon-margin;
+    padding-right: 6px;
+
+    .btn {
+      position: relative;
+      padding: 1px 3px;
+      background-color: $input-wrap-addon-btn-bg;
+      z-index: $form-control-zindex;
+    }
   }
 
   //   &__backdrop {
@@ -36,15 +44,14 @@
   position: relative;
   width: 100%;
   height: $input-height;
-  padding: $input-padding-y 40px $input-padding-y $input-padding-x;
-  border: $form-control-border-width solid $form-control-border-color;
+  padding: $input-padding-y $input-padding-y;
+  border: none;
   border-radius: $form-control-border-radius;
+  font-size: $form-control-font-size;
+  line-height: $form-control-font-line-height;
+  color: $input-color;
   outline: none;
   z-index: $form-control-zindex;
-
-  &:focus {
-    border: $form-control-border-width solid $form-control-focus-border-color;
-  }
 }
 
 .form-group {
@@ -52,7 +59,7 @@
   position: relative;
 }
 
-.form-label {
+.form__label {
   display: inline-block;
   margin-bottom: 4px;
   font-size: $form-label-font-size;
