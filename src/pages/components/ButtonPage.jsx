@@ -27,7 +27,7 @@ const ComponentPage = () => {
     <div className="docs">
       <div className="page__button">
         <ComponentContent>
-          <Heading as="h2" size={2} text="1. 개요" />
+          <Heading as="h2" size="2" text="1. 개요" />
           <Text>Button 컴포넌트를 통해 버튼 요소를 생성합니다.</Text>
           <StyledPreview>
             <Button type="solidGreen" text="SolidGreen Button"></Button>
@@ -41,7 +41,7 @@ const ComponentPage = () => {
         </ComponentContent>
 
         <ComponentContent>
-          <Heading as="h2" size={2} text="2. 스타일" />
+          <Heading as="h2" size="2" text="2. Style" />
           <Text>버튼 스타일은 type 프로퍼티를 통해 변경합니다. 기본 값은 &#39;solidGreen&#39; 입니다.</Text>
           <StyledPreview>
             <Button type="solidGreen" text="SolidGreen Button"></Button>
@@ -54,7 +54,7 @@ const ComponentPage = () => {
           </Suspense>
         </ComponentContent>
         <ComponentContent>
-          <Heading as="h2" size={2} text="3. 사이즈" />
+          <Heading as="h2" size="2" text="3. Size" />
           <Text>
             size 프로퍼티를 통해 요소의 역할을 결정합니다. 기본값은 &#39;md&#39; 입니다.
             <br />
@@ -71,7 +71,7 @@ const ComponentPage = () => {
           </Suspense>
         </ComponentContent>
         <ComponentContent>
-          <Heading as="h2" size={2} text="4. 아이콘" />
+          <Heading as="h2" size="2" text="4. Icon" />
           <Text>
             버튼 아이콘은 Icon 컴포넌트를 통해 아이콘을 생성합니다.
             <br />
@@ -84,7 +84,7 @@ const ComponentPage = () => {
             <Button text="Left Icon Button">
               <Icon name="plus" color="white" />
             </Button>
-            <Button text="Right Icon Button" reverse={true}>
+            <Button text="Right Icon Button" reverse>
               <Icon name="plus" color="white" />
             </Button>
           </StyledPreview>
@@ -93,7 +93,7 @@ const ComponentPage = () => {
           </Suspense>
         </ComponentContent>
         <ComponentContent>
-          <Heading as="h2" size={2} text="5. Events" />
+          <Heading as="h2" size="2" text="5. Events" />
           <Text>onClick 프로퍼티를 통해 클릭 이벤트를 발생시킵니다.</Text>
           <StyledPreview>
             <Button text="Click Button" onClick={() => alert('Click Event')} />
@@ -159,7 +159,7 @@ const ButtonCode = {
     `</Button>`,
     ``,
     `<!-- Right Icon Button> -->`,
-    `<Button text="Right Icon Button" reverse={true}>`,
+    `<Button text="Right Icon Button" reverse>`,
     `<Icon name="plus" color="white" />`,
     `</Button>`,
   ].join(`\n`),
