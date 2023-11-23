@@ -5,31 +5,21 @@ const baseStyle = {
   justifyContent: 'center',
   alignItems: 'center',
   height: '24px',
-  padding: '1px 8px',
+  padding: '1px 10px',
   borderWidth: '1px',
   borderStyle: 'solid',
-  borderColor: 'transparent',
   borderRadius: `${tokens.radius[4]}`,
-  color: `${tokens.colors.white}`,
-  fontSize: '14px',
-  lineHight: '20px',
+  fontSize: '12px',
+  lineHeight: '20px',
   fontFamily: 'inherit',
   textAlign: 'center',
 };
 
 const badgeTypes = {
-  success: {
-    backgroundColor: `${tokens.colors.green600}`,
-  },
-  warn: {
-    backgroundColor: `${tokens.colors.amber700}`,
-  },
-  error: {
-    backgroundColor: `${tokens.colors.red600}`,
-  },
-  information: {
-    backgroundColor: `${tokens.colors.navy600}`,
-  },
+  success: `${tokens.colors.green600}`,
+  warn: `${tokens.colors.amber700}`,
+  error: `${tokens.colors.red600}`,
+  information: `${tokens.colors.navy600}`,
 };
 
 export default { baseStyle, badgeTypes };
