@@ -1,7 +1,54 @@
 // layouts
 
 .docs {
+  .docs-text,
+  .docs-heading {
+    .component-content {
+      .preview {
+        flex-direction: column;
+        align-items: start;
+
+        .text {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
   .text {
     margin-bottom: 15px;
+  }
+
+  .component-content {
+    margin-bottom: 50px;
+
+    .preview {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 30px;
+      background-color: #{$gray100};
+      border: 2px solid #{$gray200};
+      border-radius: 5px;
+    }
+
+    .icon-preview {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100px;
+      height: 100px;
+      column-gap: 15px;
+      row-gap: 15px;
+      background-color: #{$gray150};
+      border-radius: 5px;
+
+      .text {
+        margin-bottom: 0;
+      }
+    }
   }
 }

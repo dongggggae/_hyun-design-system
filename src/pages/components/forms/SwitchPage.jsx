@@ -30,18 +30,14 @@ const IconPreview = styled.div`
   border-radius: 5px;
 `;
 
-const ComponentContent = styled.div`
-  margin-bottom: 50px;
-`;
-
 const ComponentPage = () => {
   const theme = useTheme();
   const iconMap = theme.components.icon.iconTypes;
 
   return (
     <div className="docs">
-      <div className="page__forms">
-        <ComponentContent>
+      <div className="docs-switch">
+        <div className="component-content">
           <Heading as="h2" size="2" text="1. 개요" />
           <Text>Icon 컴포넌트를 통해 아이콘 요소를 생성합니다.</Text>
           <StyledPreview>
@@ -51,9 +47,9 @@ const ComponentPage = () => {
             <Icon name="arrowDown" size="lg" />
           </StyledPreview>
           <CodeContainer codeString={IconCode.overview} />
-        </ComponentContent>
+        </div>
 
-        <ComponentContent>
+        <div className="component-content">
           <Heading as="h2" size="2" text="2. Color" />
           <Text>
             color 프로퍼티를 통해 아이콘 컬러를 지정하며, 기본 값은 &#39;#000000&#39; 입니다 다른 컬러를 적용하고 싶은 경우에 사용합니다.
@@ -67,9 +63,9 @@ const ComponentPage = () => {
             <Icon name="close" size="lg" color="red600" />
           </StyledPreview>
           <CodeContainer codeString={IconCode.color} />
-        </ComponentContent>
+        </div>
 
-        <ComponentContent>
+        <div className="component-content">
           <Heading as="h2" size="2" text="3. Size" />
           <Text>
             size 프로퍼티를 통해 아이콘의 사이즈를 지정하며, 기본값은 &#39;md&#39; 입니다.
@@ -82,9 +78,9 @@ const ComponentPage = () => {
             <Icon name="close" size="sm" />
           </StyledPreview>
           <CodeContainer codeString={IconCode.size} />
-        </ComponentContent>
+        </div>
 
-        <ComponentContent>
+        <div className="component-content">
           <Heading as="h2" size="2" text="4. 아이콘 종류" />
           <Text>아이콘은 다음과 같은 종류를 가집니다.</Text>
           <StyledPreview theme={theme}>
@@ -95,7 +91,7 @@ const ComponentPage = () => {
               </IconPreview>
             ))}
           </StyledPreview>
-        </ComponentContent>
+        </div>
       </div>
     </div>
   );
