@@ -1,14 +1,18 @@
+import React from 'react';
 import Heading from '../hyun-design-system/typography/Heading';
 
-const LayoutHeader = () => {
+const LayoutHeader = React.memo(() => {
   const PREFIX = 'header';
 
   return (
     <header className={PREFIX}>
       <div className="header__inner">
-        <Heading as="h2" size={3} text="HEADER" />
+        <Heading as="h2" size="3" text="HEADER" />
       </div>
     </header>
   );
-};
+});
+
+LayoutHeader.displayName = 'LayoutHeader';
+
 export default LayoutHeader;

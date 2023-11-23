@@ -27,7 +27,7 @@ const ComponentPage = () => {
     <div className="docs">
       <div className="page__foundation">
         <ComponentContent>
-          <Heading as="h2" size={2} text="1. 개요" />
+          <Heading as="h2" size="2" text="1. 개요" />
           <Text>Text 컴포넌트를 통해 텍스트 요소를 생성합니다.</Text>
           <StyledPreview>
             <Text>Default Text</Text>
@@ -36,7 +36,7 @@ const ComponentPage = () => {
         </ComponentContent>
 
         <ComponentContent>
-          <Heading as="h2" size={2} text="2. Color" />
+          <Heading as="h2" size="2" text="2. Color" />
           <Text>
             color 프로퍼티를 통해 헤더 컬러를 지정하며, 기본 값은 &#39;#555555&#39; 입니다 다른 컬러를 적용하고 싶은 경우에 사용합니다.
             <br />
@@ -64,7 +64,7 @@ const ComponentPage = () => {
         </ComponentContent>
 
         <ComponentContent>
-          <Heading as="h2" size={2} text="3. Size" />
+          <Heading as="h2" size="2" text="3. Size" />
           <Text>
             size 프로퍼티를 통해 헤더 사이즈를 지정하며, 해당 태그에 다른 크기를 적용하고 싶은 경우에 사용합니다.
             <br />
