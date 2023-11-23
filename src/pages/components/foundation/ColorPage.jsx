@@ -3,10 +3,6 @@ import Heading from '../../../components/hyun-design-system/typography/Heading';
 import Text from '../../../components/hyun-design-system/typography/Text';
 import colors from '../../../themes/default/tokens/colors';
 
-const ComponentContent = styled.div`
-  margin-bottom: 50px;
-`;
-
 const ColorWrap = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -30,8 +26,8 @@ const ComponentPage = () => {
 
   return (
     <div className="docs">
-      <div className="page__foundation">
-        <ComponentContent>
+      <div className="docs-color">
+        <div className="component-content">
           <Heading as="h2" size="2" text="1. Gray" />
           <Text>다음은 Gray Scale을 나타냅니다.</Text>
           <ColorWrap>
@@ -42,9 +38,9 @@ const ComponentPage = () => {
               </ColorUnit>
             ))}
           </ColorWrap>
-        </ComponentContent>
+        </div>
 
-        <ComponentContent>
+        <div className="component-content">
           <Heading as="h2" size="2" text="2. Red & Ember" />
           <Text>다음은 Red & Ember Scale을 나타냅니다.</Text>
           <ColorWrap>
@@ -55,9 +51,9 @@ const ComponentPage = () => {
               </ColorUnit>
             ))}
           </ColorWrap>
-        </ComponentContent>
+        </div>
 
-        <ComponentContent>
+        <div className="component-content">
           <Heading as="h2" size="2" text="3. Green & Blue & Navy" />
           <Text>다음은 Green & Blue & Navy Scale을 나타냅니다.</Text>
           <ColorWrap>
@@ -68,7 +64,7 @@ const ComponentPage = () => {
               </ColorUnit>
             ))}
           </ColorWrap>
-        </ComponentContent>
+        </div>
       </div>
     </div>
   );

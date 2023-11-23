@@ -19,8 +19,8 @@ const navData = [
       { name: 'Switch', to: 'components/forms/SwitchPage' },
     ],
   },
-  { name: 'Button', to: 'components/ButtonPage' },
   { name: 'Badge', to: 'components/BadgePage' },
+  { name: 'Button', to: 'components/ButtonPage' },
   { name: 'Icon', to: 'components/IconPage' },
 ];
 export default navData;
