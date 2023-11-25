@@ -17,26 +17,7 @@
     align-items: center;
     margin: $input-wrap-addon-margin;
     padding-right: 6px;
-
-    .btn {
-      position: relative;
-      padding: 1px 3px;
-      background-color: $input-wrap-addon-btn-bg;
-      z-index: $form-control-zindex;
-    }
   }
-
-  //   &__backdrop {
-  //     position: absolute;
-  //     top: 0;
-  //     right: 0;
-  //     bottom: 0;
-  //     left: 0;
-  //     outline: 0.75px solid #638dff;
-  //     border-radius: 4px;
-  //     outline-offset: 3px;
-  //     z-index: 1;
-  //   }
 }
 
 .form__control {
