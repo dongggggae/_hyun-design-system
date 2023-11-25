@@ -22,6 +22,22 @@ const iconTypes = {
   system: FaGear,
 };
 
+const iconNames = {
+  arrowLeft: '왼쪽 화살표',
+  arrowRight: '오른쪽 화살표',
+  arrowUp: '위쪽 화살표',
+  arrowDown: '아래쪽 화살표',
+  close: '닫기',
+  closeFill: '지우기',
+  plus: '더하기',
+  search: '검색하기',
+  hamburger: '메뉴',
+  visible: '보기',
+  invisible: '숨기기',
+  refresh: '새로고침',
+  system: '설정',
+};
+
 const iconSizes = {
   lg: {
     width: '24px',
@@ -37,4 +53,4 @@ const iconSizes = {
   },
 };
 
-export default { baseStyle, iconTypes, iconSizes };
+export default { baseStyle, iconTypes, iconNames, iconSizes };

@@ -17,6 +17,13 @@ const baseStyle = {
   cursor: 'pointer',
 };
 
+const iconButtonStyle = {
+  gap: '0',
+  backgroundColor: `transparent`,
+  borderColor: 'transparent',
+  zIndex: `${tokens.zindex.foucsed}`,
+};
+
 const buttonTypes = {
   solidGreen: {
     backgroundColor: `${tokens.colors.green}`,
@@ -37,6 +44,18 @@ const buttonTypes = {
     backgroundColor: 'transparent',
     borderColor: `${tokens.colors.gray400}`,
     color: `${tokens.colors.black}`,
+  },
+};
+
+const iconButtonSizes = {
+  md: {
+    padding: '11px',
+  },
+  sm: {
+    padding: '5px',
+  },
+  xs: {
+    padding: '3px',
   },
 };
 
@@ -71,4 +90,4 @@ const buttonSizes = {
   },
 };
 
-export default { baseStyle, buttonSizes, buttonTypes };
+export default { baseStyle, iconButtonStyle, buttonSizes, iconButtonSizes, buttonTypes };
