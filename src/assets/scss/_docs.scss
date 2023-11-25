@@ -15,6 +15,12 @@
     }
   }
 
+  .docs-button {
+    .preview .btn__icon {
+      border: 1px solid $black;
+    }
+  }
+
   .text {
     margin-bottom: 15px;
   }
