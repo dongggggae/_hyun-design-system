@@ -12,10 +12,11 @@ const StyledIcon = styled.span`
   }
 `;
 
-const Icon = React.memo(({ name, size, color, text }) => {
+const Icon = React.memo(({ name, size, color }) => {
   const PREFIX = 'icon';
   const theme = useTheme();
   const SelectedIcon = theme.components.icon.iconTypes[name];
+  const SelectedIconName = theme.components.icon.iconNames[name];
 
   if (!SelectedIcon) {
     return null;
@@ -24,7 +25,7 @@ const Icon = React.memo(({ name, size, color, text }) => {
   return (
     <StyledIcon size={size} theme={theme} color={color}>
       <SelectedIcon className={PREFIX} />
-      <b>{text}</b>
+      <b className="blind">{SelectedIconName}</b>
     </StyledIcon>
   );
 });
@@ -35,7 +36,6 @@ Icon.defaultProps = {
 };
 
 Icon.propTypes = {
-  text: PropTypes.string,
   name: PropTypes.string.isRequired,
   size: PropTypes.oneOf(['lg', 'md', 'sm']),
   color: PropTypes.string,
