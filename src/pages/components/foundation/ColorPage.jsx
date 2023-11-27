@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+
 import Heading from '../../../components/hyun-design-system/typography/Heading';
 import Text from '../../../components/hyun-design-system/typography/Text';
 import colors from '../../../themes/default/tokens/colors';

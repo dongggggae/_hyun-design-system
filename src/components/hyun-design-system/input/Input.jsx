@@ -1,6 +1,8 @@
 import React, { useRef, useState, useCallback } from 'react';
-import PropTypes from 'prop-types';
+
 import styled from '@emotion/styled';
+import PropTypes from 'prop-types';
+
 import InputAddon from './InputAddon';
 
 const StyledInput = styled.div`

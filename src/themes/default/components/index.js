@@ -1,7 +1,7 @@
-import typography from './typography';
-import button from './button';
 import badge from './badge';
+import button from './button';
 import icon from './icon';
+import typography from './typography';
 
 const components = {
   typography,

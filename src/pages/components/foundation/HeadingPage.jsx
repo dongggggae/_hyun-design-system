@@ -1,4 +1,5 @@
 import { lazy, Suspense } from 'react';
+
 import Heading from '../../../components/hyun-design-system/typography/Heading';
 import Text from '../../../components/hyun-design-system/typography/Text';
 
