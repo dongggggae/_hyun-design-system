@@ -54,7 +54,7 @@ const colorScales = {
 const colors = {
   ...colorScales,
 
-  primaryText: colorScales.black,
+  primaryText: colorScales.gray900,
   secondaryText: colorScales.gray700,
   tertiaryText: colorScales.gray500,
   surface: colorScales.white,
