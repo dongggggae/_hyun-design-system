@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 
 import Layout from './layouts/Layout';
+import AccordionPage from './pages/components/AccordionPage';
 import BadgePage from './pages/components/BadgePage';
 import ButtonPage from './pages/components/ButtonPage';
 import InputPage from './pages/components/forms/InputPage';
@@ -10,7 +11,6 @@ import ColorPage from './pages/components/foundation/ColorPage';
 import HeadingPage from './pages/components/foundation/HeadingPage';
 import TextPage from './pages/components/foundation/TextPage';
 import IconPage from './pages/components/IconPage';
-import AccordionPage from './pages/components/AccordionPage';
 import { ThemeProvider } from './theme/ThemeContext';
 
 function App() {

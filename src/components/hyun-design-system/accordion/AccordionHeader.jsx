@@ -1,6 +1,5 @@
-import React from 'react';
-
 import styled from '@emotion/styled';
+import PropTypes from 'prop-types';
 
 import { useAccordionItem } from './AccordionItem';
 import { useTheme } from '../../../theme/ThemeContext';
@@ -25,6 +24,10 @@ const AccordionHeader = ({ title }) => {
       <Icon name={state.collapsed ? 'arrowDown' : 'arrowUp'} color={state.collapsed ? 'gray600' : 'gray400'} />
     </StyledHeader>
   );
+};
+
+AccordionHeader.propTypes = {
+  title: PropTypes.string,
 };
 
 export default AccordionHeader;

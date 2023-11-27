@@ -1,6 +1,5 @@
-import React from 'react';
-
 import styled from '@emotion/styled';
+import PropTypes from 'prop-types';
 
 import { useAccordionItem } from './AccordionItem';
 import { useTheme } from '../../../theme/ThemeContext';
@@ -19,6 +18,10 @@ const AccordionBody = ({ children }) => {
       {children}
     </StyledBody>
   );
+};
+
+AccordionBody.propTypes = {
+  children: PropTypes.node,
 };
 
 export default AccordionBody;

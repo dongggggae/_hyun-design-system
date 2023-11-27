@@ -1,7 +1,6 @@
 import { lazy, Suspense } from 'react';
+
 import { Accordion, AccordionItem } from '../../components/hyun-design-system/accordion';
-import Icon from '../../components/hyun-design-system/icon/Icon';
-import Button from '../../components/hyun-design-system/button/Button';
 import Heading from '../../components/hyun-design-system/typography/Heading';
 import Text from '../../components/hyun-design-system/typography/Text';
 
