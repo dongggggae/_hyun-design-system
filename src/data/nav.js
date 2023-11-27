@@ -19,6 +19,7 @@ const navData = [
       { name: 'Switch', to: 'components/forms/SwitchPage' },
     ],
   },
+  { name: 'Accordion', to: 'components/AccordionPage' },
   { name: 'Badge', to: 'components/BadgePage' },
   { name: 'Button', to: 'components/ButtonPage' },
   { name: 'Icon', to: 'components/IconPage' },
