@@ -1,8 +1,10 @@
 import { lazy, Suspense } from 'react';
+
 import styled from '@emotion/styled';
+
+import Badge from '../../components/hyun-design-system/badge/Badge';
 import Heading from '../../components/hyun-design-system/typography/Heading';
 import Text from '../../components/hyun-design-system/typography/Text';
-import Badge from '../../components/hyun-design-system/badge/Badge';
 
 const LazyCodeContainer = lazy(() => import('../../components/docs/CodeContainer'));
 

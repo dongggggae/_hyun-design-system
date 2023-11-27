@@ -1,7 +1,8 @@
 import { lazy, Suspense } from 'react';
+
+import Icon from '../../components/hyun-design-system/icon/Icon';
 import Heading from '../../components/hyun-design-system/typography/Heading';
 import Text from '../../components/hyun-design-system/typography/Text';
-import Icon from '../../components/hyun-design-system/icon/Icon';
 import { useTheme } from '../../theme/ThemeContext';
 
 const LazyCodeContainer = lazy(() => import('../../components/docs/CodeContainer'));

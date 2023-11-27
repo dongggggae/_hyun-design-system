@@ -1,8 +1,9 @@
 import styled from '@emotion/styled';
+
+import CodeContainer from '../../../components/docs/CodeContainer';
+import Icon from '../../../components/hyun-design-system/icon/Icon';
 import Heading from '../../../components/hyun-design-system/typography/Heading';
 import Text from '../../../components/hyun-design-system/typography/Text';
-import Icon from '../../../components/hyun-design-system/icon/Icon';
-import CodeContainer from '../../../components/docs/CodeContainer';
 import { useTheme } from '../../../theme/ThemeContext';
 import { defaultTheme } from '../../../themes';
 

@@ -1,15 +1,16 @@
 import { Routes, Route } from 'react-router-dom';
-import { ThemeProvider } from './theme/ThemeContext';
+
 import Layout from './layouts/Layout';
+import BadgePage from './pages/components/BadgePage';
+import ButtonPage from './pages/components/ButtonPage';
 import InputPage from './pages/components/forms/InputPage';
 import SelectPage from './pages/components/forms/SelectPage';
 import SwitchPage from './pages/components/forms/SwitchPage';
 import ColorPage from './pages/components/foundation/ColorPage';
 import HeadingPage from './pages/components/foundation/HeadingPage';
 import TextPage from './pages/components/foundation/TextPage';
-import ButtonPage from './pages/components/ButtonPage';
-import BadgePage from './pages/components/BadgePage';
 import IconPage from './pages/components/IconPage';
+import { ThemeProvider } from './theme/ThemeContext';
 
 function App() {
   return (
