@@ -65,8 +65,8 @@ const ComponentPage = () => {
             reverse 프로퍼티를 통해 Icon 과 Text의 위치를 변경할 수 있습니다. 기본값은 &#39;false&#39;입니다.
           </Text>
           <div className="preview">
-            <Button icononly size="sm">
-              <Icon name="plus" />
+            <Button icononly>
+              <Icon name="plus" color="white" />
             </Button>
             <Button text="Left Icon Button">
               <Icon name="plus" color="white" />
@@ -137,8 +137,8 @@ const ButtonCode = {
   ].join(`\n`),
   icon: [
     `<!-- Only Icon Button> -->`,
-    `<Button icononly size="sm">`,
-    `<Icon name="plus" />`,
+    `<Button icononly>`,
+    `<Icon name="plus" color="white" />`,
     `</Button>`,
     ``,
     `<!-- Left Icon Button> -->`,

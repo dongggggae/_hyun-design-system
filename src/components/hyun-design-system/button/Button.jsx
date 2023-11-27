@@ -29,10 +29,8 @@ const Button = React.memo(({ type, size, text, children, reverse, icononly, onCl
 
   return (
     <React.Fragment>
-      {/*  아이콘 only 일때는 name을 그냥 Icon에 porps를 주고 + 새로운 스타일을 줘야함  + Icon에는 웹접근서성을
-      위해서 블라인드 메시지를 줘야하는데 이걸 그냥 js파일에서 관리하는게 나을 듯?*/}
       {icononly ? (
-        <StyledIconButton className={`${PREFIX}__icon`} type={type} size={size} theme={theme} onClick={handleClick}>
+        <StyledIconButton className={`${PREFIX}__icon`} size={size} theme={theme} onClick={handleClick}>
           {children}
         </StyledIconButton>
       ) : (
