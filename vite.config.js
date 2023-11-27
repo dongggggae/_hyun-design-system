@@ -18,17 +18,6 @@ export default defineConfig({
     rollupOptions: {
       plugins: [terser()],
       output: {
-        manualChunks: { react: ['react', 'react-dom', 'react-router-dom', 'react-syntax-highlighter'] },
-      },
-    },
-  },
-  optimizeDeps: {
-    include: ['react', 'react-dom'],
-  },
-  build: {
-    rollupOptions: {
-      plugins: [terser()],
-      output: {
         manualChunks: {
           react: ['react', 'react-dom'],
           reactRouter: ['react-router-dom'],
