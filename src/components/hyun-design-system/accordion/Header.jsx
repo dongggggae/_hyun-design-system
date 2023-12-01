@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 
-import { useAccordionItem } from './AccordionItem';
+import { useItem } from './Item';
 import { useTheme } from '../../../theme/ThemeContext';
 import Icon from '../icon/Icon';
 
@@ -10,9 +10,9 @@ const StyledHeader = styled.button`
   ${(props) => props.collapsed && props.theme.components.accordion.collapsedHeaderStyle}
 `;
 
-const AccordionHeader = ({ title }) => {
+const Header = ({ title }) => {
   const theme = useTheme();
-  const { state, dispatch, itemId } = useAccordionItem();
+  const { state, dispatch, itemId } = useItem();
 
   const handleCollapsed = () => {
     dispatch({ type: 'TOGGLE_COLLAPSED', itemId });
@@ -26,8 +26,8 @@ const AccordionHeader = ({ title }) => {
   );
 };
 
-AccordionHeader.propTypes = {
+Header.propTypes = {
   title: PropTypes.string,
 };
 
-export default AccordionHeader;
+export default Header;

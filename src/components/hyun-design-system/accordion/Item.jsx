@@ -3,11 +3,11 @@ import { createContext, useContext, useReducer, useRef } from 'react';
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 
-import AccordionBody from './AccordionBody';
-import AccordionHeader from './AccordionHeader';
+import Body from './Body';
+import Header from './Header';
 import { useTheme } from '../../../theme/ThemeContext';
 
-const AccordionItemContext = createContext();
+const ItemContext = createContext();
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -22,7 +22,7 @@ const StyledItem = styled.div`
   ${(props) => props.theme.components.accordion.accordionItemStyle}
 `;
 
-const AccordionItem = ({ title, children, isOpen }) => {
+const Item = ({ title, children, isOpen }) => {
   const theme = useTheme();
   const itemIdRef = useRef(0);
 
@@ -31,23 +31,24 @@ const AccordionItem = ({ title, children, isOpen }) => {
   });
 
   return (
-    <AccordionItemContext.Provider value={{ state, dispatch, itemId: itemIdRef.current }}>
+    <ItemContext.Provider value={{ state, dispatch, itemId: itemIdRef.current }}>
       <StyledItem theme={theme}>
-        <AccordionHeader title={title} />
-        <AccordionBody collapsed={state.collapsed}>{children}</AccordionBody>
+        <Header title={title} />
+        <Body collapsed={state.collapsed}>{children}</Body>
       </StyledItem>
-    </AccordionItemContext.Provider>
+    </ItemContext.Provider>
   );
 };
 
-export const useAccordionItem = () => {
-  return useContext(AccordionItemContext);
+// eslint-disable-next-line react-refresh/only-export-components
+export const useItem = () => {
+  return useContext(ItemContext);
 };
 
-AccordionItem.propTypes = {
+Item.propTypes = {
   title: PropTypes.string.isRequired,
   children: PropTypes.node,
   isOpen: PropTypes.bool,
 };
 
-export default AccordionItem;
+export default Item;

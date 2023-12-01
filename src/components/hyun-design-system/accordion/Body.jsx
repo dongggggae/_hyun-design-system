@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 
-import { useAccordionItem } from './AccordionItem';
+import { useItem } from './Item';
 import { useTheme } from '../../../theme/ThemeContext';
 
 const StyledBody = styled.div`
@@ -9,9 +9,9 @@ const StyledBody = styled.div`
   ${(props) => props.collapsed && props.theme.components.accordion.collapsedBodyStyle}
 `;
 
-const AccordionBody = ({ children }) => {
-  const { state } = useAccordionItem();
+const Body = ({ children }) => {
   const theme = useTheme();
+  const { state } = useItem();
 
   return (
     <StyledBody theme={theme} collapsed={state.collapsed}>
@@ -20,8 +20,8 @@ const AccordionBody = ({ children }) => {
   );
 };
 
-AccordionBody.propTypes = {
+Body.propTypes = {
   children: PropTypes.node,
 };
 
-export default AccordionBody;
+export default Body;
