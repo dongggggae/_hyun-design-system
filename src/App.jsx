@@ -11,6 +11,7 @@ import ColorPage from './pages/components/foundation/ColorPage';
 import HeadingPage from './pages/components/foundation/HeadingPage';
 import TextPage from './pages/components/foundation/TextPage';
 import IconPage from './pages/components/IconPage';
+import TablePage from './pages/components/TablePage';
 import { ThemeProvider } from './theme/ThemeContext';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path="components/ButtonPage" element={<ButtonPage />} />
           <Route path="components/BadgePage" element={<BadgePage />} />
           <Route path="components/IconPage" element={<IconPage />} />
+          <Route path="components/TablePage" element={<TablePage />} />
         </Route>
       </Routes>
     </ThemeProvider>
