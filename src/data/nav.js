@@ -23,5 +23,6 @@ const navData = [
   { name: 'Badge', to: 'components/BadgePage' },
   { name: 'Button', to: 'components/ButtonPage' },
   { name: 'Icon', to: 'components/IconPage' },
+  { name: 'Table', to: 'components/TablePage' },
 ];
 export default navData;
