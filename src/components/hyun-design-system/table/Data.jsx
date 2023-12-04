@@ -15,9 +15,15 @@ const StyledData = styled.td`
       border-left: none;
     }
   `}
+
+  text-align: ${(props) => {
+    if (props.textAlign === 'left') return 'left';
+    if (props.textAlign === 'center') return 'center';
+    return 'center';
+  }};
 `;
 
-const Data = ({ children, rowSpan, colSpan }) => {
+const Data = ({ children, rowSpan, colSpan, textAlign }) => {
   const theme = useTheme();
   const type = useRow();
   const attributes = {};
@@ -26,7 +32,7 @@ const Data = ({ children, rowSpan, colSpan }) => {
   attributes.colSpan = colSpan || attributes.colSpan;
 
   return (
-    <StyledData {...attributes} theme={theme} type={type}>
+    <StyledData {...attributes} theme={theme} type={type} textAlign={textAlign}>
       {children}
     </StyledData>
   );
@@ -36,6 +42,7 @@ Data.propTypes = {
   children: PropTypes.node.isRequired,
   rowSpan: PropTypes.number,
   colSpan: PropTypes.number,
+  textAlign: PropTypes.string,
 };
 
 export default Data;
