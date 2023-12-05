@@ -21,6 +21,17 @@
     }
   }
 
+  .docs-table {
+    .code-box {
+      display: flex;
+      gap: 10px;
+
+      .code__container {
+        flex: 1;
+      }
+    }
+  }
+
   .text {
     margin-bottom: 15px;
   }
