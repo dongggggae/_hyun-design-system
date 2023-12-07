@@ -65,7 +65,7 @@ const ComponentPage = () => {
               </TableBody>
             </Table>
           </div>
-          <div className='code-box'>
+          <div className="code-box">
             <Suspense fallback={<div>Loading...</div>}>
               <LazyCodeContainer codeString={TableCode.overview} />
             </Suspense>
@@ -110,8 +110,8 @@ const ComponentPage = () => {
         </div>
 
         <div className="component-content">
-          <Heading as="h2" size="2" text="2. active" />
-          <Text>TableRow 컴포넌트에 active 프로퍼티를 통해 선택한 스타일을 적용할 수 있습니다.</Text>
+          <Heading as="h2" size="2" text="3. active" />
+          <Text>active 프로퍼티를 통해 해당 행(row)의 강조를 설정합니다. 기본값은 false입니다.</Text>
           <div className="preview">
             <Table>
               <TableHead>
@@ -132,6 +132,42 @@ const ComponentPage = () => {
                   <TableData>Data2</TableData>
                   <TableData>Data3</TableData>
                 </TableRow>
+                <TableRow active>
+                  <TableData>Data1</TableData>
+                  <TableData>Data2</TableData>
+                  <TableData>Data3</TableData>
+                </TableRow>
+              </TableBody>
+            </Table>
+          </div>
+          <Suspense fallback={<div>Loading...</div>}>
+            <LazyCodeContainer codeString={TableCode.active} />
+          </Suspense>
+        </div>
+
+        <div className="component-content">
+          <Heading as="h2" size="2" text="4. hover" />
+          <Text>hover 프로퍼티를 통해 테이블 행(row)의 hover 활성화를 설정합니다. 기본값은 false입니다.</Text>
+          <div className="preview">
+            <Table hover>
+              <TableHead>
+                <TableRow>
+                  <TableHeader>Header1</TableHeader>
+                  <TableHeader>Header2</TableHeader>
+                  <TableHeader>Header3</TableHeader>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                <TableRow>
+                  <TableData>Data1</TableData>
+                  <TableData>Data2</TableData>
+                  <TableData>Data3</TableData>
+                </TableRow>
+                <TableRow>
+                  <TableData>Data1</TableData>
+                  <TableData>Data2</TableData>
+                  <TableData>Data3</TableData>
+                </TableRow>
                 <TableRow>
                   <TableData>Data1</TableData>
                   <TableData>Data2</TableData>
@@ -141,9 +177,11 @@ const ComponentPage = () => {
             </Table>
           </div>
           <Suspense fallback={<div>Loading...</div>}>
-            <LazyCodeContainer codeString={TableCode.span} />
+            <LazyCodeContainer codeString={TableCode.hover} />
           </Suspense>
         </div>
+
+
       </div>
     </div>
   );
@@ -206,7 +244,6 @@ const TableCode = {
     `</Table>`,
     ``,
     ``,
-    
   ].join(`\n`),
   span: [
     `<Table>`,
@@ -229,6 +266,58 @@ const TableCode = {
     `   </TableRow>`,
     `   <TableRow>`,
     `     <TableData colSpan={2}>Data1</TableData>`,
+    `     <TableData>Data2</TableData>`,
+    `   </TableRow>`,
+    ` </TableBody>`,
+    `</Table>`,
+  ].join(`\n`),
+  active: [
+    `<Table>`,
+    `  <TableHead>`,
+    `   <TableRow>`,
+    `     <TableHeader>Header1</TableHeader>`,
+    `     <TableHeader>Header2</TableHeader>`,
+    `     <TableHeader>Header3</TableHeader>`,
+    `   </TableRow>`,
+    ` </TableHead>`,
+    ` <TableBody>`,
+    `   <TableRow>`,
+    `     <TableData active>Data1</TableData>`,
+    `     <TableData>Data2</TableData>`,
+    `     <TableData>Data3</TableData>`,
+    `   </TableRow>`,
+    `   <TableRow>`,
+    `     <TableData>Data1</TableData>`,
+    `     <TableData>Data2</TableData>`,
+    `   </TableRow>`,
+    `   <TableRow>`,
+    `     <TableData active>Data1</TableData>`,
+    `     <TableData>Data2</TableData>`,
+    `   </TableRow>`,
+    ` </TableBody>`,
+    `</Table>`,
+  ].join(`\n`),
+  hover: [
+    `<Table hover>`,
+    `  <TableHead>`,
+    `   <TableRow>`,
+    `     <TableHeader>Header1</TableHeader>`,
+    `     <TableHeader>Header2</TableHeader>`,
+    `     <TableHeader>Header3</TableHeader>`,
+    `   </TableRow>`,
+    ` </TableHead>`,
+    ` <TableBody>`,
+    `   <TableRow>`,
+    `     <TableData>Data1</TableData>`,
+    `     <TableData>Data2</TableData>`,
+    `     <TableData>Data3</TableData>`,
+    `   </TableRow>`,
+    `   <TableRow>`,
+    `     <TableData>Data1</TableData>`,
+    `     <TableData>Data2</TableData>`,
+    `   </TableRow>`,
+    `   <TableRow>`,
+    `     <TableData>Data1</TableData>`,
     `     <TableData>Data2</TableData>`,
     `   </TableRow>`,
     ` </TableBody>`,
