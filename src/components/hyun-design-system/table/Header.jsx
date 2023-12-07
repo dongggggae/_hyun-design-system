@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 
-import { useRow } from './Row';
 import { useTheme } from '../../../theme/ThemeContext';
 
 const StyledHeader = styled.th`
@@ -21,13 +20,12 @@ const StyledHeader = styled.th`
 const Header = ({ children, rowSpan, colSpan, textAlign }) => {
   const theme = useTheme();
   const attributes = {};
-  const type = useRow();
 
   attributes.rowSpan = rowSpan || attributes.rowSpan;
   attributes.colSpan = colSpan || attributes.colSpan;
 
   return (
-    <StyledHeader {...attributes} theme={theme} type={type} textAlign={textAlign}>
+    <StyledHeader {...attributes} theme={theme} textAlign={textAlign}>
       {children}
     </StyledHeader>
   );

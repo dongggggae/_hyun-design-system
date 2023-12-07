@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 
-import { useRow } from './Row';
 import { useTheme } from '../../../theme/ThemeContext';
 
 const StyledData = styled.td`
@@ -25,14 +24,13 @@ const StyledData = styled.td`
 
 const Data = ({ children, rowSpan, colSpan, textAlign }) => {
   const theme = useTheme();
-  const type = useRow();
   const attributes = {};
 
   attributes.rowSpan = rowSpan || attributes.rowSpan;
   attributes.colSpan = colSpan || attributes.colSpan;
 
   return (
-    <StyledData {...attributes} theme={theme} type={type} textAlign={textAlign}>
+    <StyledData {...attributes} theme={theme} textAlign={textAlign}>
       {children}
     </StyledData>
   );

@@ -1,42 +1,37 @@
-import { createContext, useContext } from 'react';
-
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 
+import { useTable } from './Table';
 import { useTheme } from '../../../theme/ThemeContext';
-
-const TableRowContext = createContext();
 
 const StyledRow = styled.tr`
   ${(props) => (props.active ? props.theme.components.table.activeRowStyle : '')}
+
+  &:hover {
+    ${(props) => (props.hover ? props.theme.components.table.activeRowStyle : '')}
+  }
 `;
 
-const Row = ({ children, type, active }) => {
+const Row = ({ active, children }) => {
   const theme = useTheme();
+  const { hover } = useTable();
 
   return (
-    <TableRowContext.Provider value={{ type, active }}>
-      <StyledRow theme={theme} active={active}>
-        {children}
-      </StyledRow>
-    </TableRowContext.Provider>
+    <StyledRow theme={theme} active={active} hover={hover}>
+      {children}
+    </StyledRow>
   );
 };
 
-// eslint-disable-next-line react-refresh/only-export-components
-export const useRow = () => {
-  return useContext(TableRowContext);
-};
-
 Row.defaultProps = {
-  type: 'col',
   active: false,
+  hover: false,
 };
 
 Row.propTypes = {
   children: PropTypes.node,
-  type: PropTypes.string,
   active: PropTypes.bool,
+  hover: PropTypes.bool,
 };
 
 export default Row;
