@@ -7,12 +7,7 @@ module.exports = {
   settings: { react: { version: '18.2' } },
   plugins: ['react-refresh', 'import'],
   rules: {
-    'react-refresh/only-export-components': [
-      'warn',
-      {
-        allowConstantExport: true,
-      },
-    ],
+    'react-refresh/only-export-components': ['off'],
     'import/order': [
       'warn',
       {

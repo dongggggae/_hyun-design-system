@@ -24,7 +24,6 @@ const Table = ({ children, hover, type }) => {
   );
 };
 
-// eslint-disable-next-line react-refresh/only-export-components
 export const useTable = () => {
   return useContext(TableContext);
 };
