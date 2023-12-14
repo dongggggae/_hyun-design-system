@@ -1,27 +1,18 @@
 import React from 'react';
 
-import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 
-import { useTheme } from '../../../theme/ThemeContext';
-
-const StyledBadge = styled.span`
-  ${(props) => props.theme.components.badge.baseStyle};
-  background-color: ${(props) => (props.outline ? 'white' : props.theme.components.badge.badgeTypes[props.state])};
-  border-color: ${(props) => (props.outline ? props.theme.components.badge.badgeTypes[props.state] : 'transparent')};
-  color: ${(props) => (props.outline ? props.theme.components.badge.badgeTypes[props.state] : 'white')};
-`;
-
-const Badge = React.memo(({ state, text, outline }) => {
-  const theme = useTheme();
+const Badge = React.memo(({ state, outline, text }) => {
   const PREFIX = 'badge';
 
   return (
-    <StyledBadge className={PREFIX} state={state} outline={outline} theme={theme}>
-      {text}
-    </StyledBadge>
+    <React.Fragment>
+      {state && outline ? <span className={[PREFIX, `${PREFIX}--outline-${state}`].join(' ')}>{text}</span> : <span className={[PREFIX, `${PREFIX}--${state}`].join(' ')}>{text}</span>}
+    </React.Fragment>
   );
 });
+
+Badge.displayName = 'Badge';
 
 Badge.defaultProps = {
   state: 'information',
@@ -29,11 +20,9 @@ Badge.defaultProps = {
 };
 
 Badge.propTypes = {
-  state: PropTypes.oneOf(['success', 'warn', 'error', 'information']),
-  text: PropTypes.string,
+  state: PropTypes.oneOf(['sucess', 'caution', 'negative', 'information']),
   outline: PropTypes.bool,
+  text: PropTypes.node,
 };
-
-Badge.displayName = 'Badge';
 
 export default Badge;
