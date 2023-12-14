@@ -1,4 +1,11 @@
-// 버튼 생성
+// Badge
+@mixin generate-badge($args...) {
+  @each $key, $value in keywords($args) {
+    --#{$prefix}badge-#{$key}: #{$value};
+  }
+}
+
+// Button
 @mixin generate-button($args...) {
   @each $key, $value in keywords($args) {
     --#{$prefix}btn-#{$key}: #{$value};
