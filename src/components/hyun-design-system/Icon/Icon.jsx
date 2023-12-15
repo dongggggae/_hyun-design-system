@@ -34,11 +34,11 @@ const Icon = React.memo(({ name, size, color }) => {
 
 Icon.defaultProps = {
   size: 'md',
-  color: 'black',
+  color: 'white',
 };
 
 Icon.propTypes = {
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
   size: PropTypes.oneOf(['lg', 'md', 'sm']),
   color: PropTypes.string,
 };
