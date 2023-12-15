@@ -149,3 +149,26 @@ $buttons: map-merge(
     }
   }
 }
+
+.btn-group {
+  width: 100%;
+  display: flex;
+
+  > .btn:active {
+    z-index: 10;
+  }
+
+  > .btn {
+    flex: 1 1 auto;
+    border-radius: 0;
+
+    &:first-child {
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+    }
+    &:last-child {
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
+  }
+}

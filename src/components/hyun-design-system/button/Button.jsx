@@ -41,6 +41,7 @@ Btn.propTypes = {
   iconColor: PropTypes.string,
   iconOnly: PropTypes.bool,
   reverse: PropTypes.bool,
+  onClick: PropTypes.func,
 };
 
 export default Btn;
