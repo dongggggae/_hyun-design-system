@@ -2,7 +2,7 @@
 $buttons: () !default;
 $buttons: map-merge(
   (
-    'solidGreen': (
+    'solid-green': (
       'bg': $green600,
       'color': $white,
       'hover-bg': $green700,
@@ -10,7 +10,7 @@ $buttons: map-merge(
       'active-border-color': $green800,
       'disabled-bg': $gray350,
     ),
-    'solidRed': (
+    'solid-red': (
       'bg': $red600,
       'color': $white,
       'hover-bg': $red700,
@@ -18,7 +18,7 @@ $buttons: map-merge(
       'active-border-color': $red800,
       'disabled-bg': $gray350,
     ),
-    'outlineGreen': (
+    'outline-green': (
       'bg': $white,
       'border-color': $green600,
       'color': $green600,
@@ -32,7 +32,7 @@ $buttons: map-merge(
       'disabled-border-color': $gray300,
       'disabled-color': $gray300,
     ),
-    'outlineGray': (
+    'outline-gray': (
       'color': $black,
       'bg': $white,
       'border-color': $gray300,
@@ -134,7 +134,6 @@ $buttons: map-merge(
 
       .btn__text {
         font-size: var(--#{$prefix}btn-text-font-size);
-        font-weight: var(--#{$prefix}btn-text-font-weight);
         line-height: var(--#{$prefix}btn-text-line-height);
       }
     }
