@@ -73,9 +73,11 @@ $buttons: map-merge(
   --#{$prefix}btn-border-color: var(--#{$prefix}btn-bg);
   --#{$prefix}btn-border-radius: 4px;
   --#{$prefix}btn-color: #{$white};
+  --#{$prefix}btn-text-margin-x: 2px;
   --#{$prefix}btn-text-font-size: #{$btn-text-font-size};
   --#{$prefix}btn-text-line-height: #{$btn-text-line-height};
   --#{$prefix}btn-text-decoration: #{$btn-text-decoration};
+  --#{$prefix}btn-icon-margin-x: 2px;
   --#{$prefix}btn-hover-bg: #{$green700};
   --#{$prefix}btn-hover-border-color: var(--#{$prefix}btn-hover-bg);
   --#{$prefix}btn-hover-color: var(--#{$prefix}btn-color);
@@ -110,6 +112,12 @@ $buttons: map-merge(
   outline: none;
   cursor: pointer;
 
+  .icon {
+    color: $white;
+    margin-right: var(--#{$prefix}btn-icon-margin-x);
+    margin-left: var(--#{$prefix}btn-icon-margin-x);
+  }
+
   @each $state in ('hover', 'active', 'disabled') {
     &:#{$state} {
       color: var(--#{$prefix}btn-#{$state}-color);
@@ -133,6 +141,8 @@ $buttons: map-merge(
       padding-right: var(--#{$prefix}btn-padding-x);
 
       .btn__text {
+        margin-right: var(--#{$prefix}btn-text-margin-x);
+        margin-left: var(--#{$prefix}btn-text-margin-x);
         font-size: var(--#{$prefix}btn-text-font-size);
         line-height: var(--#{$prefix}btn-text-line-height);
       }
