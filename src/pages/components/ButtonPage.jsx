@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react';
 
 import Btn from '../../components/hyun-design-system/button/Button';
+import BtnGroup from '../../components/hyun-design-system/button/Group';
 import Heading from '../../components/hyun-design-system/typography/Heading';
 import Text from '../../components/hyun-design-system/typography/Text';
 
@@ -88,6 +89,20 @@ const ComponentPage = () => {
             <LazyCodeContainer codeString={ButtonCode.event} />
           </Suspense>
         </div>
+
+        <div className="component-content">
+          <Heading as="h2" size="2" text="6. BtnGroup" />
+          <Text>BtnGroup 컴포넌트를 통해 버튼을 그룹화합니다.</Text>
+          <div className="preview">
+            <BtnGroup>
+              <Btn type="solid-green" text="Button" />
+              <Btn type="outline-green" text="Button" />
+            </BtnGroup>
+          </div>
+          <Suspense fallback={<div>Loading...</div>}>
+            <LazyCodeContainer codeString={ButtonCode.group} />
+          </Suspense>
+        </div>
       </div>
     </div>
   );
@@ -146,7 +161,8 @@ const ButtonCode = {
     `<!-- Right Icon Button> -->`,
     `<Btn type="solid-red" text="ButtonText" reverse icon="plus" />`,
   ].join(`\n`),
-  event: [`<Btn text="Click Button" onClick={() => alert('Click Event')} />`].join(`\n`),
+  event: [`<!-- Button Events> -->`, `<Btn text="Click Button" onClick={() => alert('Click Event')} />`].join(`\n`),
+  group: [`<BtnGroup>`, ` <Btn type="solid-green" text="Button" />`, ` <Btn type="outline-green" text="Button" />`, `</BtnGroup>`].join(`\n`),
 };
 
 export default ComponentPage;
