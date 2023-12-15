@@ -201,19 +201,19 @@ $buttons-sizes: (
   'md': (
     'height': 48px,
     'padding-x': 14px,
-    'text-font-size': #{$text-font-size-md},
-    'text-line-height': #{$text-line-height-md},
+    'text-font-size': #{$text-font-size-sm},
+    'text-line-height': #{$text-line-height-sm},
   ),
   'sm': (
     'height': 32px,
     'padding-x': 10px,
-    'text-font-size': #{$text-font-size-md},
-    'text-line-height': #{$text-line-height-md},
+    'text-font-size': #{$text-font-size-sm},
+    'text-line-height': #{$text-line-height-sm},
   ),
   'xs': (
     'height': 24px,
     'padding-x': 6px,
-    'text-font-size': #{$text-font-size-md},
-    'text-line-height': #{$text-line-height-md},
+    'text-font-size': #{$text-font-size-xs},
+    'text-line-height': #{$text-line-height-xs},
   ),
 ) !default;
