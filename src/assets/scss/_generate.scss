@@ -1,0 +1,7 @@
+// Button Class generate
+
+@each $key, $args in $buttons {
+  .btn--#{$key} {
+    @include generate-button($args...);
+  }
+}

@@ -1,0 +1,6 @@
+// 버튼 생성
+@mixin generate-button($args...) {
+  @each $key, $value in keywords($args) {
+    --#{$prefix}btn-#{$key}: #{$value};
+  }
+}

@@ -115,6 +115,25 @@ $font-family-system: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', R
 $font-family-hds: noto;
 $word-break-base: keep-all;
 
+// Fonts-size
+$text-font-size-lg: 18px;
+$text-font-size-md: 16px;
+$text-font-size-sm: 14px;
+$text-font-size-xs: 12px;
+$text-font-size-xxs: 10px;
+$text-line-height-lg: 32px;
+$text-line-height-md: 24px;
+$text-line-height-sm: 24px;
+$text-line-height-xs: 20px;
+$text-line-height-xxs: 16px;
+$text-sizes: (
+  lg: $text-font-size-lg $text-line-height-lg,
+  md: $text-font-size-md $text-line-height-md,
+  sm: $text-font-size-sm $text-line-height-sm,
+  xs: $text-font-size-xs $text-line-height-xs,
+  xxs: $text-font-size-xxs $text-line-height-xxs,
+);
+
 // Body
 $body-bg: $white;
 $body-font-family: $font-family-hds, $font-family-system;
@@ -163,3 +182,38 @@ $input-wrap-addon-position: 0;
 $input-wrap-addon-width: 30px;
 $input-wrap-addon-margin: 4px;
 $input-wrap-addon-btn-bg: transparent;
+
+// Buttons
+$btn-height: 48px !default;
+$btn-padding-x: 14px !default;
+$btn-text-font-size: $text-font-size-sm;
+$btn-text-line-height: $text-line-height-sm;
+$btn-text-decoration: none !default;
+$btn-border-width: 1px !default;
+$btn-border-style: solid !default;
+$buttons-sizes: (
+  'lg': (
+    'height': 56px,
+    'padding-x': 18px,
+    'text-font-size': #{$text-font-size-md},
+    'text-line-height': #{$text-line-height-md},
+  ),
+  'md': (
+    'height': 48px,
+    'padding-x': 14px,
+    'text-font-size': #{$text-font-size-md},
+    'text-line-height': #{$text-line-height-md},
+  ),
+  'sm': (
+    'height': 32px,
+    'padding-x': 10px,
+    'text-font-size': #{$text-font-size-md},
+    'text-line-height': #{$text-line-height-md},
+  ),
+  'xs': (
+    'height': 24px,
+    'padding-x': 6px,
+    'text-font-size': #{$text-font-size-md},
+    'text-line-height': #{$text-line-height-md},
+  ),
+) !default;
