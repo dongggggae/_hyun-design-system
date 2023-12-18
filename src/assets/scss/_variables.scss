@@ -40,6 +40,7 @@ $navy600: #707991;
 $navy700: #464f69;
 $navy800: #323b54;
 $navy900: #202a43;
+$overlay: rgba(67, 90, 111, 0.7);
 
 $root-color: ();
 $root-color: map-merge(
@@ -83,8 +84,39 @@ $root-color: map-merge(
     'navy700': #{$navy700},
     'navy800': #{$navy800},
     'navy900': #{$navy900},
+    'surface': #{$white},
+    'primary-text': #{$gray900},
+    'secondary-text': #{$gray700},
+    'tertiary-text': #{$gray500},
+    'overlay': #{$overlay},
+    'positive': #{$green600},
+    'caution': #{$red600},
+    'negative': #{$amber600},
   ),
   $root-color
+);
+
+$spacing-base: 16px;
+$root-space: ();
+$root-space: map-merge(
+  (
+    'spacing0': $spacing-base * 0,
+    'spacing1': $spacing-base * 0.25,
+    'spacing2': $spacing-base * 0.5,
+    'spacing3': $spacing-base * 0.75,
+    'spacing4': $spacing-base,
+    'spacing5': $spacing-base * 1.25,
+    'spacing6': $spacing-base * 1.5,
+    'spacing7': $spacing-base * 2,
+    'spacing8': $spacing-base * 2.5,
+    'spacing9': $spacing-base * 3,
+    'spacing10': $spacing-base * 3.5,
+    'spacing11': $spacing-base * 4,
+    'spacing12': $spacing-base * 4.5,
+    'spacing13': $spacing-base * 5,
+    'spacing14': $spacing-base * 6,
+  ),
+  $root-space
 );
 
 // PREFIX
