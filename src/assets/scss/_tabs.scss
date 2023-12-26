@@ -1,0 +1,32 @@
+// Tabs
+
+.tab {
+  --#{$prefix}tab-link-padding-y: #{$tab-link-padding-y};
+  --#{$prefix}tab-link-color: #{$tab-link-color};
+  --#{$prefix}tab-link-text-font-size: #{$tab-link-text-font-size};
+  --#{$prefix}tab-link-text-line-height: #{$tab-link-text-line-height};
+  --#{$prefix}tab-link-text-margin-x: #{$tab-link-text-margin-x};
+
+  list-style: none;
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: var(--#{$prefix}tab-link-padding-y);
+    padding-bottom: var(--#{$prefix}tab-link-padding-y);
+    background: none;
+    border: none;
+    color: var(--#{$prefix}tab-link-color);
+    font-size: var(--#{$prefix}tab-link-text-font-size);
+    line-height: var(--#{$prefix}tab-link-text-line-height);
+    text-decoration: none;
+    user-select: none;
+    white-space: nowrap;
+  }
+
+  &__text {
+    margin-left: var(--#{$prefix}tab-link-text-margin-x);
+    margin-right: var(--#{$prefix}tab-link-text-margin-x);
+  }
+}

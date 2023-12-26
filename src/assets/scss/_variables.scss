@@ -260,3 +260,10 @@ $buttons-sizes: (
     'text-line-height': #{$text-line-height-xs},
   ),
 ) !default;
+
+// Tabs
+$tab-link-padding-y: 10px;
+$tab-link-color: $blue400;
+$tab-link-text-font-size: $text-font-size-md;
+$tab-link-text-line-height: $text-line-height-md;
+$tab-link-text-margin-x: 2px;

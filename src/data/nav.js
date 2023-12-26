@@ -24,5 +24,6 @@ const navData = [
   { name: 'Button', to: 'components/ButtonPage' },
   { name: 'Icon', to: 'components/IconPage' },
   { name: 'Table', to: 'components/TablePage' },
+  { name: 'Tabs', to: 'components/TabsPage' },
 ];
 export default navData;
