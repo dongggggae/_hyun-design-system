@@ -23,3 +23,12 @@ body {
   line-height: 0;
   text-indent: -9999px;
 }
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+}
