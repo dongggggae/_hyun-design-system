@@ -260,3 +260,19 @@ $buttons-sizes: (
     'text-line-height': #{$text-line-height-xs},
   ),
 ) !default;
+
+// Tabs
+$tab-border-width: 1px;
+$tab-border-color: $gray200;
+$tab-link-padding-y: 10px;
+$tab-link-color: $blue400;
+$tab-link-text-font-size: $text-font-size-md;
+$tab-link-text-line-height: $text-line-height-md;
+$tab-link-text-margin-x: 2px;
+$tab-link-active-color: $blue700;
+
+$tab-link-indicator-color: $tab-link-active-color;
+$tab-link-indicator-height: 2px;
+
+$tab-content-margin-y: 16px;
+$tab-content-padding-x: 10px;
