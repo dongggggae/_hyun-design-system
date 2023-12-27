@@ -1,12 +1,16 @@
 import PropTypes from 'prop-types';
 
-const Panel = ({ children }) => {
+const Panel = ({ isActive, children }) => {
   const PREFIX = 'tab';
-
-  return <div className={`${PREFIX}`}>{children}</div>;
+  return (
+    <div isActive={isActive} className={`${PREFIX}__panel`}>
+      {children}
+    </div>
+  );
 };
 
 Panel.propTypes = {
+  isActive: PropTypes.bool,
   children: PropTypes.node,
 };
 
