@@ -6,7 +6,7 @@ const TabContext = createContext();
 
 const Tabs = ({ children }) => {
   const PREFIX = 'tab';
-  const [activeTabIndex, setActiveTabIndex] = useState([]);
+  const [activeTabIndex, setActiveTabIndex] = useState();
 
   return (
     <TabContext.Provider value={{ activeTabIndex, setActiveTabIndex }}>
@@ -14,6 +14,7 @@ const Tabs = ({ children }) => {
     </TabContext.Provider>
   );
 };
+
 Tabs.propTypes = {
   children: PropTypes.node,
 };

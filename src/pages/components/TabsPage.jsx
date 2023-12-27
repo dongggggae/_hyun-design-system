@@ -4,9 +4,9 @@ const ComponentPage = () => {
   return (
     <Tabs>
       <TabList>
-        <Tab name={'aaa'} />
-        <Tab name={'aaa'} />
-        <Tab name={'aaa'} />
+        <Tab name="title1" />
+        <Tab name="title2" />
+        <Tab name="title3" />
       </TabList>
       <TabContent>asdasd</TabContent>
       <TabContent>asdasd</TabContent>
