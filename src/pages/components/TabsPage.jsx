@@ -1,17 +1,16 @@
-import { Tabs, TabList, Tab, TabContent } from '../../components/hyun-design-system/tabs';
+import Tab from '../../components/hyun-design-system/tabs/Tab';
+import TabContainer from '../../components/hyun-design-system/tabs/TabContainer';
 
 const ComponentPage = () => {
   return (
-    <Tabs>
-      <TabList>
-        <Tab name="title1" />
-        <Tab name="title2" />
-        <Tab name="title3" />
-      </TabList>
-      <TabContent>asdasd</TabContent>
-      <TabContent>asdasd</TabContent>
-      <TabContent>asdasd</TabContent>
-    </Tabs>
+    <TabContainer id="test" defaultActiveKey={1}>
+      <Tab title="Tab 1 title" eventKey={1}>
+        Tab 1 content
+      </Tab>
+      <Tab title="Tab 2 title" eventKey={2}>
+        Tab 2 content
+      </Tab>
+    </TabContainer>
   );
 };
 

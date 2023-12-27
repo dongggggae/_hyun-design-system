@@ -1,26 +1,41 @@
-import { createContext, useContext, useState } from 'react';
+import React from 'react';
 
 import PropTypes from 'prop-types';
 
-const TabContext = createContext();
+import Link from './TabLink';
 
-const Tabs = ({ children }) => {
+const Tabs = ({ defaultActiveKey, children }) => {
   const PREFIX = 'tab';
-  const [activeTabIndex, setActiveTabIndex] = useState();
 
   return (
-    <TabContext.Provider value={{ activeTabIndex, setActiveTabIndex }}>
-      <div className={`${PREFIX}__wrap`}>{children}</div>
-    </TabContext.Provider>
+    <React.Fragment>
+      <ul className={`${PREFIX}`}>
+        {React.Children.map(children, (child, index) => {
+          if (React.isValidElement(child)) {
+            return (
+              <li key={index} className={`${PREFIX}__item`}>
+                <Link title={child.props.title} />
+              </li>
+            );
+          }
+          return null;
+        })}
+      </ul>
+      <div className={`${PREFIX}__content`}>
+        {React.Children.map(children, (child, index) => {
+          if (React.isValidElement(child)) {
+            return React.cloneElement(child, { isActive: child.props.eventKey === defaultActiveKey, key: index });
+          }
+          return null;
+        })}
+      </div>
+    </React.Fragment>
   );
 };
 
 Tabs.propTypes = {
+  defaultActiveKey: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   children: PropTypes.node,
-};
-
-export const useTabContext = () => {
-  return useContext(TabContext);
 };
 
 export default Tabs;
