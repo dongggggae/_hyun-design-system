@@ -2,11 +2,13 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
+import { useTabContext } from './Container';
 import Link from './Link';
 import Tab from './Tab';
 
 const Tabs = ({ children }) => {
   const PREFIX = 'tab';
+  const { fill } = useTabContext();
 
   const renderTab = (child, index) => {
     if (React.isValidElement(child)) {
@@ -23,7 +25,7 @@ const Tabs = ({ children }) => {
 
   return (
     <React.Fragment>
-      <ul className={`${PREFIX}`}>{React.Children.map(children, renderTab)}</ul>
+      <ul className={`${PREFIX} ${fill ? `${PREFIX}--pills` : ''}`}>{React.Children.map(children, renderTab)}</ul>
 
       <div className={`${PREFIX}__content`}>
         {React.Children.map(children, (child, index) => {
