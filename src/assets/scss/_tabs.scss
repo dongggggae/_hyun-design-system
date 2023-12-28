@@ -1,18 +1,26 @@
 // Tabs
 
 .tab {
+  --#{$prefix}tab-border-width: #{$tab-border-width};
+  --#{$prefix}tab-border-color: #{$tab-border-color};
   --#{$prefix}tab-link-padding-y: #{$tab-link-padding-y};
   --#{$prefix}tab-link-color: #{$tab-link-color};
   --#{$prefix}tab-link-text-font-size: #{$tab-link-text-font-size};
   --#{$prefix}tab-link-text-line-height: #{$tab-link-text-line-height};
   --#{$prefix}tab-link-text-margin-x: #{$tab-link-text-margin-x};
   --#{$prefix}tab-link-active-color: #{$tab-link-active-color};
+  --#{$prefix}tab-link-indicator-height: #{$tab-link-indicator-height};
+  --#{$prefix}tab-link-indicator-color: #{$tab-link-indicator-color};
 
   display: flex;
   flex-wrap: wrap;
+  border-bottom-width: var(--#{$prefix}tab-border-width);
+  border-style: solid;
+  border-color: var(--#{$prefix}tab-border-color);
   list-style: none;
 
   &__link {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,6 +37,18 @@
 
     &.active {
       color: var(--#{$prefix}tab-link-active-color);
+
+      &::after {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        bottom: -1px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: var(--#{$prefix}tab-link-indicator-height);
+        background-color: var(--#{$prefix}tab-link-indicator-color);
+      }
     }
   }
 
