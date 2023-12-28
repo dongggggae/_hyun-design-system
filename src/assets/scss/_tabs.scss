@@ -82,4 +82,35 @@
       display: block;
     }
   }
+
+  &--pills {
+    --#{$prefix}tab-link-padding-x: #{$tab-pills-link-padding-x};
+    --#{$prefix}tab-link-padding-y: #{$tab-pills-link-padding-y};
+    --#{$prefix}tab-link-bg: #{$tab-pills-link-bg};
+    --#{$prefix}tab-pills-link-gap-x: #{$tab-pills-link-gap-x};
+    --#{$prefix}tab-pills-link-gap-y: #{$tab-pills-link-gap-y};
+    --#{$prefix}tab-pills-border-radius: #{$tab-pills-border-radius};
+    --#{$prefix}tab-pills-link-active-color: #{$tab-pills-link-active-color};
+    --#{$prefix}tab-pills-link-active-bg: #{$tab-pills-link-active-bg};
+    --#{$prefix}tab-pills-link-active-icon-color: #{$tab-pills-link-active-icon-color};
+
+    border: none;
+
+    .tab__link {
+      margin: var(--#{$prefix}tab-pills-link-gap-y) var(--#{$prefix}tab-pills-link-gap-x);
+      color: var(--#{$prefix}tab-link-color);
+      border: 0;
+      border-radius: var(--#{$prefix}tab-pills-border-radius);
+      background-color: var(--#{$prefix}tab-link-bg);
+
+      &.active {
+        color: var(--#{$prefix}tab-pills-link-active-color);
+        background-color: var(--#{$prefix}tab-pills-link-active-bg);
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
 }

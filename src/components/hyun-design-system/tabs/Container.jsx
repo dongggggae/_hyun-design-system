@@ -21,6 +21,8 @@ const Container = ({ id, defaultActiveKey, children }) => {
     changeActiveKey: changeActiveKey,
     activeKey: activeKey,
     isActive: isActive,
+    fill: 'fill',
+    type: ['pills', 'inlines'],
   };
 
   return (
@@ -38,6 +40,7 @@ Container.propTypes = {
   id: PropTypes.string,
   defaultActiveKey: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   children: PropTypes.node,
+  fill: PropTypes.bool,
 };
 
 export const useTabContext = () => {
