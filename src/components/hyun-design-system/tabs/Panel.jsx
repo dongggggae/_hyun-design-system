@@ -1,17 +1,17 @@
 import PropTypes from 'prop-types';
 
-const Panel = ({ isActive, children }) => {
+import { useTabContext } from './Container';
+
+const Panel = ({ children, eventKey }) => {
   const PREFIX = 'tab';
-  return (
-    <div isActive={isActive} className={`${PREFIX}__panel`}>
-      {children}
-    </div>
-  );
+  const { isActive } = useTabContext();
+
+  return <div className={`${PREFIX}__panel ${isActive(eventKey) ? 'active' : ''}`}>{children}</div>;
 };
 
 Panel.propTypes = {
-  isActive: PropTypes.bool,
   children: PropTypes.node,
+  eventKey: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 };
 
 export default Panel;

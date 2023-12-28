@@ -2,13 +2,13 @@ import PropTypes from 'prop-types';
 
 import Panel from './Panel';
 
-const Tab = ({ title, eventKey, children, isActive }) => <Panel isActive={isActive}>{children}</Panel>;
+const Tab = ({ children, eventKey }) => {
+  return <Panel eventKey={eventKey}>{children}</Panel>;
+};
 
-Tab.PropTypes = {
-  title: PropTypes.number,
+Tab.propTypes = {
   eventKey: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   children: PropTypes.node,
-  isActive: PropTypes.func,
 };
 
 export default Tab;
