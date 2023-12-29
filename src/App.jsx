@@ -12,7 +12,7 @@ import HeadingPage from './pages/components/foundation/HeadingPage';
 import TextPage from './pages/components/foundation/TextPage';
 import IconPage from './pages/components/IconPage';
 import TablePage from './pages/components/TablePage';
-import TabsPage from './pages/components/TabsPage';
+import TabPage from './pages/components/TabPage';
 import { ThemeProvider } from './theme/ThemeContext';
 
 function App() {
@@ -31,7 +31,7 @@ function App() {
           <Route path="components/BadgePage" element={<BadgePage />} />
           <Route path="components/IconPage" element={<IconPage />} />
           <Route path="components/TablePage" element={<TablePage />} />
-          <Route path="components/TabsPage" element={<TabsPage />} />
+          <Route path="components/TabPage" element={<TabPage />} />
         </Route>
       </Routes>
     </ThemeProvider>

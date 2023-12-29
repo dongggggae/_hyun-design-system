@@ -32,6 +32,16 @@
     }
   }
 
+  .docs-tab {
+    .component-content {
+      .preview {
+        gap: 50px;
+        flex-direction: column;
+        align-items: normal;
+      }
+    }
+  }
+
   .text {
     margin-bottom: 15px;
   }
