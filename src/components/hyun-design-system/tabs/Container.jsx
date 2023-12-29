@@ -6,7 +6,7 @@ import Tabs from './Tabs';
 
 const TabContext = createContext();
 
-const Container = ({ id, defaultActiveKey, children }) => {
+const Container = ({ id, defaultActiveKey, children, fill, type }) => {
   const [activeKey, setActiveKey] = useState(defaultActiveKey);
 
   const changeActiveKey = (eventKey) => {
@@ -21,14 +21,12 @@ const Container = ({ id, defaultActiveKey, children }) => {
     changeActiveKey: changeActiveKey,
     activeKey: activeKey,
     isActive: isActive,
-    fill: 'fill',
-    type: ['pills', 'inlines'],
   };
 
   return (
     <TabContext.Provider value={contextValue}>
       <div className="tab__wrap">
-        <Tabs id={id} defaultActiveKey={defaultActiveKey}>
+        <Tabs id={id} defaultActiveKey={defaultActiveKey} fill={fill} type={type}>
           {children}
         </Tabs>
       </div>
@@ -41,6 +39,7 @@ Container.propTypes = {
   defaultActiveKey: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   children: PropTypes.node,
   fill: PropTypes.bool,
+  type: PropTypes.oneOf(['pills', 'inlines']),
 };
 
 export const useTabContext = () => {

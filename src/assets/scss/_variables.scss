@@ -264,6 +264,7 @@ $buttons-sizes: (
 // Tabs
 $tab-border-width: 1px;
 $tab-border-color: $gray200;
+$tab-link-padding-x: 16px;
 $tab-link-padding-y: 10px;
 $tab-link-color: $blue400;
 $tab-link-text-font-size: $text-font-size-md;
@@ -281,8 +282,13 @@ $tab-pills-link-padding-x: calc(12px - #{$tab-link-text-margin-x});
 $tab-pills-link-padding-y: 4px;
 $tab-pills-link-bg: $gray200;
 $tab-pills-link-gap-x: 4px;
-$tab-pills-link-gap-y: 0;
 $tab-pills-border-radius: 16px;
 $tab-pills-link-active-color: $white;
 $tab-pills-link-active-bg: $blue600;
 $tab-pills-link-active-icon-color: $tab-pills-link-active-color;
+
+$tab-inlines-link-padding-x: calc(#{$tab-link-padding-x} - #{$tab-link-text-margin-x});
+$tab-inlines-link-color: $black;
+$tab-inlines-link-active-color: $blue600;
+$tab-inlines-link-divider-height: 16px;
+$tab-inlines-link-divider-color: $gray300;
