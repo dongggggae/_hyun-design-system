@@ -1,6 +1,5 @@
 import { lazy, Suspense } from 'react';
 
-import { Table, TableRow, TableHeader, TableData, TableBody, TableHead } from '../../components/hyun-design-system/table';
 import { TabContainer, Tab } from '../../components/hyun-design-system/tabs';
 import Heading from '../../components/hyun-design-system/typography/Heading';
 import Text from '../../components/hyun-design-system/typography/Text';
