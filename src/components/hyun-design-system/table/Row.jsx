@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 
 import { useTable } from './Table';
-import { useTheme } from '../../../theme/ThemeContext';
+import { useTheme } from '@/theme/ThemeContext';
 
 const StyledRow = styled.tr`
   ${(props) => (props.active ? props.theme.components.table.activeRowStyle : '')}

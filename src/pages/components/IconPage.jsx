@@ -1,11 +1,11 @@
 import { lazy, Suspense } from 'react';
 
-import Icon from '../../components/hyun-design-system/icon/Icon';
-import Heading from '../../components/hyun-design-system/typography/Heading';
-import Text from '../../components/hyun-design-system/typography/Text';
-import { useTheme } from '../../theme/ThemeContext';
+import Icon from '@/components/hyun-design-system/icon/Icon';
+import Heading from '@/components/hyun-design-system/typography/Heading';
+import Text from '@/components/hyun-design-system/typography/Text';
+import { useTheme } from '@/theme/ThemeContext';
 
-const LazyCodeContainer = lazy(() => import('../../components/docs/CodeContainer'));
+const LazyCodeContainer = lazy(() => import('@/components/docs/CodeContainer'));
 
 const ComponentPage = () => {
   const theme = useTheme();

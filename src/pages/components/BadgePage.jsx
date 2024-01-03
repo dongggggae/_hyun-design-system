@@ -2,11 +2,11 @@ import { lazy, Suspense } from 'react';
 
 import styled from '@emotion/styled';
 
-import Badge from '../../components/hyun-design-system/badge/Badge';
-import Heading from '../../components/hyun-design-system/typography/Heading';
-import Text from '../../components/hyun-design-system/typography/Text';
+import Badge from '@/components/hyun-design-system/badge/Badge';
+import Heading from '@/components/hyun-design-system/typography/Heading';
+import Text from '@/components/hyun-design-system/typography/Text';
 
-const LazyCodeContainer = lazy(() => import('../../components/docs/CodeContainer'));
+const LazyCodeContainer = lazy(() => import('@/components/docs/CodeContainer'));
 
 const FlexBox = styled.div`
   display: flex;
@@ -14,7 +14,7 @@ const FlexBox = styled.div`
   gap: 10px;
 `;
 
-const ComponentPage = () => {
+const BadgePage = () => {
   return (
     <div className="docs">
       <div className="docs-badge">
@@ -113,4 +113,4 @@ const BadgeCode = {
   ].join(`\n`),
 };
 
-export default ComponentPage;
+export default BadgePage;

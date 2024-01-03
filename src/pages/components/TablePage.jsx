@@ -1,10 +1,10 @@
 import { lazy, Suspense } from 'react';
 
-import { Table, TableRow, TableHeader, TableData, TableBody, TableHead } from '../../components/hyun-design-system/table';
-import Heading from '../../components/hyun-design-system/typography/Heading';
-import Text from '../../components/hyun-design-system/typography/Text';
+import { Table, TableRow, TableHeader, TableData, TableBody, TableHead } from '@/components/hyun-design-system/table';
+import Heading from '@/components/hyun-design-system/typography/Heading';
+import Text from '@/components/hyun-design-system/typography/Text';
 
-const LazyCodeContainer = lazy(() => import('../../components/docs/CodeContainer'));
+const LazyCodeContainer = lazy(() => import('@/components/docs/CodeContainer'));
 
 const ComponentPage = () => {
   return (
@@ -180,8 +180,6 @@ const ComponentPage = () => {
             <LazyCodeContainer codeString={TableCode.hover} />
           </Suspense>
         </div>
-
-
       </div>
     </div>
   );

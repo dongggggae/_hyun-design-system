@@ -13,7 +13,7 @@ import TextPage from './pages/components/foundation/TextPage';
 import IconPage from './pages/components/IconPage';
 import TablePage from './pages/components/TablePage';
 import TabPage from './pages/components/TabPage';
-import { ThemeProvider } from './theme/ThemeContext';
+import { ThemeProvider } from '@/theme/ThemeContext';
 
 function App() {
   return (

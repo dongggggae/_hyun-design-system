@@ -3,7 +3,7 @@ import { createContext, useContext } from 'react';
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 
-import { useTheme } from '../../../theme/ThemeContext';
+import { useTheme } from '@/theme/ThemeContext';
 
 const TableContext = createContext();
 

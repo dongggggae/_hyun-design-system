@@ -2,7 +2,7 @@ import { createContext, useContext } from 'react';
 
 import PropTypes from 'prop-types';
 
-import { defaultTheme } from '../themes';
+import { defaultTheme } from '@/themes';
 
 const ThemeContext = createContext();
 
