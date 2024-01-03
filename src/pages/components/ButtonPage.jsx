@@ -1,11 +1,11 @@
 import { lazy, Suspense } from 'react';
 
-import Btn from '../../components/hyun-design-system/button/Button';
-import BtnGroup from '../../components/hyun-design-system/button/Group';
-import Heading from '../../components/hyun-design-system/typography/Heading';
-import Text from '../../components/hyun-design-system/typography/Text';
+import Btn from '@/components/hyun-design-system/button/Button';
+import BtnGroup from '@/components/hyun-design-system/button/Group';
+import Heading from '@/components/hyun-design-system/typography/Heading';
+import Text from '@/components/hyun-design-system/typography/Text';
 
-const LazyCodeContainer = lazy(() => import('../../components/docs/CodeContainer'));
+const LazyCodeContainer = lazy(() => import('@/components/docs/CodeContainer'));
 
 const ComponentPage = () => {
   return (

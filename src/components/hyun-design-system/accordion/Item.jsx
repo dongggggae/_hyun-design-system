@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 import Body from './Body';
 import Header from './Header';
-import { useTheme } from '../../../theme/ThemeContext';
+import { useTheme } from '@/theme/ThemeContext';
 
 const ItemContext = createContext();
 

@@ -3,7 +3,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 
-import { useTheme } from '../../../theme/ThemeContext';
+import { useTheme } from '@/theme/ThemeContext';
 
 const StyledIcon = styled.span`
   ${(props) => props.theme.components.icon.baseStyle}

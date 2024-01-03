@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 
-import { useTheme } from '../../../theme/ThemeContext';
+import { useTheme } from '@/theme/ThemeContext';
 
 const StyledHeader = styled.th`
   ${(props) => props.theme.components.table.headerStyle}

@@ -2,8 +2,8 @@ import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 
 import { useItem } from './Item';
-import { useTheme } from '../../../theme/ThemeContext';
 import Icon from '../icon/Icon';
+import { useTheme } from '@/theme/ThemeContext';
 
 const StyledHeader = styled.button`
   ${(props) => props.theme.components.accordion.accordionHeaderStyle}

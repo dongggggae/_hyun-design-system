@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 
 import { useItem } from './Item';
-import { useTheme } from '../../../theme/ThemeContext';
+import { useTheme } from '@/theme/ThemeContext';
 
 const StyledBody = styled.div`
   ${(props) => props.theme.components.accordion.accordionBodyStyle}

@@ -1,12 +1,12 @@
 import { lazy, Suspense } from 'react';
 
-import { Accordion, AccordionItem } from '../../components/hyun-design-system/accordion';
-import Heading from '../../components/hyun-design-system/typography/Heading';
-import Text from '../../components/hyun-design-system/typography/Text';
+import { Accordion, AccordionItem } from '@/components/hyun-design-system/accordion';
+import Heading from '@/components/hyun-design-system/typography/Heading';
+import Text from '@/components/hyun-design-system/typography/Text';
 
-const LazyCodeContainer = lazy(() => import('../../components/docs/CodeContainer'));
+const LazyCodeContainer = lazy(() => import('@/components/docs/CodeContainer'));
 
-const ComponentPage = () => {
+const AccordionPage = () => {
   return (
     <div className="docs">
       <div className="docs-accrodion">
@@ -183,4 +183,4 @@ const AccordionCode = {
   ].join(`\n`),
 };
 
-export default ComponentPage;
+export default AccordionPage;

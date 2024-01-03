@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import LayoutSidebarNav from './LayoutSidebarNav';
-import navData from '../../data/nav';
+import navData from '@/data/nav';
 
 const LayoutSidebar = React.memo(() => {
   const [openGroups, setOpenGroups] = useState(Array(navData.length).fill(false));

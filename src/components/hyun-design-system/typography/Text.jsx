@@ -3,7 +3,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 
-import { useTheme } from '../../../theme/ThemeContext';
+import { useTheme } from '@/theme/ThemeContext';
 
 const StyledText = styled.p`
   ${(props) => props.theme.components.typography.textSizes[props.size]};

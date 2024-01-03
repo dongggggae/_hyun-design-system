@@ -1,10 +1,10 @@
 import { lazy, Suspense } from 'react';
 
-import { TabContainer, Tab } from '../../components/hyun-design-system/tabs';
-import Heading from '../../components/hyun-design-system/typography/Heading';
-import Text from '../../components/hyun-design-system/typography/Text';
+import { TabContainer, Tab } from '@/components/hyun-design-system/tabs';
+import Heading from '@/components/hyun-design-system/typography/Heading';
+import Text from '@/components/hyun-design-system/typography/Text';
 
-const LazyCodeContainer = lazy(() => import('../../components/docs/CodeContainer'));
+const LazyCodeContainer = lazy(() => import('@/components/docs/CodeContainer'));
 
 const ComponentPage = () => {
   return (
