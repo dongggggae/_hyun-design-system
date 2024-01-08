@@ -16,7 +16,7 @@ const Btn = ({ type, size, text, icon, iconColor, iconOnly, reverse, onClick }) 
 
   return (
     <button className={[PREFIX, `${PREFIX}--${type}`, `${PREFIX}--${size}`].join(' ')} onClick={handleClick}>
-      {iconOnly && icon && <Icon name={icon} />}
+      {iconOnly && icon && <Icon color={iconColor} name={icon} />}
       {!iconOnly && (
         <React.Fragment>
           {!reverse && <Icon name={icon} color={iconColor} />}
