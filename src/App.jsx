@@ -11,6 +11,7 @@ import ColorPage from './pages/components/foundation/ColorPage';
 import HeadingPage from './pages/components/foundation/HeadingPage';
 import TextPage from './pages/components/foundation/TextPage';
 import IconPage from './pages/components/IconPage';
+import ModalPage from './pages/components/ModalPage';
 import TablePage from './pages/components/TablePage';
 import TabPage from './pages/components/TabPage';
 import { ThemeProvider } from '@/theme/ThemeContext';
@@ -32,6 +33,7 @@ function App() {
           <Route path="components/IconPage" element={<IconPage />} />
           <Route path="components/TablePage" element={<TablePage />} />
           <Route path="components/TabPage" element={<TabPage />} />
+          <Route path="components/ModalPage" element={<ModalPage />} />
         </Route>
       </Routes>
     </ThemeProvider>

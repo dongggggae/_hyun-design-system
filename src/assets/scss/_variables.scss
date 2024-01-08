@@ -40,7 +40,7 @@ $navy600: #707991;
 $navy700: #464f69;
 $navy800: #323b54;
 $navy900: #202a43;
-$overlay: rgba(67, 90, 111, 0.7);
+$overlay: rgba(0, 0, 0, 0.2);
 
 $root-color: ();
 $root-color: map-merge(
@@ -292,3 +292,27 @@ $tab-inlines-link-color: $black;
 $tab-inlines-link-active-color: $blue600;
 $tab-inlines-link-divider-height: 16px;
 $tab-inlines-link-divider-color: $gray300;
+
+// Modal
+$modal-divider-color: $gray300;
+$modal-border-width: 1px;
+$modal-dialog-margin-y: 16px;
+$modal-dialog-margin-x: auto;
+$modal-content-border-color: $modal-divider-color;
+$modal-content-border-radius: 8px;
+$modal-header-padding-x: 16px;
+$modal-header-padding-y: $modal-header-padding-x;
+$modal-header-border-width: $modal-border-width;
+$modal-header-border-color: $modal-divider-color;
+$modal-header-button-width: 24px;
+$modal-header-button-height: 24px;
+$modal-header-button-padding-x: 0;
+$modal-header-button-bg: $white;
+$modal-body-margin-bottom: 16px;
+$modal-body-padding-x: 16px;
+$modal-body-padding-y: $modal-body-padding-x;
+$modal-footer-gap: 8px;
+$modal-footer-padding-x: 12px;
+$modal-footer-padding-y: $modal-footer-padding-x;
+$modal-footer-border-width: $modal-border-width;
+$modal-footer-border-color: $modal-divider-color;
