@@ -8,14 +8,14 @@ import Dialog from './Dialog';
 
 const ModalContext = createContext();
 
-const Modal = ({ show, onHide, children }) => {
+const Modal = ({ show, onHide, children, size, type }) => {
   const PREFIX = 'modal';
   const handleClose = () => {
     onHide();
   };
 
   return createPortal(
-    <ModalContext.Provider value={{ handleClose }}>
+    <ModalContext.Provider value={{ handleClose, size, type }}>
       <div className={`${PREFIX} ${show ? 'show' : ''}`}>
         <Dialog>
           <Content>{children}</Content>
@@ -32,7 +32,8 @@ export const useModal = () => {
 
 Modal.propTypes = {
   children: PropTypes.node,
-  selectedModal: PropTypes.bool,
+  size: PropTypes.string,
+  type: PropTypes.string,
 };
 
 export default Modal;
