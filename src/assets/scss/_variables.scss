@@ -227,13 +227,13 @@ $badges-text-font-size: 12px;
 $badges-text-line-height: 16px;
 
 // Buttons
-$btn-height: 48px !default;
-$btn-padding-x: 14px !default;
+$btn-height: 48px;
+$btn-padding-x: 14px;
 $btn-text-font-size: $text-font-size-sm;
 $btn-text-line-height: $text-line-height-sm;
-$btn-text-decoration: none !default;
-$btn-border-width: 1px !default;
-$btn-border-style: solid !default;
+$btn-text-decoration: none;
+$btn-border-width: 1px;
+$btn-border-style: solid;
 $buttons-sizes: (
   'lg': (
     'height': 56px,
@@ -259,7 +259,7 @@ $buttons-sizes: (
     'text-font-size': #{$text-font-size-xs},
     'text-line-height': #{$text-line-height-xs},
   ),
-) !default;
+);
 
 // Tabs
 $tab-border-width: 1px;
@@ -294,6 +294,8 @@ $tab-inlines-link-divider-height: 16px;
 $tab-inlines-link-divider-color: $gray300;
 
 // Modal
+$modal-width: 800px;
+$modal-zindex: $zindex-overlay;
 $modal-divider-color: $gray300;
 $modal-border-width: 1px;
 $modal-dialog-margin-y: 16px;
@@ -316,3 +318,15 @@ $modal-footer-padding-x: 12px;
 $modal-footer-padding-y: $modal-footer-padding-x;
 $modal-footer-border-width: $modal-border-width;
 $modal-footer-border-color: $modal-divider-color;
+
+$modal-sizes: (
+  'lg': (
+    'width': 1000px,
+  ),
+  'md': (
+    'width': 800px,
+  ),
+  'sm': (
+    'width': 600px,
+  ),
+);
