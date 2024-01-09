@@ -6,7 +6,7 @@ import Text from '@/components/hyun-design-system/typography/Text';
 
 const LazyCodeContainer = lazy(() => import('@/components/docs/CodeContainer'));
 
-const ComponentPage = () => {
+const TabPage = () => {
   return (
     <div className="docs">
       <div className="docs-tab">
@@ -182,4 +182,4 @@ const TabCode = {
   ].join(`\n`),
 };
 
-export default ComponentPage;
+export default TabPage;

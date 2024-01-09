@@ -31,7 +31,7 @@ const IconPreview = styled.div`
   border-radius: 5px;
 `;
 
-const ComponentPage = () => {
+const SelectPage = () => {
   const theme = useTheme();
   const iconMap = theme.components.icon.iconTypes;
 
@@ -138,4 +138,4 @@ const IconCode = {
   ].join(`\n`),
 };
 
-export default ComponentPage;
+export default SelectPage;

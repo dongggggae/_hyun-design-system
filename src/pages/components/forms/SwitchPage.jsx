@@ -1,4 +1,4 @@
-const ComponentPage = () => {
+const SwitchPage = () => {
   return (
     <>
       <div className="tab__wrap">
@@ -91,4 +91,4 @@ const ComponentPage = () => {
   );
 };
 
-export default ComponentPage;
+export default SwitchPage;

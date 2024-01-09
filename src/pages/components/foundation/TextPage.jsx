@@ -2,7 +2,7 @@ import CodeContainer from '@/components/docs/CodeContainer';
 import Heading from '@/components/hyun-design-system/typography/Heading';
 import Text from '@/components/hyun-design-system/typography/Text';
 
-const ComponentPage = () => {
+const TextPage = () => {
   return (
     <div className="docs">
       <div className="docs-text">
@@ -104,4 +104,4 @@ const TextCode = {
   ].join('\n'),
 };
 
-export default ComponentPage;
+export default TextPage;

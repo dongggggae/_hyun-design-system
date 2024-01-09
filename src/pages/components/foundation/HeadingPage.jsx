@@ -5,7 +5,7 @@ import Text from '@/components/hyun-design-system/typography/Text';
 
 const LazyCodeContainer = lazy(() => import('@/components/docs/CodeContainer'));
 
-const ComponentPage = () => {
+const HeadingPage = () => {
   return (
     <div className="docs">
       <div className="docs-heading">
@@ -149,4 +149,4 @@ const HeadingCode = {
   ].join('\n'),
 };
 
-export default ComponentPage;
+export default HeadingPage;

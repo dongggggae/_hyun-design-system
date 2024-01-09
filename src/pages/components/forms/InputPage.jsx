@@ -6,7 +6,7 @@
 
 // const LazyCodeContainer = lazy(() => import('../../../components/docs/CodeContainer'));
 
-const ComponentPage = () => {
+const InputPage = () => {
   // return (
   //   <div className="docs">
   //     <div className="docs-input">
@@ -86,4 +86,4 @@ const ComponentPage = () => {
 //   ].join(`\n`),
 // };
 
-export default ComponentPage;
+export default InputPage;

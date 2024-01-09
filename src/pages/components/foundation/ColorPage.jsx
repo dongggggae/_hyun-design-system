@@ -22,7 +22,7 @@ const ColorBox = styled.div`
   background-color: ${(props) => colors[props.color]};
 `;
 
-const ComponentPage = () => {
+const ColorPage = () => {
   const colorKeys = Object.keys(colors);
 
   return (
@@ -71,4 +71,4 @@ const ComponentPage = () => {
   );
 };
 
-export default ComponentPage;
+export default ColorPage;

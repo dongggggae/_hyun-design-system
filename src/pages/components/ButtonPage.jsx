@@ -7,7 +7,7 @@ import Text from '@/components/hyun-design-system/typography/Text';
 
 const LazyCodeContainer = lazy(() => import('@/components/docs/CodeContainer'));
 
-const ComponentPage = () => {
+const ButtonPage = () => {
   return (
     <div className="docs">
       <div className="docs-button">
@@ -170,4 +170,4 @@ const ButtonCode = {
   ].join(`\n`),
 };
 
-export default ComponentPage;
+export default ButtonPage;

@@ -7,7 +7,7 @@ import { useTheme } from '@/theme/ThemeContext';
 
 const LazyCodeContainer = lazy(() => import('@/components/docs/CodeContainer'));
 
-const ComponentPage = () => {
+const IconPage = () => {
   const theme = useTheme();
   const iconMap = theme.components.icon.iconTypes;
 
@@ -120,4 +120,4 @@ const IconCode = {
   ].join(`\n`),
 };
 
-export default ComponentPage;
+export default IconPage;
