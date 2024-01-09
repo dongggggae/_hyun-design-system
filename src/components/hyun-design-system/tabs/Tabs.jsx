@@ -23,7 +23,9 @@ const Tabs = ({ children, fill, type }) => {
 
   return (
     <React.Fragment>
-      <ul className={`${PREFIX} ${fill ? `${PREFIX}--fill` : ''} ${type ? `${PREFIX}--${type}` : ''}`}>{React.Children.map(children, renderTab)}</ul>
+      <ul className={`${PREFIX} ${fill ? `${PREFIX}--fill` : ''} ${type ? `${PREFIX}--${type}` : ''}`}>
+        {React.Children.map(children, renderTab)}
+      </ul>
 
       <div className={`${PREFIX}__content`}>
         {React.Children.map(children, (child, index) => {

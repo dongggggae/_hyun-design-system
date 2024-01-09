@@ -6,7 +6,15 @@ const Dialog = ({ children }) => {
   const PREFIX = 'modal';
   const { size, type } = useModal();
 
-  return <div className={`${PREFIX}__dialog ${size ? `${PREFIX}__dialog--${size}` : ''} ${type ? `${PREFIX}__dialog--${type}` : ''}`}>{children}</div>;
+  return (
+    <div
+      className={`${PREFIX}__dialog ${size ? `${PREFIX}__dialog--${size}` : ''} ${
+        type ? `${PREFIX}__dialog--${type}` : ''
+      }`}
+    >
+      {children}
+    </div>
+  );
 };
 
 Dialog.propTypes = {

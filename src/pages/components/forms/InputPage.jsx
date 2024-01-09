@@ -23,7 +23,6 @@ const ComponentPage = () => {
   //           <LazyCodeContainer codeString={InputCode.overview} />
   //         </Suspense>
   //       </div>
-
   //       <div className="component-content">
   //         <Heading as="h2" size="2" text="2. Clear 버튼" />
   //         <Text>clear 프로퍼티를 통해 초기화하는 버튼을 보이게 지정합니다. 기본값은 &#39;false&#39;입니다.</Text>
@@ -43,7 +42,6 @@ const ComponentPage = () => {
   //           <LazyCodeContainer codeString={InputCode.clear} />
   //         </Suspense>
   //       </div>
-
   //       <div className="component-content">
   //         <Heading as="h2" size="2" text="3. Field 버튼" />
   //         <Text>Field 프로퍼티를 통해 필드 유형을 지정합니다.</Text>

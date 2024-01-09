@@ -6,7 +6,11 @@ const Footer = ({ buttons }) => {
   const PREFIX = 'modal';
   const { handleClose } = useModal();
 
-  return <div className={`${PREFIX}__footer`}>{buttons && buttons.map((button, index) => <Btn key={index} {...button} onClick={handleClose} />)}</div>;
+  return (
+    <div className={`${PREFIX}__footer`}>
+      {buttons && buttons.map((button, index) => <Btn key={index} {...button} onClick={handleClose} />)}
+    </div>
+  );
 };
 
 Footer.propTypes = {

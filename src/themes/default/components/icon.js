@@ -1,4 +1,18 @@
-import { FaAngleLeft, FaAngleRight, FaAngleUp, FaAngleDown, FaXmark, FaRegCircleXmark, FaPlus, FaMagnifyingGlass, FaBars, FaEye, FaEyeSlash, FaRotateRight, FaGear } from 'react-icons/fa6';
+import {
+  FaAngleLeft,
+  FaAngleRight,
+  FaAngleUp,
+  FaAngleDown,
+  FaXmark,
+  FaRegCircleXmark,
+  FaPlus,
+  FaMagnifyingGlass,
+  FaBars,
+  FaEye,
+  FaEyeSlash,
+  FaRotateRight,
+  FaGear,
+} from 'react-icons/fa6';
 
 const baseStyle = {
   display: 'inline-flex',

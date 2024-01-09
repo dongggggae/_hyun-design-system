@@ -17,20 +17,20 @@ const AccordionPage = () => {
             <Accordion>
               <AccordionItem title="Accordion Title1">
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas veniam quisquam quae officiis nemo, natus autem placeat optio at qui nobis quod, maxime in aspernatur sint sed
-                  eaqueitaque ea.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas veniam quisquam quae officiis nemo,
+                  natus autem placeat optio at qui nobis quod, maxime in aspernatur sint sed eaqueitaque ea.
                 </p>
               </AccordionItem>
               <AccordionItem title="Accordion Title2">
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas veniam quisquam quae officiis nemo, natus autem placeat optio at qui nobis quod, maxime in aspernatur sint sed
-                  eaqueitaque ea.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas veniam quisquam quae officiis nemo,
+                  natus autem placeat optio at qui nobis quod, maxime in aspernatur sint sed eaqueitaque ea.
                 </p>
               </AccordionItem>
               <AccordionItem title="Accordion Title3">
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas veniam quisquam quae officiis nemo, natus autem placeat optio at qui nobis quod, maxime in aspernatur sint sed
-                  eaqueitaque ea.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas veniam quisquam quae officiis nemo,
+                  natus autem placeat optio at qui nobis quod, maxime in aspernatur sint sed eaqueitaque ea.
                 </p>
               </AccordionItem>
             </Accordion>
@@ -46,20 +46,20 @@ const AccordionPage = () => {
             <Accordion>
               <AccordionItem title="Accordion Title1">
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas veniam quisquam quae officiis nemo, natus autem placeat optio at qui nobis quod, maxime in aspernatur sint sed
-                  eaqueitaque ea.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas veniam quisquam quae officiis nemo,
+                  natus autem placeat optio at qui nobis quod, maxime in aspernatur sint sed eaqueitaque ea.
                 </p>
               </AccordionItem>
               <AccordionItem title="Accordion Title2">
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas veniam quisquam quae officiis nemo, natus autem placeat optio at qui nobis quod, maxime in aspernatur sint sed
-                  eaqueitaque ea.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas veniam quisquam quae officiis nemo,
+                  natus autem placeat optio at qui nobis quod, maxime in aspernatur sint sed eaqueitaque ea.
                 </p>
               </AccordionItem>
               <AccordionItem title="Accordion Title3">
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas veniam quisquam quae officiis nemo, natus autem placeat optio at qui nobis quod, maxime in aspernatur sint sed
-                  eaqueitaque ea.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas veniam quisquam quae officiis nemo,
+                  natus autem placeat optio at qui nobis quod, maxime in aspernatur sint sed eaqueitaque ea.
                 </p>
               </AccordionItem>
             </Accordion>
@@ -75,20 +75,20 @@ const AccordionPage = () => {
             <Accordion>
               <AccordionItem title="Accordion Title1" isOpen>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas veniam quisquam quae officiis nemo, natus autem placeat optio at qui nobis quod, maxime in aspernatur sint sed
-                  eaqueitaque ea.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas veniam quisquam quae officiis nemo,
+                  natus autem placeat optio at qui nobis quod, maxime in aspernatur sint sed eaqueitaque ea.
                 </p>
               </AccordionItem>
               <AccordionItem title="Accordion Title2" isOpen>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas veniam quisquam quae officiis nemo, natus autem placeat optio at qui nobis quod, maxime in aspernatur sint sed
-                  eaqueitaque ea.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas veniam quisquam quae officiis nemo,
+                  natus autem placeat optio at qui nobis quod, maxime in aspernatur sint sed eaqueitaque ea.
                 </p>
               </AccordionItem>
               <AccordionItem title="Accordion Title3" isOpen>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas veniam quisquam quae officiis nemo, natus autem placeat optio at qui nobis quod, maxime in aspernatur sint sed
-                  eaqueitaque ea.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas veniam quisquam quae officiis nemo,
+                  natus autem placeat optio at qui nobis quod, maxime in aspernatur sint sed eaqueitaque ea.
                 </p>
               </AccordionItem>
             </Accordion>

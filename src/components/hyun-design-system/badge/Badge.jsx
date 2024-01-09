@@ -7,7 +7,11 @@ const Badge = React.memo(({ state, outline, text }) => {
 
   return (
     <React.Fragment>
-      {state && outline ? <span className={[PREFIX, `${PREFIX}--outline-${state}`].join(' ')}>{text}</span> : <span className={[PREFIX, `${PREFIX}--${state}`].join(' ')}>{text}</span>}
+      {state && outline ? (
+        <span className={[PREFIX, `${PREFIX}--outline-${state}`].join(' ')}>{text}</span>
+      ) : (
+        <span className={[PREFIX, `${PREFIX}--${state}`].join(' ')}>{text}</span>
+      )}
     </React.Fragment>
   );
 });

@@ -21,7 +21,8 @@
   bottom: 0;
   width: var(--#{$prefix}sidebar-width);
   background-color: var(--#{$prefix}sidebar-bg);
-  border-right: var(--#{$prefix}sidebar-border-width) var(--#{$prefix}sidebar-border-style) var(--#{$prefix}sidebar-border-color);
+  border-right: var(--#{$prefix}sidebar-border-width) var(--#{$prefix}sidebar-border-style)
+    var(--#{$prefix}sidebar-border-color);
   z-index: $zindex-layout-sidebar;
 
   .navigation {
@@ -83,7 +84,6 @@
 
         .icon {
           transform: rotate(180deg);
-          
         }
       }
     }
@@ -127,7 +127,8 @@
   width: var(--#{$prefix}header-width);
   height: var(--#{$prefix}header-height);
   background-color: var(--#{$prefix}header-bg);
-  border-bottom: var(--#{$prefix}header-border-width) var(--#{$prefix}header-border-style) var(--#{$prefix}header-border-color);
+  border-bottom: var(--#{$prefix}header-border-width) var(--#{$prefix}header-border-style)
+    var(--#{$prefix}header-border-color);
   color: var(--#{$prefix}header-color);
   z-index: $zindex-layout-header;
 
@@ -149,5 +150,6 @@
   position: relative;
   margin-top: #{$layout-occupy-start-top};
   margin-left: #{$layout-occupy-start-left};
-  padding: var(--#{$prefix}main-padding-y) var(--#{$prefix}main-padding-right) var(--#{$prefix}main-padding-y) var(--#{$prefix}main-padding-left);
+  padding: var(--#{$prefix}main-padding-y) var(--#{$prefix}main-padding-right) var(--#{$prefix}main-padding-y)
+    var(--#{$prefix}main-padding-left);
 }

@@ -40,4 +40,10 @@ const collapsedBodyStyle = {
   borderBottom: `1px solid ${tokens.colors.divider}`,
 };
 
-export default { accordionHeaderStyle, accordionBodyStyle, accordionItemStyle, collapsedHeaderStyle, collapsedBodyStyle };
+export default {
+  accordionHeaderStyle,
+  accordionBodyStyle,
+  accordionItemStyle,
+  collapsedHeaderStyle,
+  collapsedBodyStyle,
+};

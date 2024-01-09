@@ -18,7 +18,8 @@ const ComponentPage = () => {
         <div className="component-content">
           <Heading as="h2" size="2" text="2. Color" />
           <Text>
-            color 프로퍼티를 통해 헤더 컬러를 지정하며, 기본 값은 &#39;#555555&#39; 입니다 다른 컬러를 적용하고 싶은 경우에 사용합니다.
+            color 프로퍼티를 통해 헤더 컬러를 지정하며, 기본 값은 &#39;#555555&#39; 입니다 다른 컬러를 적용하고 싶은
+            경우에 사용합니다.
             <br />
             아래는 color 프로퍼티를 통해 컬러를 적용한 예시입니다.
           </Text>

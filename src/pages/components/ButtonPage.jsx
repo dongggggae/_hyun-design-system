@@ -162,7 +162,12 @@ const ButtonCode = {
     `<Btn type="solid-red" text="ButtonText" reverse icon="plus" />`,
   ].join(`\n`),
   event: [`<!-- Button Events> -->`, `<Btn text="Click Button" onClick={() => alert('Click Event')} />`].join(`\n`),
-  group: [`<BtnGroup>`, ` <Btn type="solid-green" text="Button" />`, ` <Btn type="outline-green" text="Button" />`, `</BtnGroup>`].join(`\n`),
+  group: [
+    `<BtnGroup>`,
+    ` <Btn type="solid-green" text="Button" />`,
+    ` <Btn type="outline-green" text="Button" />`,
+    `</BtnGroup>`,
+  ].join(`\n`),
 };
 
 export default ComponentPage;
