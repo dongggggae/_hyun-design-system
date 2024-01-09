@@ -1,20 +1,13 @@
 import PropTypes from 'prop-types';
 
-import { useModal } from './Modal';
-import Btn from '../button/Button';
-const Footer = ({ buttons }) => {
+const Footer = ({ children }) => {
   const PREFIX = 'modal';
-  const { handleClose } = useModal();
 
-  return (
-    <div className={`${PREFIX}__footer`}>
-      {buttons && buttons.map((button, index) => <Btn key={index} {...button} onClick={handleClose} />)}
-    </div>
-  );
+  return <div className={`${PREFIX}__footer`}>{children}</div>;
 };
 
 Footer.propTypes = {
-  buttons: PropTypes.array,
+  children: PropTypes.node,
 };
 
 export default Footer;
