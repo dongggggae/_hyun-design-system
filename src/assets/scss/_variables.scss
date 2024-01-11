@@ -331,3 +331,23 @@ $modal-sizes: (
     'width': 600px,
   ),
 );
+
+// Card
+$card-padding-x: 12px;
+$card-padding-y: 12px;
+$card-transition: all 0.15s linear;
+$card-box-shadow: 0 8px 24px 0 #00000026;
+$card-border-radius: 12px;
+$card-border-width: 1px;
+$card-border-color: $gray200;
+$card-thumbnail-margin-y: 8px;
+$card-thumbnail-bg: $blue400;
+$card-thumbnail-border-radius: $card-border-radius;
+$card-title-margin-x: 8px;
+$card-title-font-size: 24px;
+$card-title-line-height: 40px;
+$card-title-color: $gray900;
+$card-text-margin-x: 8px;
+$card-text-font-size: 14px;
+$card-text-line-height: 24px;
+$card-text-color: $gray700;
