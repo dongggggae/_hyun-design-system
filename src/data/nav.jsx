@@ -1,6 +1,7 @@
 import AccordionPage from '../pages/components/AccordionPage';
 import BadgePage from '../pages/components/BadgePage';
 import ButtonPage from '../pages/components/ButtonPage';
+import CardPage from '../pages/components/CardPage';
 import InputPage from '../pages/components/forms/InputPage';
 import SelectPage from '../pages/components/forms/SelectPage';
 import SwitchPage from '../pages/components/forms/SwitchPage';
@@ -35,6 +36,7 @@ const navData = [
   },
   { name: 'Accordion', to: 'components/AccordionPage', component: AccordionPage },
   { name: 'Badge', to: 'components/BadgePage', component: BadgePage },
+  { name: 'Card', to: 'components/CardPage', component: CardPage },
   { name: 'Button', to: 'components/ButtonPage', component: ButtonPage },
   { name: 'Icon', to: 'components/IconPage', component: IconPage },
   { name: 'Table', to: 'components/TablePage', component: TablePage },
