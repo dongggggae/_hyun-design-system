@@ -1,4 +1,4 @@
-import { createContext, useContext } from 'react';
+import { createContext, useContext, useEffect } from 'react';
 
 import PropTypes from 'prop-types';
 import { createPortal } from 'react-dom';
@@ -10,9 +10,22 @@ const ModalContext = createContext();
 
 const Modal = ({ show, onHide, children, size, type }) => {
   const PREFIX = 'modal';
+
   const handleClose = () => {
     onHide();
   };
+
+  useEffect(() => {
+    if (show) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [show]);
 
   return createPortal(
     <ModalContext.Provider value={{ handleClose, size, type }}>
