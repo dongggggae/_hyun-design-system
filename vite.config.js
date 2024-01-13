@@ -9,7 +9,7 @@ export default defineConfig({
     port: 8080,
   },
   css: {
-    devSourcemap: false,
+    devSourcemap: true,
   },
   optimizeDeps: {
     include: ['react', 'react-dom'],

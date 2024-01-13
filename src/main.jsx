@@ -2,7 +2,6 @@ import React from 'react';
 
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-import { Reset } from 'styled-reset';
 
 import App from './App.jsx';
 import './assets/scss/hds.scss';
@@ -10,7 +9,6 @@ import './assets/scss/hds.scss';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <React.StrictMode>
-      <Reset />
       <App />
     </React.StrictMode>
   </BrowserRouter>,

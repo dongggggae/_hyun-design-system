@@ -97,9 +97,10 @@ $root-color: map-merge(
     'secondary-text': #{$gray700},
     'tertiary-text': #{$gray500},
     'overlay': #{$overlay},
+    'information': #{$blue600},
     'positive': #{$green600},
-    'caution': #{$red600},
-    'negative': #{$amber600},
+    'caution': #{$amber600},
+    'negative': #{$red600},
   ),
   $root-color
 );
@@ -130,7 +131,7 @@ $root-space: map-merge(
 // PREFIX
 $prefix: hds-;
 
-// Font
+// Font Face
 $font-face-name: AppleSDGothicNeo;
 $font-face-path: '/fonts/';
 $font-face-exts: woff;
@@ -143,18 +144,37 @@ $font-face-files: (
 );
 
 // Fonts
+$font-size-base: 16px;
+$line-height-base: 1.2;
 $font-weight-light: 300;
 $font-weight-regular: 400;
 $font-weight-medium: 500;
 $font-weight-semibold: 600;
 $font-weight-bold: 700;
-$font-size-base: 16px;
 $font-weight-base: $font-weight-regular;
-$line-height-base: 1.2;
+$font-weights: (
+  light: $font-weight-light,
+  regular: $font-weight-regular,
+  medium: $font-weight-medium,
+  semibold: $font-weight-semibold,
+  bold: $font-weight-bold,
+);
 $font-family-system: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', Roboto, 'Noto Sans KR', 'Segoe UI',
   'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji';
 $font-family-hds: noto;
+$letter-spacing-base: -0.2px;
 $word-break-base: keep-all;
+$heading-font-color-base: $gray900;
+$text-font-color-base: $gray700;
+$font-colors: (
+  primary: $gray900,
+  secondary: $gray700,
+  tertiary: $gray500,
+  information: $blue600,
+  positive: $green600,
+  caution: $amber600,
+  negative: $red600,
+);
 
 // Fonts-size
 $text-font-size-lg: 18px;
@@ -173,6 +193,34 @@ $text-sizes: (
   sm: $text-font-size-sm $text-line-height-sm,
   xs: $text-font-size-xs $text-line-height-xs,
   xxs: $text-font-size-xxs $text-line-height-xxs,
+);
+
+// Heading
+$h1-font-size: 56px;
+$h2-font-size: 48px;
+$h3-font-size: 40px;
+$h4-font-size: 32px;
+$h5-font-size: 24px;
+$h6-font-size: 20px;
+$h1-line-height: 72px;
+$h2-line-height: 64px;
+$h3-line-height: 56px;
+$h4-line-height: 48px;
+$h5-line-height: 40px;
+$h6-line-height: 32px;
+$h1-font-weight: 700;
+$h2-font-weight: 700;
+$h3-font-weight: 600;
+$h4-font-weight: 600;
+$h5-font-weight: 500;
+$h6-font-weight: 500;
+$heading-sizes: (
+  h1: $h1-font-size $h1-line-height $h1-font-weight,
+  h2: $h2-font-size $h2-line-height $h2-font-weight,
+  h3: $h3-font-size $h3-line-height $h3-font-weight,
+  h4: $h4-font-size $h4-line-height $h4-font-weight,
+  h5: $h5-font-size $h5-line-height $h5-font-weight,
+  h6: $h6-font-size $h6-line-height $h6-font-weight,
 );
 
 // Body

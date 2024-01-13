@@ -11,7 +11,7 @@ const InputPage = () => {
   //   <div className="docs">
   //     <div className="docs-input">
   //       <div className="component-content">
-  //         <Heading as="h2" size="2" text="1. 개요" />
+  //         <Heading tag="h2" size="2" text="1. 개요" />
   //         <Text>Input 컴포넌트를 통해 텍스트&#44; 비밀번호&#44; 검색 등 다양한 유형의 입력 영역을 생성합니다.</Text>
   //         <div className="preview">
   //           <Input placeholder="placeholder" />
@@ -24,7 +24,7 @@ const InputPage = () => {
   //         </Suspense>
   //       </div>
   //       <div className="component-content">
-  //         <Heading as="h2" size="2" text="2. Clear 버튼" />
+  //         <Heading tag="h2" size="2" text="2. Clear 버튼" />
   //         <Text>clear 프로퍼티를 통해 초기화하는 버튼을 보이게 지정합니다. 기본값은 &#39;false&#39;입니다.</Text>
   //         <div className="preview fill">
   //           <div className="default-input">
@@ -43,7 +43,7 @@ const InputPage = () => {
   //         </Suspense>
   //       </div>
   //       <div className="component-content">
-  //         <Heading as="h2" size="2" text="3. Field 버튼" />
+  //         <Heading tag="h2" size="2" text="3. Field 버튼" />
   //         <Text>Field 프로퍼티를 통해 필드 유형을 지정합니다.</Text>
   //         <div className="preview fill">
   //           <div className="default-input">
