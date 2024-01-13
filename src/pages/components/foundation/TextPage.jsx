@@ -24,20 +24,23 @@ const TextPage = () => {
             아래는 color 프로퍼티를 통해 컬러를 적용한 예시입니다.
           </Text>
           <div className="preview">
-            <Text size="lg" color="primaryText">
+            <Text size="lg" color="primary">
               Primary Color
             </Text>
             <Text size="lg">Default Color</Text>
-            <Text size="lg" color="tertiaryText">
+            <Text size="lg" color="tertiary">
               Tertiary Color
             </Text>
-            <Text size="lg" color="blue500">
+            <Text size="lg" color="information">
               Blue Color
             </Text>
-            <Text size="lg" color="green600">
+            <Text size="lg" color="positive">
               Green Color
             </Text>
-            <Text size="lg" color="red600">
+            <Text size="lg" color="caution">
+              Red Color
+            </Text>
+            <Text size="lg" color="negative">
               Red Color
             </Text>
           </div>
@@ -75,16 +78,19 @@ const TextCode = {
     `<Text size="lg">Default Color</Text>`,
     ``,
     `<!-- Text Tertiary Color -->`,
-    `<Text size="lg" color="tertiaryText">Tertiary Color</Text>`,
+    `<Text size="lg" color="tertiary">Tertiary Color</Text>`,
     ``,
     `<!-- Text Blue Color -->`,
-    `<Text size="lg" color="blue500">Blue Color</Text>`,
+    `<Text size="lg" color="information">Blue Color</Text>`,
     ``,
     `<!-- Text Green Color -->`,
-    `<Text size="lg" color="green600">Green Color</Text>`,
+    `<Text size="lg" color="positive">Green Color</Text>`,
+    ``,
+    `<!-- Text Amber Color -->`,
+    `<Text size="lg" color="caution">Amber Color</Text>`,
     ``,
     `<!-- Text Red Color -->`,
-    `<Text size="lg" color="red600">Red Color</Text>`,
+    `<Text size="lg" color="negative">Red Color</Text>`,
   ].join('\n'),
   size: [
     `<!-- Large Text -->`,
