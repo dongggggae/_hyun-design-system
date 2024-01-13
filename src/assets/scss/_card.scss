@@ -32,6 +32,7 @@
   box-sizing: border-box;
   text-decoration: none;
   transition: var(--#{$prefix}card-transition);
+  cursor: pointer;
 
   &:hover {
     transform: translate3d(0, -5px, 0);
@@ -45,11 +46,12 @@
 
   &__thumbnail {
     overflow: hidden;
-    height: auto;
-    margin: var(--#{$prefix}card-thumbnail-margin-y);
-    padding-top: 50%;
+    height: 200px;
+    margin-bottom: var(--#{$prefix}card-thumbnail-margin-y);
     border-radius: var(--#{$prefix}card-thumbnail-border-radius);
     background-color: var(--#{$prefix}card-thumbnail-bg);
+    background-repeat: no-repeat;
+    background-position: center center;
   }
 
   &__title {
@@ -68,12 +70,22 @@
     color: var(--#{$prefix}card-text-color);
   }
 }
-.abs {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
 
-  > .card {
-    flex: 1 1 25%;
+.card-group {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 10px;
+}
+
+@media (min-width: 1024px) {
+  .card-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+  }
+  .card__thumbnail {
+    height: auto;
+    padding-top: 55%;
   }
 }

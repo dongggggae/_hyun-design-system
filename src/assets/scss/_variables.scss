@@ -18,18 +18,22 @@ $gray800: #2a2a2a;
 $gray850: #1f1f1f;
 $gray900: #111111;
 $black: #000000;
+$red400: #ff96a3;
 $red500: #ff697a;
 $red600: #ff334b;
 $red700: #e5172f;
 $red800: #c9162b;
+$amber400: #ffeb94;
 $amber500: #ffd86b;
 $amber600: #ffc53d;
 $amber700: #fcb321;
 $amber800: #fa9e1e;
+$green400: #6de67b;
 $green500: #5bdd6a;
 $green600: #06c755;
 $green700: #3d9e43;
 $green800: #1e6e1e;
+$blue300: #c2d2ff;
 $blue400: #96b2ff;
 $blue500: #638dff;
 $blue600: #4d73ff;
@@ -62,18 +66,22 @@ $root-color: map-merge(
     'gray850': #{$gray850},
     'gray900': #{$gray900},
     'black': #{$black},
+    'red400': #{$red400},
     'red500': #{$red500},
     'red600': #{$red600},
     'red700': #{$red700},
     'red800': #{$red800},
+    'amber400': #{$amber400},
     'amber500': #{$amber500},
     'amber600': #{$amber600},
     'amber700': #{$amber700},
     'amber800': #{$amber800},
+    'green400': #{$green400},
     'green500': #{$green500},
     'green600': #{$green600},
     'green700': #{$green700},
     'green800': #{$green800},
+    'blue300': #{$blue300},
     'blue400': #{$blue400},
     'blue500': #{$blue500},
     'blue600': #{$blue600},
@@ -341,13 +349,13 @@ $card-border-radius: 12px;
 $card-border-width: 1px;
 $card-border-color: $gray200;
 $card-thumbnail-margin-y: 8px;
-$card-thumbnail-bg: $blue400;
+$card-thumbnail-bg: $blue300;
 $card-thumbnail-border-radius: $card-border-radius;
 $card-title-margin-x: 8px;
 $card-title-font-size: 24px;
 $card-title-line-height: 40px;
 $card-title-color: $gray900;
 $card-text-margin-x: 8px;
-$card-text-font-size: 14px;
+$card-text-font-size: 16px;
 $card-text-line-height: 24px;
 $card-text-color: $gray700;

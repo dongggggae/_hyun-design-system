@@ -1,13 +1,17 @@
 import PropTypes from 'prop-types';
 
-const Thumbnail = ({ children }) => {
+const Thumbnail = ({ imageUrl }) => {
   const PREFIX = 'card__thumbnail';
 
-  return <div className={PREFIX}>{children}</div>;
+  const thumbnailUrl = {
+    backgroundImage: `url(${imageUrl})`,
+  };
+
+  return <div className={PREFIX} style={thumbnailUrl}></div>;
 };
 
 Thumbnail.propTypes = {
-  children: PropTypes.node,
+  imageUrl: PropTypes.string,
 };
 
 export default Thumbnail;
