@@ -29,7 +29,7 @@ const ColorPage = () => {
     <div className="docs">
       <div className="docs-color">
         <div className="component-content">
-          <Heading as="h2" size="2" text="1. Gray" />
+          <Heading tag="h2" size="2" text="1. Gray" />
           <Text>다음은 Gray Scale을 나타냅니다.</Text>
           <ColorWrap>
             {colorKeys.slice(0, 17).map((color, index) => (
@@ -42,7 +42,7 @@ const ColorPage = () => {
         </div>
 
         <div className="component-content">
-          <Heading as="h2" size="2" text="2. Red & Ember" />
+          <Heading tag="h2" size="2" text="2. Red & Ember" />
           <Text>다음은 Red & Ember Scale을 나타냅니다.</Text>
           <ColorWrap>
             {colorKeys.slice(17, 25).map((color, index) => (
@@ -55,7 +55,7 @@ const ColorPage = () => {
         </div>
 
         <div className="component-content">
-          <Heading as="h2" size="2" text="3. Green & Blue & Navy" />
+          <Heading tag="h2" size="2" text="3. Green & Blue & Navy" />
           <Text>다음은 Green & Blue & Navy Scale을 나타냅니다.</Text>
           <ColorWrap>
             {colorKeys.slice(25, 39).map((color, index) => (

@@ -32,7 +32,7 @@ const ModalPage = () => {
     <div className="docs">
       <div className="docs-table">
         <div className="component-content">
-          <Heading as="h2" size="2" text="1. 개요" />
+          <Heading tag="h2" size="2" text="1. 개요" />
           <Text>Modal 컴포넌트를 통해 기존 화면 위에 모달을 생성합니다.</Text>
           <div className="preview">
             <Btn onClick={() => handleShow('modal1')} text="Default Modal" />
@@ -51,7 +51,7 @@ const ModalPage = () => {
         </div>
 
         <div className="component-content">
-          <Heading as="h2" size="2" text="2. 닫기 버튼" />
+          <Heading tag="h2" size="2" text="2. 닫기 버튼" />
           <Text>
             close 프로퍼티를 통해 Modal Header 컴포넌트의 닫기 버튼 유무를 설정합니다. 기본 값은 &#39;false&#39; 입니다.
           </Text>
@@ -72,7 +72,7 @@ const ModalPage = () => {
         </div>
 
         <div className="component-content">
-          <Heading as="h2" size="2" text="3. Type" />
+          <Heading tag="h2" size="2" text="3. Type" />
           <Text>
             type 프로퍼티를 통해 Modal의 스타일을 설정합니다.
             <br />
@@ -196,7 +196,7 @@ const ModalPage = () => {
         </div>
 
         <div className="component-content">
-          <Heading as="h2" size="2" text="4. size" />
+          <Heading tag="h2" size="2" text="4. size" />
           <Text>
             size 프로퍼티를 통해 Modal의 크기를 설정합니다. 기본값은 &#39;md&#39; 입니다.
             <br />

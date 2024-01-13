@@ -12,7 +12,7 @@ const ButtonPage = () => {
     <div className="docs">
       <div className="docs-button">
         <div className="component-content">
-          <Heading as="h2" size="2" text="1. 개요" />
+          <Heading tag="h2" size="2" text="1. 개요" />
           <Text>Btn 컴포넌트를 통해 버튼 요소를 생성합니다.</Text>
           <div className="preview">
             <Btn text="SolidGreen Button" />
@@ -27,7 +27,7 @@ const ButtonPage = () => {
         </div>
 
         <div className="component-content">
-          <Heading as="h2" size="2" text="2. Style" />
+          <Heading tag="h2" size="2" text="2. Style" />
           <Text>버튼 스타일은 type 프로퍼티를 통해 변경합니다. 기본 값은 &#39;solid-green&#39; 입니다.</Text>
           <div className="preview">
             <Btn text="SolidGreen Button" />
@@ -42,7 +42,7 @@ const ButtonPage = () => {
         </div>
 
         <div className="component-content">
-          <Heading as="h2" size="2" text="3. Size" />
+          <Heading tag="h2" size="2" text="3. Size" />
           <Text>
             size 프로퍼티를 통해 요소의 역할을 결정합니다. 기본값은 &#39;md&#39; 입니다.
             <br />
@@ -60,7 +60,7 @@ const ButtonPage = () => {
         </div>
 
         <div className="component-content">
-          <Heading as="h2" size="2" text="4. Icon" />
+          <Heading tag="h2" size="2" text="4. Icon" />
           <Text>
             버튼 아이콘은 Icon 컴포넌트를 통해 아이콘을 생성합니다.
             <br />
@@ -80,7 +80,7 @@ const ButtonPage = () => {
         </div>
 
         <div className="component-content">
-          <Heading as="h2" size="2" text="5. Events" />
+          <Heading tag="h2" size="2" text="5. Events" />
           <Text>onClick 프로퍼티를 통해 클릭 이벤트를 발생시킵니다.</Text>
           <div className="preview">
             <Btn text="Click Button" onClick={() => alert('Click Event')} />
@@ -91,7 +91,7 @@ const ButtonPage = () => {
         </div>
 
         <div className="component-content">
-          <Heading as="h2" size="2" text="6. BtnGroup" />
+          <Heading tag="h2" size="2" text="6. BtnGroup" />
           <Text>BtnGroup 컴포넌트를 통해 버튼을 그룹화합니다.</Text>
           <div className="preview">
             <BtnGroup>

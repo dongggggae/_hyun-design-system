@@ -15,7 +15,7 @@ const IconPage = () => {
     <div className="docs">
       <div className="docs-icon">
         <div className="component-content">
-          <Heading as="h2" size="2" text="1. 개요" />
+          <Heading tag="h2" size="2" text="1. 개요" />
           <Text>Icon 컴포넌트를 통해 아이콘 요소를 생성합니다.</Text>
           <div className="preview">
             <Icon name="arrowLeft" size="lg" />
@@ -29,7 +29,7 @@ const IconPage = () => {
         </div>
 
         <div className="component-content">
-          <Heading as="h2" size="2" text="2. Color" />
+          <Heading tag="h2" size="2" text="2. Color" />
           <Text>
             color 프로퍼티를 통해 아이콘 컬러를 지정하며, 기본 값은 &#39;#000000&#39; 입니다 다른 컬러를 적용하고 싶은
             경우에 사용합니다.
@@ -48,7 +48,7 @@ const IconPage = () => {
         </div>
 
         <div className="component-content">
-          <Heading as="h2" size="2" text="3. Size" />
+          <Heading tag="h2" size="2" text="3. Size" />
           <Text>
             size 프로퍼티를 통해 아이콘의 사이즈를 지정하며, 기본값은 &#39;md&#39; 입니다.
             <br />
@@ -65,7 +65,7 @@ const IconPage = () => {
         </div>
 
         <div className="component-content">
-          <Heading as="h2" size="2" text="4. 아이콘 종류" />
+          <Heading tag="h2" size="2" text="4. 아이콘 종류" />
           <Text>아이콘은 다음과 같은 종류를 가집니다.</Text>
           <div className="preview">
             {Object.keys(iconMap).map((name, idx) => (

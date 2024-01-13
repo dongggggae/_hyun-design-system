@@ -11,7 +11,7 @@ const AccordionPage = () => {
     <div className="docs">
       <div className="docs-accrodion">
         <div className="component-content">
-          <Heading as="h2" size="2" text="1. 개요" />
+          <Heading tag="h2" size="2" text="1. 개요" />
           <Text>Accordion 컴포넌트를 통해 아코디언 요소를 생성합니다.</Text>
           <div className="preview fill">
             <Accordion>
@@ -40,7 +40,7 @@ const AccordionPage = () => {
           </Suspense>
         </div>
         <div className="component-content">
-          <Heading as="h2" size="2" text="2. Title" />
+          <Heading tag="h2" size="2" text="2. Title" />
           <Text>Title 프로퍼티를 통해 아코디언의 제목을 지정할 수 있습니다.</Text>
           <div className="preview fill">
             <Accordion>
@@ -69,7 +69,7 @@ const AccordionPage = () => {
           </Suspense>
         </div>
         <div className="component-content">
-          <Heading as="h2" size="2" text="3. isOpen" />
+          <Heading tag="h2" size="2" text="3. isOpen" />
           <Text>AccordionItem 컴포넌트의 isOpen 프로퍼티를 통해 해당 컨텐츠가 펼쳐진 채로 나타납니다.</Text>
           <div className="preview fill">
             <Accordion>

@@ -8,7 +8,7 @@ const LayoutHeader = React.memo(() => {
   return (
     <header className={PREFIX}>
       <div className="header__inner">
-        <Heading as="h2" size="3" text="HEADER" />
+        <Heading tag="h2" size="3" text="HEADER" />
       </div>
     </header>
   );

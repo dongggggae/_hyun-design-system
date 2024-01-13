@@ -11,7 +11,7 @@ const CardPage = () => {
     <div className="docs">
       <div className="docs-card">
         <div className="component-content">
-          <Heading as="h2" size="2" text="1. 개요" />
+          <Heading tag="h2" size="2" text="1. 개요" />
           <Text>Card 컴포넌트를 통해 카드 요소를 생성합니다.</Text>
           <div className="preview fill">
             <div className="card-group">
@@ -33,7 +33,7 @@ const CardPage = () => {
         </div>
 
         <div className="component-content">
-          <Heading as="h2" size="2" text="2. Thmubnail" />
+          <Heading tag="h2" size="2" text="2. Thmubnail" />
           <Text>
             CardThmubnail 컴포넌트의 &#39;imageUrl&#39; 프로퍼티를 통해 카드 요소에 들어갈 이미지를 지정합니다.
           </Text>
@@ -57,7 +57,7 @@ const CardPage = () => {
         </div>
 
         <div className="component-content">
-          <Heading as="h2" size="2" text="3. Title" />
+          <Heading tag="h2" size="2" text="3. Title" />
           <Text>CardTitle 컴포넌트의 &#39;title&#39; 프로퍼티를 통해 카드 요소에 들어갈 제목을 지정합니다.</Text>
           <div className="preview fill">
             <div className="card-group">
@@ -79,7 +79,7 @@ const CardPage = () => {
         </div>
 
         <div className="component-content">
-          <Heading as="h2" size="2" text="4. Text" />
+          <Heading tag="h2" size="2" text="4. Text" />
           <Text>CardTitle 컴포넌트의 &#39;text&#39; 프로퍼티를 통해 카드 요소에 들어갈 설명을 지정합니다.</Text>
           <div className="preview fill">
             <div className="card-group">
