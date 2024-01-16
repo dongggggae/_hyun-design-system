@@ -15,9 +15,36 @@
     }
   }
 
+  .docs-badge {
+    .badge__wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+
   .docs-button {
     .preview .btn__icon {
       background-color: $green600;
+    }
+  }
+
+  .docs-color {
+    .color__wrap {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .color__unit {
+      position: relative;
+      flex: 1;
+      min-width: 120px;
+      height: 90px;
+
+      .color__box {
+        width: 100%;
+        height: 40px;
+      }
     }
   }
 

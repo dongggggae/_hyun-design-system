@@ -24,7 +24,7 @@ Badge.defaultProps = {
 };
 
 Badge.propTypes = {
-  state: PropTypes.oneOf(['sucess', 'caution', 'negative', 'information']),
+  state: PropTypes.oneOf(['success', 'warn', 'error', 'information']),
   outline: PropTypes.bool,
   text: PropTypes.node,
 };
