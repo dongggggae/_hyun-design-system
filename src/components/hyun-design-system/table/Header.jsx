@@ -1,33 +1,15 @@
-import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 
-import { useTheme } from '@/theme/ThemeContext';
-
-const StyledHeader = styled.th`
-  ${(props) => props.theme.components.table.headerStyle}
-
-  &:first-of-type {
-    border-left: none;
-  }
-
-  text-align: ${(props) => {
-    if (props.textAlign === 'left') return 'left';
-    if (props.textAlign === 'center') return 'center';
-    return 'center';
-  }};
-`;
-
-const Header = ({ children, rowSpan, colSpan, textAlign }) => {
-  const theme = useTheme();
+const Header = ({ children, rowSpan, colSpan, active }) => {
   const attributes = {};
 
   attributes.rowSpan = rowSpan || attributes.rowSpan;
   attributes.colSpan = colSpan || attributes.colSpan;
 
   return (
-    <StyledHeader {...attributes} theme={theme} textAlign={textAlign}>
+    <th className={active ? 'active' : null} {...attributes}>
       {children}
-    </StyledHeader>
+    </th>
   );
 };
 
@@ -35,7 +17,7 @@ Header.propTypes = {
   children: PropTypes.node.isRequired,
   rowSpan: PropTypes.number,
   colSpan: PropTypes.number,
-  textAlign: PropTypes.string,
+  active: PropTypes.bool,
 };
 
 export default Header;

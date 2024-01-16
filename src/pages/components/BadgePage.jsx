@@ -1,18 +1,10 @@
 import { lazy, Suspense } from 'react';
 
-import styled from '@emotion/styled';
-
 import Badge from '@/components/hyun-design-system/badge/Badge';
 import Heading from '@/components/hyun-design-system/typography/Heading';
 import Text from '@/components/hyun-design-system/typography/Text';
 
 const LazyCodeContainer = lazy(() => import('@/components/docs/CodeContainer'));
-
-const FlexBox = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 10px;
-`;
 
 const BadgePage = () => {
   return (
@@ -23,15 +15,15 @@ const BadgePage = () => {
           <Text>Badge 컴포넌트를 통해 뱃지 요소를 생성합니다.</Text>
           <div className="preview">
             <div>
-              <FlexBox>
+              <div className="badge__wrap">
                 <Heading as="h4" size="6" text="Defult Badge" />
                 <Badge text="Default Badge" />
-              </FlexBox>
+              </div>
               <br />
-              <FlexBox>
+              <div className="badge__wrap">
                 <Heading as="h4" size="6" text="Defult Badge" />
                 <Badge text="Outline Badge" outline />
-              </FlexBox>
+              </div>
             </div>
           </div>
           <Suspense fallback={<div>Loading...</div>}>
@@ -73,42 +65,42 @@ const BadgePage = () => {
 
 const BadgeCode = {
   overview: [
-    `<!-- Default Badge> -->`,
+    `<!-- Default Badge -->`,
     `<Badge text="Default Badge" />`,
     ``,
-    `<!-- Success Badge> -->`,
+    `<!-- Success Badge -->`,
     `<Badge text="Success Badge" state="success" />`,
     ``,
-    `<!-- Warn Badge> -->`,
+    `<!-- Warn Badge -->`,
     `<Badge text="Warn Badge" state="warn" />`,
     ``,
-    `<!-- Error Badge> -->`,
+    `<!-- Error Badge -->`,
     `<Badge text="Error Badge" state="error" />`,
   ].join(`\n`),
   state: [
-    `<!-- Default Badge> -->`,
+    `<!-- Default Badge -->`,
     `<Badge text="Default Badge" />`,
     ``,
-    `<!-- Success Badge> -->`,
+    `<!-- Success Badge -->`,
     `<Badge text="Success Badge" state="success" />`,
     ``,
-    `<!-- Warn Badge> -->`,
+    `<!-- Warn Badge -->`,
     `<Badge text="Warn Badge" state="warn" />`,
     ``,
-    `<!-- Error Badge> -->`,
+    `<!-- Error Badge -->`,
     `<Badge text="Error Badge" state="error" />`,
   ].join(`\n`),
   outline: [
-    `<!-- Default Outline Badge> -->`,
+    `<!-- Default Outline Badge -->`,
     `<Badge text="Default Badge" outline />`,
     ``,
-    `<!-- Success Outline Badge> -->`,
+    `<!-- Success Outline Badge -->`,
     `<Badge text="Success Badge" state="success" outline />`,
     ``,
-    `<!-- Warn Outline Badge> -->`,
+    `<!-- Warn Outline Badge -->`,
     `<Badge text="Warn Badge" state="warn" outline />`,
     ``,
-    `<!-- Error Outline Badge> -->`,
+    `<!-- Error Outline Badge -->`,
     `<Badge text="Error Badge" state="error" outline />`,
   ].join(`\n`),
 };

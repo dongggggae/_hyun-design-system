@@ -12,6 +12,7 @@ import IconPage from '../pages/components/IconPage';
 import ModalPage from '../pages/components/ModalPage';
 import TablePage from '../pages/components/TablePage';
 import TabPage from '../pages/components/TabPage';
+import Test from '../pages/components/Test';
 
 const navData = [
   {
@@ -42,5 +43,6 @@ const navData = [
   { name: 'Table', to: 'components/TablePage', component: TablePage },
   { name: 'Tab', to: 'components/TabPage', component: TabPage },
   { name: 'Modal', to: 'components/ModalPage', component: ModalPage },
+  { name: 'Test', to: 'components/Test', component: Test },
 ];
 export default navData;

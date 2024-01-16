@@ -104,7 +104,7 @@ const AccordionPage = () => {
 
 const AccordionCode = {
   overview: [
-    `<!-- Default Accordion> -->`,
+    `<!-- Default Accordion -->`,
     ` <Accordion>`,
     `   <AccordionItem title="Accordion Title1">`,
     `     <p>`,
@@ -130,7 +130,7 @@ const AccordionCode = {
     `</Accordion>`,
   ].join(`\n`),
   title: [
-    `<!-- Default Accordion> -->`,
+    `<!-- Default Accordion -->`,
     ` <Accordion>`,
     `   <AccordionItem title="Accordion Title1">`,
     `     <p>`,
@@ -156,7 +156,7 @@ const AccordionCode = {
     `</Accordion>`,
   ].join(`\n`),
   isOpen: [
-    `<!-- Default Accordion> -->`,
+    `<!-- Default Accordion -->`,
     ` <Accordion>`,
     `   <AccordionItem title="Accordion Title1" isOpen >`,
     `     <p>`,

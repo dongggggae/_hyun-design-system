@@ -352,13 +352,10 @@ $tab-link-text-font-size: $text-font-size-md;
 $tab-link-text-line-height: $text-line-height-md;
 $tab-link-text-margin-x: 2px;
 $tab-link-active-color: $blue700;
-
 $tab-link-indicator-color: $tab-link-active-color;
 $tab-link-indicator-height: 2px;
-
 $tab-content-margin-y: 16px;
 $tab-content-padding-x: 10px;
-
 $tab-pills-link-padding-x: calc(12px - #{$tab-link-text-margin-x});
 $tab-pills-link-padding-y: 4px;
 $tab-pills-link-bg: $gray200;
@@ -367,12 +364,28 @@ $tab-pills-border-radius: 16px;
 $tab-pills-link-active-color: $white;
 $tab-pills-link-active-bg: $blue600;
 $tab-pills-link-active-icon-color: $tab-pills-link-active-color;
-
 $tab-inlines-link-padding-x: calc(#{$tab-link-padding-x} - #{$tab-link-text-margin-x});
 $tab-inlines-link-color: $black;
 $tab-inlines-link-active-color: $blue600;
 $tab-inlines-link-divider-height: 16px;
 $tab-inlines-link-divider-color: $gray300;
+
+// Table
+$table-bg: $white;
+$table-border-width: 1px;
+$table-border-color: $gray200;
+$table-color: $gray700;
+$table-cell-padding-x: 8px;
+$table-cell-padding-y: 10px;
+$table-cell-vertical-align: middle;
+$table-cell-text-align: center;
+$table-cell-font-weight: $font-weight-base;
+$table-th-cell-padding-x: $table-cell-padding-x;
+$table-th-cell-padding-y: $table-cell-padding-y;
+$table-th-cell-color: $gray900;
+$table-th-cell-font-weight: $font-weight-bold;
+$table-active-bg: $gray200;
+$table-hover-bg: $table-active-bg;
 
 // Modal
 $modal-width: 800px;

@@ -14,7 +14,7 @@ const TablePage = () => {
           <Heading tag="h2" size="2" text="1. 개요" />
           <Text>Table 컴포넌트를 통해 테이블 요소를 생성합니다.</Text>
           <div className="preview fill">
-            <Table>
+            <Table caption="기본 테이블 타입">
               <TableHead>
                 <TableRow>
                   <TableHeader>Header1</TableHeader>
@@ -74,12 +74,11 @@ const TablePage = () => {
             </Suspense>
           </div>
         </div>
-
         <div className="component-content">
           <Heading tag="h2" size="2" text="2. colSpan,rowSpan" />
           <Text>colSpan 및 rowSpan 프로퍼티를 활용하여 테이블 아이템의 열 및 행 병합을 지정할 수 있습니다.</Text>
           <div className="preview">
-            <Table>
+            <Table caption="colSpan, rowSpan 설명 테이블">
               <TableHead>
                 <TableRow>
                   <TableHeader>Header1</TableHeader>
@@ -108,34 +107,33 @@ const TablePage = () => {
             <LazyCodeContainer codeString={TableCode.span} />
           </Suspense>
         </div>
-
         <div className="component-content">
           <Heading tag="h2" size="2" text="3. active" />
-          <Text>active 프로퍼티를 통해 해당 행(row)의 강조를 설정합니다. 기본값은 false입니다.</Text>
+          <Text>active 프로퍼티를 통해 해당 cell의 강조를 설정합니다. 기본값은 false입니다.</Text>
           <div className="preview">
-            <Table>
+            <Table caption="active 설명 테이블">
               <TableHead>
                 <TableRow>
                   <TableHeader>Header1</TableHeader>
                   <TableHeader>Header2</TableHeader>
-                  <TableHeader>Header3</TableHeader>
+                  <TableHeader active>Header3</TableHeader>
                 </TableRow>
               </TableHead>
               <TableBody>
-                <TableRow active>
-                  <TableData>Data1</TableData>
+                <TableRow>
+                  <TableData active>Data1</TableData>
                   <TableData>Data2</TableData>
                   <TableData>Data3</TableData>
                 </TableRow>
                 <TableRow>
                   <TableData>Data1</TableData>
-                  <TableData>Data2</TableData>
+                  <TableData active>Data2</TableData>
                   <TableData>Data3</TableData>
                 </TableRow>
-                <TableRow active>
+                <TableRow>
                   <TableData>Data1</TableData>
                   <TableData>Data2</TableData>
-                  <TableData>Data3</TableData>
+                  <TableData active>Data3</TableData>
                 </TableRow>
               </TableBody>
             </Table>
@@ -144,7 +142,6 @@ const TablePage = () => {
             <LazyCodeContainer codeString={TableCode.active} />
           </Suspense>
         </div>
-
         <div className="component-content">
           <Heading tag="h2" size="2" text="4. hover" />
           <Text>hover 프로퍼티를 통해 테이블 행(row)의 hover 활성화를 설정합니다. 기본값은 false입니다.</Text>
