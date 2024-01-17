@@ -1,3 +1,10 @@
+// Badge Class genrate
+@each $key, $args in $badges {
+  .badge--#{$key} {
+    @include generate-badge($args...);
+  }
+}
+
 // Button Class generate
 @each $key, $args in $buttons {
   .btn--#{$key} {
@@ -5,9 +12,5 @@
   }
 }
 
-// Badge Class genrate
-@each $key, $args in $badges {
-  .badge--#{$key} {
-    @include generate-badge($args...);
-  }
-}
+// Icon Class generate
+@include generate-icon($icons);

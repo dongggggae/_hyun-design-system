@@ -3,14 +3,12 @@ import { lazy, Suspense } from 'react';
 import Icon from '@/components/hyun-design-system/icon/Icon';
 import Heading from '@/components/hyun-design-system/typography/Heading';
 import Text from '@/components/hyun-design-system/typography/Text';
-import { useTheme } from '@/theme/ThemeContext';
 
 const LazyCodeContainer = lazy(() => import('@/components/docs/CodeContainer'));
 
-const IconPage = () => {
-  const theme = useTheme();
-  const iconMap = theme.components.icon.iconTypes;
+const iconMap = ['menu', 'arrow-up', 'arrow-right', 'arrow-down', 'arrow-left', 'close', 'visible', 'invisible'];
 
+const IconPage = () => {
   return (
     <div className="docs">
       <div className="docs-icon">
@@ -18,10 +16,10 @@ const IconPage = () => {
           <Heading tag="h2" size="2" text="1. 개요" />
           <Text>Icon 컴포넌트를 통해 아이콘 요소를 생성합니다.</Text>
           <div className="preview">
-            <Icon name="arrowLeft" size="lg" />
-            <Icon name="arrowUp" size="lg" />
-            <Icon name="arrowRight" size="lg" />
-            <Icon name="arrowDown" size="lg" />
+            <Icon name="arrow-up" size="lg" />
+            <Icon name="arrow-right" size="lg" />
+            <Icon name="arrow-down" size="lg" />
+            <Icon name="arrow-left" size="lg" />
           </div>
           <Suspense fallback={<div>Loading...</div>}>
             <LazyCodeContainer codeString={IconCode.overview} />
@@ -38,9 +36,10 @@ const IconPage = () => {
           </Text>
           <div className="preview">
             <Icon name="close" size="lg" />
-            <Icon name="close" size="lg" color="green600" />
-            <Icon name="close" size="lg" color="amber600" />
-            <Icon name="close" size="lg" color="red600" />
+            <Icon name="close" size="lg" color="green" />
+            <Icon name="close" size="lg" color="blue" />
+            <Icon name="close" size="lg" color="amber" />
+            <Icon name="close" size="lg" color="red" />
           </div>
           <Suspense fallback={<div>Loading...</div>}>
             <LazyCodeContainer codeString={IconCode.color} />
@@ -68,8 +67,8 @@ const IconPage = () => {
           <Heading tag="h2" size="2" text="4. 아이콘 종류" />
           <Text>아이콘은 다음과 같은 종류를 가집니다.</Text>
           <div className="preview">
-            {Object.keys(iconMap).map((name, idx) => (
-              <div className="icon-preview" key={idx}>
+            {iconMap.map((name, idx) => (
+              <div className="icon-preview" key={`${name}_${idx}`}>
                 <Icon name={name} />
                 <Text>{name}</Text>
               </div>
@@ -83,30 +82,33 @@ const IconPage = () => {
 
 const IconCode = {
   overview: [
-    `<!-- Arrow Left > -->`,
-    `<Icon name="arrowLeft" size="lg" />`,
-    ``,
     `<!-- Arrow Up > -->`,
-    `<Icon name="arrowUp" size="lg" />`,
+    `<Icon name="arrow-up" size="lg" />`,
     ``,
     `<!-- Arrow Right > -->`,
-    `<Icon name="arrowRight" size="lg" />`,
+    `<Icon name="arrow-right" size="lg" />`,
     ``,
     `<!-- Arrow Down > -->`,
-    `<Icon name="arrowDown" size="lg" />`,
+    `<Icon name="arrow-down" size="lg" />`,
+    ``,
+    `<!-- Arrow Left > -->`,
+    `<Icon name="arrow-left" size="lg" />`,
   ].join(`\n`),
   color: [
     `<!-- Default Color Button> -->`,
     `<Icon name="close" size="lg" />`,
     ``,
     `<!-- Green Color Button> -->`,
-    `<Icon name="close" size="lg" color="green600" />`,
+    `<Icon name="close" size="lg" color="green" />`,
+    ``,
+    `<!-- Blue Color Button> -->`,
+    `<Icon name="close" size="lg" color="blue" />`,
     ``,
     `<!-- Amber Color Button> -->`,
-    `<Icon name="close" size="lg" color="amber600" />`,
+    `<Icon name="close" size="lg" color="amber" />`,
     ``,
     `<!-- Red Color Button> -->`,
-    `<Icon name="close" size="lg" color="red600" />`,
+    `<Icon name="close" size="lg" color="red" />`,
   ].join(`\n`),
   size: [
     `<!-- Large Size Icon > -->`,
