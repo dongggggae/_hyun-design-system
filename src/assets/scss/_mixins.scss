@@ -11,3 +11,29 @@
     --#{$prefix}btn-#{$key}: #{$value};
   }
 }
+
+// Icon
+@mixin generate-icon($icons) {
+  .icon {
+    @each $key, $value in $icons {
+      $class: map-get($value, class);
+      $image: map-get($value, image);
+      $variant: map-get($value, variant);
+
+      --icon-#{$class}: #{escape-svg(#{$image})};
+
+      &__#{$class} {
+        &::after {
+          content: '#{$class}';
+          @if ($variant == 'none') {
+            background-image: var(--icon-#{$class});
+            background-color: transparent;
+          } @else {
+            -webkit-mask-image: var(--icon-#{$class});
+            mask-image: var(--icon-#{$class});
+          }
+        }
+      }
+    }
+  }
+}
