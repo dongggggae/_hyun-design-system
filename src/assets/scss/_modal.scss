@@ -10,9 +10,8 @@
   --#{$prefix}modal-header-padding-y: #{$modal-header-padding-y};
   --#{$prefix}modal-header-border-width: #{$modal-header-border-width};
   --#{$prefix}modal-header-border-color: #{$modal-header-border-color};
-  --#{$prefix}modal-header-button-width: #{$modal-header-button-width};
-  --#{$prefix}modal-header-button-height: #{$modal-header-button-height};
   --#{$prefix}modal-header-button-padding-x: #{$modal-header-button-padding-x};
+  --#{$prefix}modal-header-button-padding-y: #{$modal-header-button-padding-y};
   --#{$prefix}modal-header-button-bg: #{$modal-header-button-bg};
   --#{$prefix}modal-body-margin-bottom: #{$modal-body-margin-bottom};
   --#{$prefix}modal-body-padding-x: #{$modal-body-padding-x};
@@ -112,9 +111,8 @@
     border-style: solid;
     border-color: var(--#{$prefix}modal-header-border-color);
 
-    .btn {
-      width: var(--#{$prefix}modal-header-button-width);
-      height: var(--#{$prefix}modal-header-button-height);
+    button {
+      padding: var(--#{$prefix}modal-header-button-padding-y) var(--#{$prefix}modal-header-button-padding-x);
       background-color: var(--#{$prefix}modal-header-button-bg);
       border-color: var(--#{$prefix}modal-header-button-bg);
     }

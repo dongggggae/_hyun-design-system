@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import BtnText from './Text';
-import Icon from '../icon/Icon';
+import Icon from '@/components/hyun-design-system/icon/Icon';
 
 const Btn = ({ type, size, text, icon, iconColor, iconOnly, reverse, onClick }) => {
   const PREFIX = 'btn';
@@ -16,14 +16,15 @@ const Btn = ({ type, size, text, icon, iconColor, iconOnly, reverse, onClick }) 
 
   return (
     <button className={[PREFIX, `${PREFIX}--${type}`, `${PREFIX}--${size}`].join(' ')} onClick={handleClick}>
-      {iconOnly && icon && <Icon color={iconColor} name={icon} />}
-      {!iconOnly && (
+      {icon && iconOnly && <Icon color={iconColor} name={icon} />}
+      {!iconOnly && icon && (
         <React.Fragment>
           {!reverse && <Icon name={icon} color={iconColor} />}
           <BtnText text={text} />
           {reverse && <Icon name={icon} color={iconColor} />}
         </React.Fragment>
       )}
+      {!icon && <BtnText text={text} />}
     </button>
   );
 };
@@ -31,6 +32,12 @@ const Btn = ({ type, size, text, icon, iconColor, iconOnly, reverse, onClick }) 
 Btn.defaultProps = {
   type: 'solid-green',
   size: 'md',
+  text: '',
+  icon: '',
+  iconColor: '',
+  iconOnly: false,
+  reverse: false,
+  onClick: () => {},
 };
 
 Btn.propTypes = {

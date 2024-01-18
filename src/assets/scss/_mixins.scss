@@ -24,7 +24,7 @@
 
       &__#{$class} {
         &::after {
-          content: '#{$class}';
+          content: '';
           @if ($variant == 'none') {
             background-image: var(--icon-#{$class});
             background-color: transparent;

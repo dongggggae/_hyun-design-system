@@ -67,12 +67,12 @@ const ButtonPage = () => {
             reverse 프로퍼티를 통해 Icon 과 Text의 위치를 변경할 수 있습니다. 기본값은 &#39;false&#39;입니다.
           </Text>
           <div className="preview">
-            <Btn iconOnly icon="plus" />
-            <Btn type="solid-green" text="Button Text" icon="plus" />
-            <Btn type="solid-green" text="Button Text" reverse icon="plus" />
-            <Btn type="solid-red" iconOnly icon="plus" />
-            <Btn type="solid-red" text="Button Text" icon="plus" />
-            <Btn type="solid-red" text="Button Text" reverse icon="plus" onClick={() => alert('Click Event')} />
+            <Btn iconOnly icon="menu" iconColor="white" />
+            <Btn type="solid-green" text="Button Text" icon="menu" iconColor="white" />
+            <Btn type="solid-green" text="Button Text" reverse icon="menu" iconColor="white" />
+            <Btn type="solid-red" iconOnly icon="menu" iconColor="white" />
+            <Btn type="solid-red" text="Button Text" icon="menu" iconColor="white" />
+            <Btn type="solid-red" text="Button Text" reverse icon="menu" iconColor="white" />
           </div>
           <Suspense fallback={<div>Loading...</div>}>
             <LazyCodeContainer codeString={ButtonCode.icon} />
