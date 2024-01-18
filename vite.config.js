@@ -22,7 +22,6 @@ export default defineConfig({
           react: ['react', 'react-dom'],
           reactRouter: ['react-router-dom'],
           reactSyntax: ['react-syntax-highlighter'],
-          reactIcon: ['react-icons'],
         },
       },
     },

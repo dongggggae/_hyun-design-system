@@ -16,7 +16,7 @@ const LayoutSidebarNav = React.memo(({ navData, openGroups, toggleOpenGroup }) =
                 {item.children && item.children.length > 0 ? (
                   <Link className="nav__link" onClick={() => toggleOpenGroup(idx)}>
                     {item.name}
-                    <Icon name="arrowDown" size="sm" color="gray300" />
+                    <Icon name="arrow-down" size="sm" color="blue" />
                   </Link>
                 ) : (
                   <span className="nav__link">{item.name}</span>
