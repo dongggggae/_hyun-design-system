@@ -426,7 +426,7 @@ $modal-header-padding-x: 16px;
 $modal-header-padding-y: $modal-header-padding-x;
 $modal-header-border-width: $modal-border-width;
 $modal-header-border-color: $modal-divider-color;
-$modal-header-button-width: 24px;
+$modal-header-button-width: calc($btn-padding-x * 2 + $icon-size + $btn-border-width * 2);
 $modal-header-button-height: 24px;
 $modal-header-button-padding-x: 0;
 $modal-header-button-bg: $white;

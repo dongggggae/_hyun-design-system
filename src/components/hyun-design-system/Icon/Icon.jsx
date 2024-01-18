@@ -15,6 +15,7 @@ const Icon = React.memo(({ name, size, color }) => {
 Icon.defaultProps = {
   size: 'md',
   color: 'black',
+  name: 'name',
 };
 
 Icon.propTypes = {
